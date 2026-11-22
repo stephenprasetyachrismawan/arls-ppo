@@ -1,0 +1,127 @@
+skala reward c(lambda): [(0.3, 525.002), (3.0, 498.689), (30.0, 291.221)]
+/home/stephen/wt/l3/revisi/hasil/gerbang_batch/latih_ppo_seq.py:268: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:822.)
+  tot += float(loss) * len(b)
+BC epoch 0: loss 0.688 akurasi 0.608 tahan 0.624 rugi tahan 8.474
+BC epoch 1: loss 0.481 akurasi 0.633 tahan 0.642 rugi tahan 7.679
+BC epoch 2: loss 0.432 akurasi 0.646 tahan 0.656 rugi tahan 6.697
+BC epoch 3: loss 0.401 akurasi 0.653 tahan 0.660 rugi tahan 6.185
+BC epoch 4: loss 0.376 akurasi 0.649 tahan 0.656 rugi tahan 5.949
+BC epoch 5: loss 0.359 akurasi 0.676 tahan 0.683 rugi tahan 5.386
+BC epoch 6: loss 0.344 akurasi 0.673 tahan 0.680 rugi tahan 5.385
+BC epoch 7: loss 0.328 akurasi 0.686 tahan 0.688 rugi tahan 5.218
+BC epoch 8: loss 0.316 akurasi 0.694 tahan 0.699 rugi tahan 5.061
+BC epoch 9: loss 0.303 akurasi 0.702 tahan 0.706 rugi tahan 4.920
+BC epoch 10: loss 0.292 akurasi 0.705 tahan 0.710 rugi tahan 4.698
+BC epoch 11: loss 0.283 akurasi 0.707 tahan 0.708 rugi tahan 4.749
+BC epoch 12: loss 0.275 akurasi 0.691 tahan 0.692 rugi tahan 3.758
+BC epoch 13: loss 0.264 akurasi 0.699 tahan 0.700 rugi tahan 4.091
+BC epoch 14: loss 0.255 akurasi 0.719 tahan 0.720 rugi tahan 4.322
+BC epoch 15: loss 0.245 akurasi 0.707 tahan 0.711 rugi tahan 4.244
+BC epoch 16: loss 0.243 akurasi 0.733 tahan 0.732 rugi tahan 3.437
+BC epoch 17: loss 0.235 akurasi 0.738 tahan 0.735 rugi tahan 3.450
+BC epoch 18: loss 0.226 akurasi 0.730 tahan 0.730 rugi tahan 3.075
+BC epoch 19: loss 0.219 akurasi 0.743 tahan 0.741 rugi tahan 3.474
+BC epoch 20: loss 0.211 akurasi 0.732 tahan 0.736 rugi tahan 3.235
+BC epoch 21: loss 0.208 akurasi 0.752 tahan 0.748 rugi tahan 3.198
+BC epoch 22: loss 0.204 akurasi 0.739 tahan 0.737 rugi tahan 2.922
+BC epoch 23: loss 0.197 akurasi 0.745 tahan 0.740 rugi tahan 2.645
+BC epoch 24: loss 0.189 akurasi 0.760 tahan 0.758 rugi tahan 2.740
+BC epoch 25: loss 0.188 akurasi 0.763 tahan 0.759 rugi tahan 3.700
+BC epoch 26: loss 0.181 akurasi 0.769 tahan 0.760 rugi tahan 2.571
+BC epoch 27: loss 0.176 akurasi 0.766 tahan 0.760 rugi tahan 3.465
+BC epoch 28: loss 0.171 akurasi 0.781 tahan 0.775 rugi tahan 3.225
+BC epoch 29: loss 0.168 akurasi 0.779 tahan 0.773 rugi tahan 2.982
+BC epoch 30: loss 0.163 akurasi 0.778 tahan 0.771 rugi tahan 2.522
+BC epoch 31: loss 0.159 akurasi 0.772 tahan 0.768 rugi tahan 2.933
+BC epoch 32: loss 0.156 akurasi 0.786 tahan 0.779 rugi tahan 2.624
+BC epoch 33: loss 0.152 akurasi 0.781 tahan 0.772 rugi tahan 2.430
+BC epoch 34: loss 0.149 akurasi 0.794 tahan 0.785 rugi tahan 2.416
+BC epoch 35: loss 0.145 akurasi 0.790 tahan 0.779 rugi tahan 2.245
+BC epoch 36: loss 0.141 akurasi 0.799 tahan 0.790 rugi tahan 2.710
+BC epoch 37: loss 0.139 akurasi 0.795 tahan 0.785 rugi tahan 2.248
+BC epoch 38: loss 0.136 akurasi 0.804 tahan 0.793 rugi tahan 2.643
+BC epoch 39: loss 0.135 akurasi 0.804 tahan 0.790 rugi tahan 2.744
+BC epoch 40: loss 0.131 akurasi 0.810 tahan 0.802 rugi tahan 2.252
+BC epoch 41: loss 0.127 akurasi 0.804 tahan 0.791 rugi tahan 2.366
+BC epoch 42: loss 0.124 akurasi 0.811 tahan 0.795 rugi tahan 2.181
+BC epoch 43: loss 0.122 akurasi 0.820 tahan 0.804 rugi tahan 2.482
+BC epoch 44: loss 0.119 akurasi 0.817 tahan 0.802 rugi tahan 2.262
+BC epoch 45: loss 0.118 akurasi 0.823 tahan 0.806 rugi tahan 2.338
+BC epoch 46: loss 0.114 akurasi 0.828 tahan 0.810 rugi tahan 1.965
+BC epoch 47: loss 0.111 akurasi 0.828 tahan 0.808 rugi tahan 2.348
+BC epoch 48: loss 0.109 akurasi 0.818 tahan 0.803 rugi tahan 2.025
+BC epoch 49: loss 0.107 akurasi 0.833 tahan 0.815 rugi tahan 1.972
+BC epoch 50: loss 0.105 akurasi 0.824 tahan 0.805 rugi tahan 3.069
+BC epoch 51: loss 0.104 akurasi 0.837 tahan 0.820 rugi tahan 1.941
+BC epoch 52: loss 0.101 akurasi 0.834 tahan 0.812 rugi tahan 2.025
+BC epoch 53: loss 0.097 akurasi 0.836 tahan 0.816 rugi tahan 2.006
+BC epoch 54: loss 0.095 akurasi 0.838 tahan 0.820 rugi tahan 2.009
+BC epoch 55: loss 0.101 akurasi 0.838 tahan 0.816 rugi tahan 2.032
+BC epoch 56: loss 0.092 akurasi 0.834 tahan 0.809 rugi tahan 1.931
+BC epoch 57: loss 0.093 akurasi 0.837 tahan 0.813 rugi tahan 2.365
+BC epoch 58: loss 0.090 akurasi 0.843 tahan 0.820 rugi tahan 1.933
+BC epoch 59: loss 0.086 akurasi 0.844 tahan 0.824 rugi tahan 1.765
+BC epoch 60: loss 0.085 akurasi 0.852 tahan 0.826 rugi tahan 2.204
+BC epoch 61: loss 0.083 akurasi 0.850 tahan 0.824 rugi tahan 2.154
+BC epoch 62: loss 0.085 akurasi 0.856 tahan 0.832 rugi tahan 1.993
+BC epoch 63: loss 0.079 akurasi 0.860 tahan 0.833 rugi tahan 2.071
+BC epoch 64: loss 0.078 akurasi 0.860 tahan 0.834 rugi tahan 1.702
+BC epoch 65: loss 0.077 akurasi 0.860 tahan 0.834 rugi tahan 1.836
+BC epoch 66: loss 0.077 akurasi 0.866 tahan 0.837 rugi tahan 1.722
+BC epoch 67: loss 0.077 akurasi 0.860 tahan 0.832 rugi tahan 1.863
+BC epoch 68: loss 0.072 akurasi 0.863 tahan 0.835 rugi tahan 1.662
+BC epoch 69: loss 0.074 akurasi 0.859 tahan 0.832 rugi tahan 2.170
+BC epoch 70: loss 0.072 akurasi 0.871 tahan 0.836 rugi tahan 1.806
+BC epoch 71: loss 0.069 akurasi 0.869 tahan 0.837 rugi tahan 1.798
+BC epoch 72: loss 0.069 akurasi 0.868 tahan 0.838 rugi tahan 2.052
+BC epoch 73: loss 0.069 akurasi 0.875 tahan 0.842 rugi tahan 1.822
+BC epoch 74: loss 0.065 akurasi 0.874 tahan 0.840 rugi tahan 1.816
+BC epoch 75: loss 0.065 akurasi 0.868 tahan 0.834 rugi tahan 1.737
+BC epoch 76: loss 0.064 akurasi 0.871 tahan 0.838 rugi tahan 1.454
+BC epoch 77: loss 0.061 akurasi 0.880 tahan 0.845 rugi tahan 1.614
+BC epoch 78: loss 0.059 akurasi 0.874 tahan 0.839 rugi tahan 1.835
+BC epoch 79: loss 0.060 akurasi 0.885 tahan 0.853 rugi tahan 1.804
+BC epoch 80: loss 0.058 akurasi 0.878 tahan 0.842 rugi tahan 1.834
+BC epoch 81: loss 0.056 akurasi 0.877 tahan 0.845 rugi tahan 1.671
+BC epoch 82: loss 0.057 akurasi 0.884 tahan 0.848 rugi tahan 1.596
+BC epoch 83: loss 0.056 akurasi 0.889 tahan 0.850 rugi tahan 1.714
+BC epoch 84: loss 0.055 akurasi 0.889 tahan 0.845 rugi tahan 1.959
+BC epoch 85: loss 0.053 akurasi 0.886 tahan 0.847 rugi tahan 1.271
+BC epoch 86: loss 0.054 akurasi 0.891 tahan 0.855 rugi tahan 1.754
+BC epoch 87: loss 0.053 akurasi 0.883 tahan 0.845 rugi tahan 1.718
+BC epoch 88: loss 0.052 akurasi 0.890 tahan 0.847 rugi tahan 1.769
+BC epoch 89: loss 0.050 akurasi 0.894 tahan 0.854 rugi tahan 1.877
+BC epoch 90: loss 0.051 akurasi 0.896 tahan 0.855 rugi tahan 1.733
+BC epoch 91: loss 0.049 akurasi 0.895 tahan 0.853 rugi tahan 1.922
+BC epoch 92: loss 0.051 akurasi 0.895 tahan 0.855 rugi tahan 1.909
+BC epoch 93: loss 0.050 akurasi 0.894 tahan 0.857 rugi tahan 1.964
+BC epoch 94: loss 0.046 akurasi 0.905 tahan 0.860 rugi tahan 1.900
+BC epoch 95: loss 0.044 akurasi 0.902 tahan 0.858 rugi tahan 1.713
+BC berhenti di epoch 95, ukuran terbaik -1.271
+BC selesai 117 s
+langkah 4096: reward rata 0.0201
+langkah 8192: reward rata 0.0230
+langkah 12288: reward rata 0.0292
+langkah 16384: reward rata 0.0265
+langkah 20480: reward rata 0.0236
+langkah 24576: reward rata 0.0196
+langkah 28672: reward rata 0.0226
+langkah 32768: reward rata 0.0269
+langkah 36864: reward rata 0.0298
+langkah 40960: reward rata 0.0189
+langkah 45056: reward rata 0.0275
+langkah 49152: reward rata 0.0211
+langkah 53248: reward rata 0.0202
+langkah 57344: reward rata 0.0303
+langkah 61440: reward rata 0.0202
+langkah 65536: reward rata 0.0259
+langkah 69632: reward rata 0.0147
+langkah 73728: reward rata 0.0196
+langkah 77824: reward rata 0.0344
+langkah 81920: reward rata 0.0230
+langkah 86016: reward rata 0.0234
+langkah 90112: reward rata 0.0193
+langkah 94208: reward rata 0.0237
+langkah 98304: reward rata 0.0186
+selesai 1471 s
