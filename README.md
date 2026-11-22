@@ -80,7 +80,7 @@ every path in Appendix 9 of the thesis exists here.
 | `revisi/hasil/gerbang_batch/` | Experiment scripts of recipe E15 E9c, their tests, validation results (`e15/`), the test opening log (`buka_uji.log`) and analysis |
 | `latex/.../chapter5/generated/` | Tables and JSON of Chapter V, written by `bab5_jalan.py` |
 | `docs/KUNCI_UJI.md` | Test lock document (Indonesian): recipe, model hashes, methods, measures, claims |
-| `src/arls_ppo/` | New thin API: model check (`models`), one episode with an optional trace (`episode`), full validation parity (`parity`) |
+| `src/arls_ppo/` | New thin API: model check (`models`), one episode with an optional trace (`episode`), full validation parity (`parity`), user projects (`custom`), the user as the selector (`manual`) |
 | `results/test/test_episodes.csv.gz` | One row per test episode (154,980 rows), without per-decision timing lists |
 | `PROVENANCE.sha256` | SHA-256 of the 343 files copied unchanged from the thesis repository at commit `f9f59439` |
 
@@ -137,6 +137,14 @@ for all eight methods in `tests/test_trace.py`. On top of the result it records:
 - the schedule before the disruptions, after AOR, and after the repair;
 - for every sub-decision: the 38 state numbers, the mask, the level probabilities, the level
   requested and the level used, the guard decision, and J before and after.
+
+Two more modules serve the simulator; they are not used for any thesis number:
+
+- `arls_ppo.custom`: a user project (epics, issues, developers, links) goes through the path of
+  the thesis instances;
+- `arls_ppo.manual`: the user picks levels, or moves tasks on the board, inside the same episode
+  code. The same J and the same schedule checks apply. Choosing ARLS-PPO's own levels with the
+  guard reproduces ARLS-PPO's result exactly (`tests/test_manual.py`).
 
 ## Reproducing
 
