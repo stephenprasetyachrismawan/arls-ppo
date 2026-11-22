@@ -28,6 +28,9 @@ METHODS: dict[str, str] = {
     "il_g": "Boosting-IL + penjaga",
 }
 
+#: Methods where the user is the selector (:mod:`arls_ppo.manual`); not thesis methods.
+MANUAL_METHODS: dict[str, str] = {"manual": "Manual", "manual_g": "Manual + penjaga"}
+
 #: The five disruption types of the TAWOS model, code -> name used in the manuscript.
 DISRUPTION_TYPES: dict[str, str] = {
     "urgent_task": "Pekerjaan tidak terencana",
@@ -105,14 +108,15 @@ def _prepare(ce, method: str, model_seed: int) -> None:
         ce._PPO.clear()
 
 
-def run_episode(instance: str, capacity: float, intensity: float, seed: int, method: str,
+def run_episode(instance, capacity: float, intensity: float, seed: int, method: str,
                 lam: float, *, model_seed: int = 0, check: bool = True) -> dict:
     """One episode; returns the result record of ``cek_episode.run`` unchanged.
 
     Parameters
     ----------
-    instance : str
-        Training or validation instance, e.g. ``"MK01"`` or ``"hurink/edata/la02"``.
+    instance : str or arls_ppo.custom.CustomProject
+        Training or validation instance, e.g. ``"MK01"`` or ``"hurink/edata/la02"``, or a
+        project typed in by a user (see :mod:`arls_ppo.custom`).
     capacity, intensity : float
         Capacity multiplier (1.0, 1.5, 2.0 in the thesis) and disruption intensity
         (0.05, 0.15, 0.30).
@@ -127,9 +131,9 @@ def run_episode(instance: str, capacity: float, intensity: float, seed: int, met
     check : bool, default=True
         Run the schedule verifier on every decision, as during the test opening (``PERIKSA``).
     """
-    ce = _start(instance, seed, method, model_seed)
-    return _run(ce, (instance, float(capacity), float(intensity), int(seed), method,
-                     float(lam)), check)
+    ce, name = _start(instance, seed, method, model_seed)
+    return _run(ce, (name, float(capacity), float(intensity), int(seed), method, float(lam)),
+                check, _project(instance))
 
 
 @dataclass
@@ -159,24 +163,29 @@ class EpisodeTrace:
     meta: dict = field(default_factory=dict)
 
 
-def trace_episode(instance: str, capacity: float, intensity: float, seed: int, method: str,
-                  lam: float, *, model_seed: int = 0, check: bool = True) -> EpisodeTrace:
+def trace_episode(instance, capacity: float, intensity: float, seed: int, method: str,
+                  lam: float, *, model_seed: int = 0, check: bool = True,
+                  options: bool = False, _allow_manual: bool = False) -> EpisodeTrace:
     """Like :func:`run_episode`, but also record every event for display.
 
     The run itself is ``cek_episode.run``; the trace only watches it (see ``_trace``). In trace
     mode ``ms`` and ``ms_keputusan`` include the time of taking snapshots, while
     ``ms_pemilih`` (selector time, indicator I-1) stays as in the plain run.
+
+    With ``options=True`` every sub-decision also records the J of each level 0-3 at that
+    point (computed after the batch, for display only).
     """
     from . import _trace
 
-    ce = _start(instance, seed, method, model_seed)
-    job = (instance, float(capacity), float(intensity), int(seed), method, float(lam))
-    rec = _trace.Recorder(lam)
+    ce, name = _start(instance, seed, method, model_seed, allow_manual=_allow_manual)
+    job = (name, float(capacity), float(intensity), int(seed), method, float(lam))
+    rec = _trace.Recorder(lam, options=options)
     with _trace.hooks(ce, rec):
-        result = _run(ce, job, check)
+        result = _run(ce, job, check, _project(instance))
     files = verify_models()
-    meta = {"instance": instance, "capacity": float(capacity), "intensity": float(intensity),
-            "seed": int(seed), "method": method, "method_name": METHODS[method],
+    meta = {"instance": name, "capacity": float(capacity), "intensity": float(intensity),
+            "seed": int(seed), "method": method,
+            "method_name": {**METHODS, **MANUAL_METHODS}[method],
             "lam": float(lam), "model_seed": int(model_seed) if method.startswith("ppo_")
             else None, "mean_effort": rec.mean_effort, "feature_names": list(FEATURE_NAMES),
             "model_files": [{"path": f.path, "sha256": f.actual} for f in files]}
@@ -184,17 +193,48 @@ def trace_episode(instance: str, capacity: float, intensity: float, seed: int, m
                         meta=meta)
 
 
-def _start(instance, seed, method, model_seed):
-    if method not in METHODS:
+def _project(instance):
+    from .custom import CustomProject
+
+    return instance if isinstance(instance, CustomProject) else None
+
+
+def _start(instance, seed, method, model_seed, allow_manual=False):
+    """Check the request and load what the method needs; return (cek_episode, name)."""
+    from .custom import CustomProject
+
+    if method not in METHODS and not (allow_manual and method in MANUAL_METHODS):
         raise ValueError(f"metode {method!r} tidak dilaporkan di tesis; pilih salah satu dari "
                          f"{', '.join(METHODS)}")
-    _refuse_test_data(instance, seed)
+    if isinstance(instance, CustomProject):
+        _refuse_test_data(instance.instance_name, seed)
+        name = instance.instance_name
+    else:
+        _refuse_test_data(instance, seed)
+        name = instance
     ce = _cek_episode()
     _prepare(ce, method, model_seed)
-    return ce
+    return ce, name
 
 
-def _run(ce, job, check):
+def _run(ce, job, check, project=None):
+    """``cek_episode.run(job)``; a user project is served to its ``instans_acak.load_any``."""
+    if project is None:
+        return _run_plain(ce, job, check)
+    import instans_acak
+
+    from .custom import build_instance
+
+    inst = build_instance(project)
+    original = instans_acak.load_any
+    instans_acak.load_any = lambda name: inst if name == project.instance_name else original(name)
+    try:
+        return _run_plain(ce, job, check)
+    finally:
+        instans_acak.load_any = original
+
+
+def _run_plain(ce, job, check):
     old = os.environ.get("PERIKSA")
     if check:
         os.environ["PERIKSA"] = "1"

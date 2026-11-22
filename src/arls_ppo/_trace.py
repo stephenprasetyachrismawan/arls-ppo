@@ -169,8 +169,9 @@ def _probabilities(policy, x, mask):
 class Recorder:
     """Collects the events of one traced episode."""
 
-    def __init__(self, lam):
+    def __init__(self, lam, options=False):
         self.lam = float(lam)
+        self.options = bool(options)
         self.events: list[dict] = []
         self.initial: dict | None = None
         self.mean_effort: float | None = None
@@ -208,6 +209,16 @@ class Recorder:
             ev["after"] = _snapshot(env, with_tasks=False)
             ev["tard_after"] = total_tardiness(env.inst, env.sched) / E
             ev["changes"] = 0
+        manual = getattr(env, "_manual_move", None)
+        if ev["subs"] is None and manual is not None:     # card moves by the user
+            env._manual_move = None
+            ev["subs"] = [{"j": j, "type": a["type"], "affected": a["tasks"], "requested": None,
+                           "used": None, "outcome": "manual_geser", "J_before": ev["tard_aor"],
+                           "J_after": manual["J"], "changes_after": ev["changes"]}
+                          for j, a in enumerate(ev["affected"])]
+            ev["J_after_batch"] = manual["J"]
+            ev["change_items"] = manual["items"]
+            ev["moves"] = manual["moves"]
         if ev["subs"] is None:      # AOR: no selector, every sub-decision stays at level 0
             ev["subs"] = [{"j": j, "type": a["type"], "affected": a["tasks"], "requested": 0,
                            "used": 0, "outcome": "aor", "J_before": ev["tard_aor"],
@@ -248,6 +259,13 @@ class Recorder:
                 x, mask, req = calls[j]
                 sub.update(features=x.astype(float).tolist(), mask=mask, requested=req,
                            probs=_probabilities(policy, x, mask))
+                if self.options:
+                    values = {0: cur_j}
+                    for lv in (1, 2, 3):
+                        tr = cek_b3.try_level(inst, cur, t, A[j], cek_b3.OPS[lv])
+                        if tr is not None:
+                            values[lv] = cek_b3.score(inst, base, tr, t, E, lam)[0]
+                    sub["options"] = values
                 if req > 0:
                     tr = cek_b3.try_level(inst, cur, t, A[j], cek_b3.OPS[req])
                     if tr is None:
