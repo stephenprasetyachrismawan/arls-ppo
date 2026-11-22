@@ -72,6 +72,24 @@ def test_replayed_value_path_ends_at_the_value_of_each_decision(runs, method, la
             ev["tard_after"] + lam * ev["changes"], abs=1e-9)
 
 
+@pytest.mark.parametrize("method", list(episode.METHODS))
+def test_listed_changes_count_exactly_the_changes_of_the_thesis(runs, method):
+    """U = tasks moved to another developer + (n - LIS) per developer, listed one by one."""
+    _, tr = runs[method]
+    for ev in tr.events:
+        items = ev["change_items"]
+        assert len(items) == ev["changes"]
+        assert {i["kind"] for i in items} <= {"assignee", "rank"}
+        for i in items:
+            if i["kind"] == "assignee":
+                assert i["from_dev"] != i["to_dev"]
+                assert ev["aor"]["entries"][i["task"]]["dev"] == i["from_dev"]
+                assert ev["after"]["entries"][i["task"]]["dev"] == i["to_dev"]
+            else:
+                assert ev["aor"]["entries"][i["task"]]["dev"] == i["dev"]
+                assert ev["after"]["entries"][i["task"]]["dev"] == i["dev"]
+
+
 @pytest.mark.parametrize("method", LEARNED)
 def test_learned_selectors_record_state_mask_and_probabilities(runs, method):
     _, tr = runs[method]

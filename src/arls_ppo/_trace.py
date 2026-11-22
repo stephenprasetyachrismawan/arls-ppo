@@ -71,6 +71,65 @@ def _disruptions(event):
             for s in subs]
 
 
+def _lis_members(seq):
+    """Indices of one longest strictly increasing subsequence of ``seq``.
+
+    Same length as ``dfjsp.repair.ladder._lis_length`` (patience sorting with
+    ``bisect_left``); the predecessor links pick one such subsequence.
+    """
+    import bisect
+
+    tails, tail_idx, parent = [], [], [None] * len(seq)
+    for i, x in enumerate(seq):
+        k = bisect.bisect_left(tails, x)
+        if k == len(tails):
+            tails.append(x)
+            tail_idx.append(i)
+        else:
+            tails[k] = x
+            tail_idx[k] = i
+        parent[i] = tail_idx[k - 1] if k > 0 else None
+    out, i = set(), tail_idx[-1] if tail_idx else None
+    while i is not None:
+        out.add(i)
+        i = parent[i]
+    return out
+
+
+def change_items(inst, before, after_entries, t_now):
+    """The changes of ``dfjsp.repair.ladder.count_changes``, one item per counted change.
+
+    Tasks moved to another developer are ``assignee`` items. For tasks that stay with the same
+    developer and had not started in ``before``, the tasks outside one longest increasing
+    subsequence of their old positions are ``rank`` items, so their number is n - LIS.
+    """
+    from dfjsp.env.schedule import queue_order
+
+    items = []
+    for tid, e in after_entries.items():
+        b = before.entries.get(tid)
+        if b is not None and b.dev_id != e.dev_id:
+            items.append({"task": int(tid), "kind": "assignee", "from_dev": int(b.dev_id),
+                          "to_dev": int(e.dev_id)})
+    qb = queue_order(inst, before, t_now)
+    waiting = {t for q in qb.values() for t in q}
+    qa: dict = {}
+    for tid in waiting:
+        e = after_entries.get(tid)
+        if e is not None:
+            qa.setdefault(e.dev_id, []).append(tid)
+    for dev, new in sorted(qa.items()):
+        new.sort(key=lambda tid: (after_entries[tid].start, tid))
+        old_pos = {t: k for k, t in enumerate(qb.get(dev, []))}
+        common = [t for t in new if t in old_pos]
+        keep = _lis_members([old_pos[t] for t in common])
+        for idx, t in enumerate(common):
+            if idx not in keep:
+                items.append({"task": int(t), "kind": "rank", "dev": int(dev),
+                              "from_pos": old_pos[t] + 1, "to_pos": new.index(t) + 1})
+    return items
+
+
 class _RecordingPolicy:
     """Pass every call to the real selector; remember state, mask and the level it chose."""
 
@@ -155,6 +214,7 @@ class Recorder:
                            "J_after": ev["tard_aor"], "changes_after": 0}
                           for j, a in enumerate(ev["affected"])]
             ev["J_after_batch"] = ev["tard_aor"]
+        ev.setdefault("change_items", [])
         self.events.append(ev)
         self._current = None
 
@@ -208,6 +268,8 @@ class Recorder:
         self._current["J_after_batch"] = (
             j_aor if final_sched is base
             else cek_b3.score(inst, base, final_sched, t, E, lam)[0])
+        self._current["change_items"] = (
+            [] if final_sched is base else change_items(inst, base, final_sched.entries, t))
 
 
 def _probe_class(base, rec):
