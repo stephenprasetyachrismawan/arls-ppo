@@ -1,0 +1,36 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Suku $J$ setiap tahap pelatihan pada data validasi}
+\label{tab:validasi-tahap}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrrr}
+\toprule
+$\lambda$ & Metode & Keterlambatan & Perubahan & $\lambda\times$perubahan & $J$ \\
+\midrule
+0{,}3 & Random + penjaga & $560{,}00$ & $79{,}96$ & $23{,}99$ & $583{,}99$ \\
+0{,}3 & Fixed-L3 + penjaga & $513{,}96$ & $95{,}43$ & $28{,}63$ & $542{,}59$ \\
+0{,}3 & BC & $487{,}30$ & $79{,}14$ & $23{,}74$ & $511{,}04$ \\
+0{,}3 & BC + DAgger & $466{,}52$ & $78{,}16$ & $23{,}45$ & $489{,}96$ \\
+0{,}3 & BC + DAgger + PPO & $456{,}88$ & $79{,}89$ & $23{,}97$ & $480{,}85$ \\
+0{,}3 & Sequential Lookahead & $372{,}41$ & $84{,}48$ & $25{,}35$ & $397{,}75$ \\
+\addlinespace
+3 & Random + penjaga & $573{,}63$ & $63{,}67$ & $191{,}02$ & $764{,}66$ \\
+3 & Fixed-L3 + penjaga & $536{,}46$ & $74{,}83$ & $224{,}50$ & $760{,}96$ \\
+3 & BC & $557{,}60$ & $56{,}38$ & $169{,}13$ & $726{,}73$ \\
+3 & BC + DAgger & $521{,}13$ & $57{,}81$ & $173{,}44$ & $694{,}58$ \\
+3 & BC + DAgger + PPO & $507{,}34$ & $58{,}61$ & $175{,}82$ & $683{,}16$ \\
+3 & Sequential Lookahead & $405{,}46$ & $59{,}02$ & $177{,}05$ & $582{,}50$ \\
+\addlinespace
+30 & Random + penjaga & $1076{,}74$ & $22{,}34$ & $670{,}24$ & $1746{,}98$ \\
+30 & Fixed-L3 + penjaga & $963{,}96$ & $23{,}44$ & $703{,}33$ & $1667{,}29$ \\
+30 & BC & $1236{,}45$ & $20{,}62$ & $618{,}49$ & $1854{,}94$ \\
+30 & BC + DAgger & $1138{,}42$ & $20{,}85$ & $625{,}63$ & $1764{,}05$ \\
+30 & BC + DAgger + PPO & $1117{,}70$ & $20{,}71$ & $621{,}35$ & $1739{,}05$ \\
+30 & Sequential Lookahead & $819{,}06$ & $24{,}41$ & $732{,}38$ & $1551{,}44$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Tujuh instans latih, \emph{seed} validasi 5000 dan 5001, tiga kapasitas, tiga intensitas. Semua tahap memakai penjaga. Nilai jaringan dirata-rata atas tiga \emph{seed} model per kondisi, lalu per instans. Keterlambatan dalam satuan $E$. AOR tidak dijalankan pada validasi E15.
+\end{table}

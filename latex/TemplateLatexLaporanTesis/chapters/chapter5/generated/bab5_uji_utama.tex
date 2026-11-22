@@ -1,0 +1,20 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Keluarga uji utama: ARLS-PPO terhadap dua pembanding (selang 98{,}75\%)}
+\label{tab:uji-utama}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llllc}
+\toprule
+Pembanding & $\lambda$ & Uk.~1 (\%) & Uk.~2 (\%) & Kesimpulan \\
+\midrule
+Random + penjaga & 0{,}3 & $-24{,}01$ [$-26{,}59$; $-21{,}38$]$^{*}$ & $-23{,}62$ [$-25{,}58$; $-21{,}74$]$^{*}$ & lebih baik \\
+Random + penjaga & 3 & $-14{,}88$ [$-16{,}74$; $-12{,}99$]$^{*}$ & $-15{,}73$ [$-17{,}10$; $-14{,}11$]$^{*}$ & lebih baik \\
+Fixed-L3 + penjaga & 0{,}3 & $+18{,}14$ [$+7{,}86$; $+32{,}65$]$^{*}$ & $-4{,}45$ [$-6{,}29$; $-0{,}91$]$^{*}$ & tidak tegas \\
+Fixed-L3 + penjaga & 3 & $+0{,}49$ [$-2{,}17$; $+4{,}20$] & $-6{,}31$ [$-7{,}62$; $-4{,}30$]$^{*}$ & tidak tegas \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Angka adalah selisih $J$ ARLS-PPO terhadap pembanding dalam persen; negatif berarti ARLS-PPO lebih baik. Uk.~1 rata-rata rasio per kondisi, uk.~2 rasio $J$ total; setiap instans berbobot sama. Tanda $^{*}$: selang tidak memuat nol. Kesimpulan ditulis \emph{lebih baik} atau \emph{lebih buruk} hanya bila kedua selang berada di sisi yang sama dari nol.
+\end{table}

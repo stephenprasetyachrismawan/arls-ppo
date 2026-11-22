@@ -1,0 +1,24 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Waktu keputusan pada data uji (I-1)}
+\label{tab:uji-waktu}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrcr}
+\toprule
+Metode & \shortstack[r]{p95 pemilih\\(ms)} & \shortstack{Di bawah\\50 ms} & \shortstack[r]{p95 total\\(ms)} \\
+\midrule
+ARLS-PPO & $1{,}92$ & ya & $466{,}42$ \\
+AOR & -- & -- & $0{,}01$ \\
+Random + penjaga & $0{,}11$ & ya & $367{,}28$ \\
+Fixed-L3 + penjaga & $0{,}01$ & ya & $733{,}17$ \\
+Boosting-IL + penjaga & $64{,}07$ & tidak & $930{,}83$ \\
+ARLS-BC & $1{,}91$ & ya & $459{,}17$ \\
+ARLS-PPO tanpa penjaga & $1{,}91$ & ya & $468{,}23$ \\
+Sequential Lookahead & -- & -- & $1021{,}01$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} p95 dihitung per instans dari semua episode instans itu; yang ditampilkan p95 terbesar atas 38 instans. Ambang 50 ms hanya untuk waktu pemilih. Waktu total memuat fitur, pemilih, operator, dan penjaga. Tanda -- : metode tanpa pemilih terpisah. Diukur pada 8 proses paralel.
+\end{table}

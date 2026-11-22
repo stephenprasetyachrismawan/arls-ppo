@@ -1,0 +1,24 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Pelanggaran keras pemeriksa jadwal pada data uji (I-2)}
+\label{tab:uji-layak}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrr}
+\toprule
+Metode & Episode & \shortstack[r]{Pelanggaran\\keras} & \shortstack[r]{Episode tanpa\\pemeriksa} \\
+\midrule
+ARLS-PPO & 33.210 & 0 & 0 \\
+AOR & 11.070 & 0 & 0 \\
+Random + penjaga & 11.070 & 0 & 0 \\
+Fixed-L3 + penjaga & 11.070 & 0 & 0 \\
+Boosting-IL + penjaga & 11.070 & 0 & 0 \\
+ARLS-BC & 33.210 & 0 & 0 \\
+ARLS-PPO tanpa penjaga & 33.210 & 0 & 0 \\
+Sequential Lookahead & 11.070 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Episode metode PPO dihitung untuk tiga \emph{seed} model.
+\end{table}

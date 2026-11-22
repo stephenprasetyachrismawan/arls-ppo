@@ -1,0 +1,1391 @@
+{
+ "kondisi": [
+  "MK01",
+  1.5,
+  0.15,
+  5000
+ ],
+ "model_seed": 0,
+ "lam": {
+  "0.3": {
+   "kejadian": [
+    {
+     "t": 2.849362822108965,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 18.93732062552392,
+     "telat_sesudah": 0.0102052336020077,
+     "ubah": 1,
+     "no": 1,
+     "pulih": 18.927115391921912,
+     "harga": 0.3,
+     "untung": 18.62711539192191,
+     "ubah_kumulatif": 1,
+     "J": 0.3102052336020077
+    },
+    {
+     "t": 5.488893419513948,
+     "jenis": [
+      "rework_review_fail",
+      "urgent_task"
+     ],
+     "diminta": [
+      3,
+      2
+     ],
+     "dipakai": [
+      3,
+      2
+     ],
+     "telat_sebelum": 45.04593055524793,
+     "telat_sesudah": 23.87184925948229,
+     "ubah": 3,
+     "no": 2,
+     "pulih": 21.17408129576564,
+     "harga": 0.8999999999999999,
+     "untung": 20.27408129576564,
+     "ubah_kumulatif": 4,
+     "J": 25.07184925948229
+    },
+    {
+     "t": 9.25,
+     "jenis": [
+      "effort_revision"
+     ],
+     "diminta": [
+      3
+     ],
+     "dipakai": [
+      0
+     ],
+     "telat_sebelum": 127.69465698395739,
+     "telat_sesudah": 127.69465698395739,
+     "ubah": 0,
+     "no": 3,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 4,
+     "J": 128.8946569839574
+    },
+    {
+     "t": 18.644244626095176,
+     "jenis": [
+      "developer_unavailable",
+      "developer_unavailable",
+      "urgent_task",
+      "rework_review_fail",
+      "urgent_task",
+      "priority_change",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      1,
+      3,
+      3,
+      3,
+      3,
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      1,
+      0,
+      3,
+      3,
+      3,
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 271.89705509221005,
+     "telat_sesudah": 227.17145857082724,
+     "ubah": 2,
+     "no": 4,
+     "pulih": 44.72559652138281,
+     "harga": 0.6,
+     "untung": 44.12559652138281,
+     "ubah_kumulatif": 6,
+     "J": 228.97145857082725
+    },
+    {
+     "t": 19.200113886307353,
+     "jenis": [
+      "rework_review_fail",
+      "developer_unavailable"
+     ],
+     "diminta": [
+      3,
+      3
+     ],
+     "dipakai": [
+      3,
+      3
+     ],
+     "telat_sebelum": 231.443184193986,
+     "telat_sesudah": 220.92260330104276,
+     "ubah": 3,
+     "no": 5,
+     "pulih": 10.520580892943258,
+     "harga": 0.8999999999999999,
+     "untung": 9.620580892943257,
+     "ubah_kumulatif": 9,
+     "J": 223.62260330104274
+    },
+    {
+     "t": 26.5,
+     "jenis": [
+      "rework_review_fail",
+      "urgent_task",
+      "effort_revision",
+      "urgent_task",
+      "effort_revision"
+     ],
+     "diminta": [
+      3,
+      3,
+      2,
+      3,
+      3
+     ],
+     "dipakai": [
+      3,
+      0,
+      0,
+      3,
+      3
+     ],
+     "telat_sebelum": 229.7228493450482,
+     "telat_sesudah": 229.7228493450482,
+     "ubah": 0,
+     "no": 6,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 9,
+     "J": 232.42284934504818
+    },
+    {
+     "t": 33.185126614823474,
+     "jenis": [
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      3,
+      2
+     ],
+     "dipakai": [
+      3,
+      2
+     ],
+     "telat_sebelum": 247.26207752483054,
+     "telat_sesudah": 229.9700833532985,
+     "ubah": 4,
+     "no": 7,
+     "pulih": 17.291994171532053,
+     "harga": 1.2,
+     "untung": 16.091994171532054,
+     "ubah_kumulatif": 13,
+     "J": 233.8700833532985
+    },
+    {
+     "t": 39.99504487864951,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "effort_revision",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      3,
+      3,
+      3,
+      3,
+      2,
+      0
+     ],
+     "dipakai": [
+      3,
+      0,
+      0,
+      0,
+      2,
+      0
+     ],
+     "telat_sebelum": 263.04278714059564,
+     "telat_sesudah": 173.29037463459414,
+     "ubah": 5,
+     "no": 8,
+     "pulih": 89.75241250600149,
+     "harga": 1.5,
+     "untung": 88.25241250600149,
+     "ubah_kumulatif": 18,
+     "J": 178.69037463459415
+    },
+    {
+     "t": 43.25,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "effort_revision"
+     ],
+     "diminta": [
+      3,
+      3,
+      3,
+      3,
+      3
+     ],
+     "dipakai": [
+      3,
+      0,
+      3,
+      0,
+      3
+     ],
+     "telat_sebelum": 175.53683346177218,
+     "telat_sesudah": 166.36500365289717,
+     "ubah": 2,
+     "no": 9,
+     "pulih": 9.171829808875003,
+     "harga": 0.6,
+     "untung": 8.571829808875004,
+     "ubah_kumulatif": 20,
+     "J": 172.36500365289717
+    },
+    {
+     "t": 44.87333932682278,
+     "jenis": [
+      "urgent_task"
+     ],
+     "diminta": [
+      3
+     ],
+     "dipakai": [
+      3
+     ],
+     "telat_sebelum": 166.36500365289717,
+     "telat_sesudah": 166.36500365289717,
+     "ubah": 0,
+     "no": 10,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 20,
+     "J": 172.36500365289717
+    },
+    {
+     "t": 53.9583121887589,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      3,
+      3,
+      1,
+      0
+     ],
+     "dipakai": [
+      3,
+      0,
+      1,
+      0
+     ],
+     "telat_sebelum": 186.94976996022186,
+     "telat_sesudah": 172.72746127644726,
+     "ubah": 5,
+     "no": 11,
+     "pulih": 14.2223086837746,
+     "harga": 1.5,
+     "untung": 12.7223086837746,
+     "ubah_kumulatif": 25,
+     "J": 180.22746127644726
+    },
+    {
+     "t": 55.91204474944543,
+     "jenis": [
+      "effort_revision",
+      "developer_unavailable"
+     ],
+     "diminta": [
+      3,
+      3
+     ],
+     "dipakai": [
+      3,
+      3
+     ],
+     "telat_sebelum": 201.5107146079991,
+     "telat_sesudah": 180.59148639479915,
+     "ubah": 4,
+     "no": 12,
+     "pulih": 20.919228213199943,
+     "harga": 1.2,
+     "untung": 19.719228213199944,
+     "ubah_kumulatif": 29,
+     "J": 189.29148639479914
+    },
+    {
+     "t": 60.257675570247216,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "developer_unavailable"
+     ],
+     "diminta": [
+      0,
+      3,
+      2
+     ],
+     "dipakai": [
+      0,
+      3,
+      0
+     ],
+     "telat_sebelum": 180.59148639479915,
+     "telat_sesudah": 179.50774255243462,
+     "ubah": 2,
+     "no": 13,
+     "pulih": 1.0837438423645267,
+     "harga": 0.6,
+     "untung": 0.4837438423645267,
+     "ubah_kumulatif": 31,
+     "J": 188.80774255243463
+    },
+    {
+     "t": 67.00000000000001,
+     "jenis": [
+      "urgent_task",
+      "developer_unavailable",
+      "rework_review_fail"
+     ],
+     "diminta": [
+      3,
+      2,
+      2
+     ],
+     "dipakai": [
+      0,
+      2,
+      0
+     ],
+     "telat_sebelum": 182.01136057847813,
+     "telat_sesudah": 181.69767198802035,
+     "ubah": 1,
+     "no": 14,
+     "pulih": 0.31368859045778663,
+     "harga": 0.3,
+     "untung": 0.013688590457786642,
+     "ubah_kumulatif": 32,
+     "J": 191.29767198802034
+    },
+    {
+     "t": 68.97570060473501,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      3,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 185.22189272068195,
+     "telat_sesudah": 185.22189272068195,
+     "ubah": 0,
+     "no": 15,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 32,
+     "J": 194.82189272068194
+    },
+    {
+     "t": 74.57803131146171,
+     "jenis": [
+      "urgent_task",
+      "developer_unavailable",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      2,
+      3,
+      3,
+      3
+     ],
+     "dipakai": [
+      2,
+      0,
+      3,
+      3
+     ],
+     "telat_sebelum": 252.83307344390855,
+     "telat_sesudah": 245.21375416462607,
+     "ubah": 1,
+     "no": 16,
+     "pulih": 7.619319279282479,
+     "harga": 0.3,
+     "untung": 7.319319279282479,
+     "ubah_kumulatif": 33,
+     "J": 255.11375416462607
+    }
+   ],
+   "J_akhir": 255.11375416462607,
+   "telat_akhir": 245.21375416462607,
+   "ubah": 33
+  },
+  "3.0": {
+   "kejadian": [
+    {
+     "t": 2.849362822108965,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      1,
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 18.93732062552392,
+     "telat_sesudah": 0.0102052336020077,
+     "ubah": 1,
+     "no": 1,
+     "pulih": 18.927115391921912,
+     "harga": 3.0,
+     "untung": 15.927115391921912,
+     "ubah_kumulatif": 1,
+     "J": 3.0102052336020075
+    },
+    {
+     "t": 5.488893419513948,
+     "jenis": [
+      "rework_review_fail",
+      "urgent_task"
+     ],
+     "diminta": [
+      3,
+      2
+     ],
+     "dipakai": [
+      0,
+      2
+     ],
+     "telat_sebelum": 45.04593055524793,
+     "telat_sesudah": 25.791716896762924,
+     "ubah": 1,
+     "no": 2,
+     "pulih": 19.254213658485003,
+     "harga": 3.0,
+     "untung": 16.254213658485003,
+     "ubah_kumulatif": 2,
+     "J": 31.791716896762924
+    },
+    {
+     "t": 9.25,
+     "jenis": [
+      "effort_revision"
+     ],
+     "diminta": [
+      2
+     ],
+     "dipakai": [
+      0
+     ],
+     "telat_sebelum": 132.74793307320905,
+     "telat_sesudah": 132.74793307320905,
+     "ubah": 0,
+     "no": 3,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 2,
+     "J": 138.74793307320905
+    },
+    {
+     "t": 18.644244626095176,
+     "jenis": [
+      "developer_unavailable",
+      "developer_unavailable",
+      "urgent_task",
+      "rework_review_fail",
+      "urgent_task",
+      "priority_change",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      1,
+      0,
+      3,
+      3,
+      0,
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      1,
+      0,
+      3,
+      3,
+      0,
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 278.50184888019976,
+     "telat_sesudah": 232.6925085164524,
+     "ubah": 3,
+     "no": 4,
+     "pulih": 45.80934036374737,
+     "harga": 9.0,
+     "untung": 36.80934036374737,
+     "ubah_kumulatif": 5,
+     "J": 247.6925085164524
+    },
+    {
+     "t": 19.200113886307353,
+     "jenis": [
+      "rework_review_fail",
+      "developer_unavailable"
+     ],
+     "diminta": [
+      3,
+      3
+     ],
+     "dipakai": [
+      0,
+      3
+     ],
+     "telat_sebelum": 236.96423413961116,
+     "telat_sesudah": 225.90178132548567,
+     "ubah": 3,
+     "no": 5,
+     "pulih": 11.062452814125493,
+     "harga": 9.0,
+     "untung": 2.0624528141254928,
+     "ubah_kumulatif": 8,
+     "J": 249.90178132548567
+    },
+    {
+     "t": 26.5,
+     "jenis": [
+      "rework_review_fail",
+      "urgent_task",
+      "effort_revision",
+      "urgent_task",
+      "effort_revision"
+     ],
+     "diminta": [
+      3,
+      3,
+      3,
+      3,
+      3
+     ],
+     "dipakai": [
+      3,
+      0,
+      3,
+      3,
+      3
+     ],
+     "telat_sebelum": 234.7020273694911,
+     "telat_sesudah": 234.7020273694911,
+     "ubah": 0,
+     "no": 6,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 8,
+     "J": 258.70202736949113
+    },
+    {
+     "t": 33.185126614823474,
+     "jenis": [
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      3,
+      2
+     ],
+     "dipakai": [
+      3,
+      0
+     ],
+     "telat_sebelum": 252.49416338945636,
+     "telat_sesudah": 235.43450216930233,
+     "ubah": 3,
+     "no": 7,
+     "pulih": 17.059661220154027,
+     "harga": 9.0,
+     "untung": 8.059661220154027,
+     "ubah_kumulatif": 11,
+     "J": 268.43450216930233
+    },
+    {
+     "t": 39.99504487864951,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "effort_revision",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      2,
+      0,
+      0,
+      2,
+      2,
+      0
+     ],
+     "dipakai": [
+      2,
+      0,
+      0,
+      0,
+      2,
+      0
+     ],
+     "telat_sebelum": 268.873376056025,
+     "telat_sesudah": 235.0328510880041,
+     "ubah": 2,
+     "no": 8,
+     "pulih": 33.8405249680209,
+     "harga": 6.0,
+     "untung": 27.8405249680209,
+     "ubah_kumulatif": 13,
+     "J": 274.0328510880041
+    },
+    {
+     "t": 43.25,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "effort_revision"
+     ],
+     "diminta": [
+      0,
+      0,
+      3,
+      3,
+      3
+     ],
+     "dipakai": [
+      0,
+      0,
+      3,
+      0,
+      3
+     ],
+     "telat_sebelum": 237.27930991518215,
+     "telat_sesudah": 208.4688188900674,
+     "ubah": 3,
+     "no": 9,
+     "pulih": 28.810491025114743,
+     "harga": 9.0,
+     "untung": 19.810491025114743,
+     "ubah_kumulatif": 16,
+     "J": 256.4688188900674
+    },
+    {
+     "t": 44.87333932682278,
+     "jenis": [
+      "urgent_task"
+     ],
+     "diminta": [
+      0
+     ],
+     "dipakai": [
+      0
+     ],
+     "telat_sebelum": 208.4688188900674,
+     "telat_sesudah": 208.4688188900674,
+     "ubah": 0,
+     "no": 10,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 16,
+     "J": 256.4688188900674
+    },
+    {
+     "t": 53.9583121887589,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      0,
+      0,
+      2,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      2,
+      0
+     ],
+     "telat_sebelum": 232.30481672448573,
+     "telat_sesudah": 218.19318605585795,
+     "ubah": 1,
+     "no": 11,
+     "pulih": 14.111630668627782,
+     "harga": 3.0,
+     "untung": 11.111630668627782,
+     "ubah_kumulatif": 17,
+     "J": 269.19318605585795
+    },
+    {
+     "t": 55.91204474944543,
+     "jenis": [
+      "effort_revision",
+      "developer_unavailable"
+     ],
+     "diminta": [
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0
+     ],
+     "telat_sebelum": 211.94854282709807,
+     "telat_sesudah": 211.94854282709807,
+     "ubah": 0,
+     "no": 12,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 17,
+     "J": 262.9485428270981
+    },
+    {
+     "t": 60.257675570247216,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "developer_unavailable"
+     ],
+     "diminta": [
+      0,
+      0,
+      2
+     ],
+     "dipakai": [
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 213.28897128902682,
+     "telat_sesudah": 213.28897128902682,
+     "ubah": 0,
+     "no": 13,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 17,
+     "J": 264.2889712890268
+    },
+    {
+     "t": 67.00000000000001,
+     "jenis": [
+      "urgent_task",
+      "developer_unavailable",
+      "rework_review_fail"
+     ],
+     "diminta": [
+      0,
+      3,
+      0
+     ],
+     "dipakai": [
+      0,
+      3,
+      0
+     ],
+     "telat_sebelum": 215.86092042904608,
+     "telat_sesudah": 215.86092042904608,
+     "ubah": 0,
+     "no": 14,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 17,
+     "J": 266.8609204290461
+    },
+    {
+     "t": 68.97570060473501,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 220.48870432991572,
+     "telat_sesudah": 220.48870432991572,
+     "ubah": 0,
+     "no": 15,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 17,
+     "J": 271.4887043299157
+    },
+    {
+     "t": 74.57803131146171,
+     "jenis": [
+      "urgent_task",
+      "developer_unavailable",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      2,
+      3,
+      0,
+      0
+     ],
+     "dipakai": [
+      2,
+      3,
+      0,
+      0
+     ],
+     "telat_sebelum": 296.5837430745036,
+     "telat_sesudah": 221.889368742645,
+     "ubah": 4,
+     "no": 16,
+     "pulih": 74.69437433185863,
+     "harga": 12.0,
+     "untung": 62.694374331858626,
+     "ubah_kumulatif": 21,
+     "J": 284.889368742645
+    }
+   ],
+   "J_akhir": 284.889368742645,
+   "telat_akhir": 221.889368742645,
+   "ubah": 21
+  },
+  "30.0": {
+   "kejadian": [
+    {
+     "t": 2.849362822108965,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 18.93732062552392,
+     "telat_sesudah": 18.93732062552392,
+     "ubah": 0,
+     "no": 1,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 18.93732062552392
+    },
+    {
+     "t": 5.488893419513948,
+     "jenis": [
+      "rework_review_fail",
+      "urgent_task"
+     ],
+     "diminta": [
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0
+     ],
+     "telat_sebelum": 65.16136474569092,
+     "telat_sesudah": 65.16136474569092,
+     "ubah": 0,
+     "no": 2,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 65.16136474569092
+    },
+    {
+     "t": 9.25,
+     "jenis": [
+      "effort_revision"
+     ],
+     "diminta": [
+      0
+     ],
+     "dipakai": [
+      0
+     ],
+     "telat_sebelum": 178.22936470364823,
+     "telat_sesudah": 178.22936470364823,
+     "ubah": 0,
+     "no": 3,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 178.22936470364823
+    },
+    {
+     "t": 18.644244626095176,
+     "jenis": [
+      "developer_unavailable",
+      "developer_unavailable",
+      "urgent_task",
+      "rework_review_fail",
+      "urgent_task",
+      "priority_change",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 329.83885514361174,
+     "telat_sesudah": 329.83885514361174,
+     "ubah": 0,
+     "no": 4,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 329.83885514361174
+    },
+    {
+     "t": 19.200113886307353,
+     "jenis": [
+      "rework_review_fail",
+      "developer_unavailable"
+     ],
+     "diminta": [
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0
+     ],
+     "telat_sebelum": 334.67633877535843,
+     "telat_sesudah": 334.67633877535843,
+     "ubah": 0,
+     "no": 5,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 334.67633877535843
+    },
+    {
+     "t": 26.5,
+     "jenis": [
+      "rework_review_fail",
+      "urgent_task",
+      "effort_revision",
+      "urgent_task",
+      "effort_revision"
+     ],
+     "diminta": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 341.13537142318876,
+     "telat_sesudah": 341.13537142318876,
+     "ubah": 0,
+     "no": 6,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 341.13537142318876
+    },
+    {
+     "t": 33.185126614823474,
+     "jenis": [
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0
+     ],
+     "telat_sebelum": 359.53711335448406,
+     "telat_sesudah": 359.53711335448406,
+     "ubah": 0,
+     "no": 7,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 359.53711335448406
+    },
+    {
+     "t": 39.99504487864951,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "effort_revision",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 393.28098208981186,
+     "telat_sesudah": 393.28098208981186,
+     "ubah": 0,
+     "no": 8,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 393.28098208981186
+    },
+    {
+     "t": 43.25,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "effort_revision"
+     ],
+     "diminta": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 395.5274409169899,
+     "telat_sesudah": 395.5274409169899,
+     "ubah": 0,
+     "no": 9,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 395.5274409169899
+    },
+    {
+     "t": 44.87333932682278,
+     "jenis": [
+      "urgent_task"
+     ],
+     "diminta": [
+      0
+     ],
+     "dipakai": [
+      0
+     ],
+     "telat_sebelum": 395.5274409169899,
+     "telat_sesudah": 395.5274409169899,
+     "ubah": 0,
+     "no": 10,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 395.5274409169899
+    },
+    {
+     "t": 53.9583121887589,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 422.71825421801356,
+     "telat_sesudah": 422.71825421801356,
+     "ubah": 0,
+     "no": 11,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 422.71825421801356
+    },
+    {
+     "t": 55.91204474944543,
+     "jenis": [
+      "effort_revision",
+      "developer_unavailable"
+     ],
+     "diminta": [
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0
+     ],
+     "telat_sebelum": 477.60466064866546,
+     "telat_sesudah": 477.60466064866546,
+     "ubah": 0,
+     "no": 12,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 477.60466064866546
+    },
+    {
+     "t": 60.257675570247216,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "developer_unavailable"
+     ],
+     "diminta": [
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 480.2855175725231,
+     "telat_sesudah": 480.2855175725231,
+     "ubah": 0,
+     "no": 13,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 480.2855175725231
+    },
+    {
+     "t": 67.00000000000001,
+     "jenis": [
+      "urgent_task",
+      "developer_unavailable",
+      "rework_review_fail"
+     ],
+     "diminta": [
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 494.61587321496705,
+     "telat_sesudah": 494.61587321496705,
+     "ubah": 0,
+     "no": 14,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 494.61587321496705
+    },
+    {
+     "t": 68.97570060473501,
+     "jenis": [
+      "urgent_task",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 497.07419935520716,
+     "telat_sesudah": 497.07419935520716,
+     "ubah": 0,
+     "no": 15,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 497.07419935520716
+    },
+    {
+     "t": 74.57803131146171,
+     "jenis": [
+      "urgent_task",
+      "developer_unavailable",
+      "urgent_task",
+      "urgent_task"
+     ],
+     "diminta": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "dipakai": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "telat_sebelum": 622.0987281275848,
+     "telat_sesudah": 622.0987281275848,
+     "ubah": 0,
+     "no": 16,
+     "pulih": 0.0,
+     "harga": 0.0,
+     "untung": 0.0,
+     "ubah_kumulatif": 0,
+     "J": 622.0987281275848
+    }
+   ],
+   "J_akhir": 622.0987281275848,
+   "telat_akhir": 622.0987281275848,
+   "ubah": 0
+  }
+ }
+}

@@ -1,0 +1,32 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Perkembangan jadwal per kejadian pada episode contoh, $\lambda = 3$}
+\label{tab:episode-lam3}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{rrcllrrrrrrr}
+\toprule
+No & $t$ & $k$ & Diminta & Dipakai & \shortstack[r]{Telat\\sebelum} & \shortstack[r]{Telat\\sesudah} & $\Delta$ & $\Sigma$ & Pulih & $\lambda\Delta$ & $J$ \\
+\midrule
+1 & $2{,}85$ & 4 & 1000 & 1000 & $18{,}94$ & $0{,}01$ & 1 & 1 & $18{,}93$ & $3{,}00$ & $3{,}01$ \\
+2 & $5{,}49$ & 2 & 32 & 02 & $45{,}05$ & $25{,}79$ & 1 & 2 & $19{,}25$ & $3{,}00$ & $31{,}79$ \\
+3 & $9{,}25$ & 1 & 2 & 0 & $132{,}75$ & $132{,}75$ & 0 & 2 & $0{,}00$ & $0{,}00$ & $138{,}75$ \\
+4 & $18{,}64$ & 8 & 10330000 & 10330000 & $278{,}50$ & $232{,}69$ & 3 & 5 & $45{,}81$ & $9{,}00$ & $247{,}69$ \\
+5 & $19{,}20$ & 2 & 33 & 03 & $236{,}96$ & $225{,}90$ & 3 & 8 & $11{,}06$ & $9{,}00$ & $249{,}90$ \\
+6 & $26{,}50$ & 5 & 33333 & 30333 & $234{,}70$ & $234{,}70$ & 0 & 8 & $0{,}00$ & $0{,}00$ & $258{,}70$ \\
+7 & $33{,}19$ & 2 & 32 & 30 & $252{,}49$ & $235{,}43$ & 3 & 11 & $17{,}06$ & $9{,}00$ & $268{,}43$ \\
+8 & $40{,}00$ & 6 & 200220 & 200020 & $268{,}87$ & $235{,}03$ & 2 & 13 & $33{,}84$ & $6{,}00$ & $274{,}03$ \\
+9 & $43{,}25$ & 5 & 00333 & 00303 & $237{,}28$ & $208{,}47$ & 3 & 16 & $28{,}81$ & $9{,}00$ & $256{,}47$ \\
+10 & $44{,}87$ & 1 & 0 & 0 & $208{,}47$ & $208{,}47$ & 0 & 16 & $0{,}00$ & $0{,}00$ & $256{,}47$ \\
+11 & $53{,}96$ & 4 & 0020 & 0020 & $232{,}30$ & $218{,}19$ & 1 & 17 & $14{,}11$ & $3{,}00$ & $269{,}19$ \\
+12 & $55{,}91$ & 2 & 00 & 00 & $211{,}95$ & $211{,}95$ & 0 & 17 & $0{,}00$ & $0{,}00$ & $262{,}95$ \\
+13 & $60{,}26$ & 3 & 002 & 000 & $213{,}29$ & $213{,}29$ & 0 & 17 & $0{,}00$ & $0{,}00$ & $264{,}29$ \\
+14 & $67{,}00$ & 3 & 030 & 030 & $215{,}86$ & $215{,}86$ & 0 & 17 & $0{,}00$ & $0{,}00$ & $266{,}86$ \\
+15 & $68{,}98$ & 3 & 000 & 000 & $220{,}49$ & $220{,}49$ & 0 & 17 & $0{,}00$ & $0{,}00$ & $271{,}49$ \\
+16 & $74{,}58$ & 4 & 2300 & 2300 & $296{,}58$ & $221{,}89$ & 4 & 21 & $74{,}69$ & $12{,}00$ & $284{,}89$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} $\lambda = 3$. $k$: banyak gangguan dalam kejadian. Diminta dan dipakai: tingkat per sub-keputusan berurutan. Telat dalam satuan $E$. $\Delta$: perubahan kejadian itu; $\Sigma$: perubahan kumulatif. Pulih: keterlambatan yang dipulihkan (telat sebelum dikurangi telat sesudah). $J$: telat sesudah ditambah $\lambda\Sigma$.
+\end{table}

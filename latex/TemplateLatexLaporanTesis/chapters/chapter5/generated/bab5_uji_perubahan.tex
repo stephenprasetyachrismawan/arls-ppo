@@ -1,0 +1,23 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Selisih banyak perubahan per episode, ARLS-PPO dikurangi pembanding (I-3)}
+\label{tab:uji-perubahan}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+Pembanding & $\lambda=0{,}1$ & $\lambda=0{,}3$ & $\lambda=1$ & $\lambda=3$ & $\lambda=10$ & $\lambda=30$ \\
+\midrule
+AOR & $+110{,}79$$^{*}$ & $+105{,}35$$^{*}$ & $+95{,}03$$^{*}$ & $+79{,}45$$^{*}$ & $+53{,}93$$^{*}$ & $+32{,}18$$^{*}$ \\
+Random + penjaga & $+8{,}97$$^{*}$ & $+5{,}51$$^{*}$ & $+2{,}00$$^{*}$ & $-1{,}98$$^{*}$ & $-6{,}37$$^{*}$ & $-0{,}81$$^{*}$ \\
+Fixed-L3 + penjaga & $-8{,}24$$^{*}$ & $-10{,}42$$^{*}$ & $-13{,}23$$^{*}$ & $-14{,}22$$^{*}$ & $-13{,}25$$^{*}$ & $-2{,}56$$^{*}$ \\
+Boosting-IL + penjaga & $+6{,}58$$^{*}$ & $+3{,}11$$^{*}$ & $+8{,}92$$^{*}$ & $+2{,}50$$^{*}$ & $+18{,}17$$^{*}$ & $+1{,}64$$^{*}$ \\
+ARLS-BC & $+0{,}32$ & $+0{,}18$ & $-0{,}52$ & $+0{,}11$ & $-0{,}04$ & $+0{,}43$$^{*}$ \\
+ARLS-PPO tanpa penjaga & $-20{,}65$$^{*}$ & $-21{,}00$$^{*}$ & $-26{,}27$$^{*}$ & $-32{,}32$$^{*}$ & $-35{,}89$$^{*}$ & $-29{,}57$$^{*}$ \\
+Sequential Lookahead & $-1{,}46$$^{*}$ & $-1{,}48$$^{*}$ & $-1{,}71$$^{*}$ & $-1{,}37$$^{*}$ & $-4{,}25$$^{*}$ & $-4{,}20$$^{*}$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Negatif berarti ARLS-PPO membuat lebih sedikit perubahan. Setiap instans berbobot sama. Tanda $^{*}$: selang 95\% tidak memuat nol. Selang lengkap ada di Lampiran~\ref{lamp:hasil-rinci}.
+\end{table}

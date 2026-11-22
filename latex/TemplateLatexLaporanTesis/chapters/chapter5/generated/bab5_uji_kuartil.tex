@@ -1,0 +1,24 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Rasio $J$ ARLS-PPO terhadap Fixed-L3 + penjaga menurut besar $J$ kondisi}
+\label{tab:uji-kuartil}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrrrrrr}
+\toprule
+$\lambda$ & Kelompok & \shortstack[r]{Rata-rata\\rasio} & \shortstack[r]{Median\\rasio} & \shortstack[r]{Porsi\\ARLS lebih kecil} & \shortstack[r]{Porsi $J$\\total} & \shortstack[r]{Rasio\\$J$ total} & \shortstack[r]{Perubahan\\ARLS} & \shortstack[r]{Perubahan\\Fixed-L3} \\
+\midrule
+0{,}3 & Q1 & $1{,}641$ & $1{,}067$ & $0{,}32$ & $0{,}03$ & $1{,}190$ & $27{,}0$ & $34{,}8$ \\
+0{,}3 & Q2 & $1{,}160$ & $1{,}035$ & $0{,}33$ & $0{,}10$ & $1{,}089$ & $63{,}5$ & $75{,}3$ \\
+0{,}3 & Q3 & $1{,}061$ & $1{,}001$ & $0{,}49$ & $0{,}24$ & $0{,}991$ & $119{,}7$ & $133{,}6$ \\
+0{,}3 & Q4 & $0{,}910$ & $0{,}923$ & $0{,}74$ & $0{,}63$ & $0{,}833$ & $204{,}0$ & $215{,}0$ \\
+3 & Q1 & $1{,}112$ & $1{,}018$ & $0{,}44$ & $0{,}04$ & $1{,}068$ & $16{,}1$ & $23{,}7$ \\
+3 & Q2 & $1{,}057$ & $1{,}035$ & $0{,}35$ & $0{,}11$ & $1{,}062$ & $44{,}0$ & $56{,}1$ \\
+3 & Q3 & $0{,}962$ & $0{,}974$ & $0{,}57$ & $0{,}26$ & $0{,}944$ & $90{,}4$ & $108{,}2$ \\
+3 & Q4 & $0{,}906$ & $0{,}906$ & $0{,}75$ & $0{,}60$ & $0{,}865$ & $160{,}0$ & $181{,}5$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Pemeriksaan deskriptif sesudah hasil dibaca, tanpa selang. Di dalam setiap instans, kondisi diurutkan menurut $J$ Fixed-L3 + penjaga lalu dibagi empat kelompok yang hampir sama banyak (Q1 terkecil); sisa pembagian masuk Q4. Porsi $J$ total: bagian $J$ Fixed-L3 + penjaga seluruh data uji yang berada di kelompok itu.
+\end{table}

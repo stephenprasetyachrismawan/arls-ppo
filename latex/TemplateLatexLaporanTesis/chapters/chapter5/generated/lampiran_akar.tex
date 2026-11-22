@@ -1,0 +1,29 @@
+% Dibangkitkan oleh exp1/dfjsp-ppo-repair/scripts/naskah_bab5.py dari run resmi1. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Ukuran akar untuk semua metode pada data uji}
+\label{tab:lampiran_akar}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Metode & \shortstack[r]{Penjadwalan\\ulang (\%)} & \emph{Makespan} & \shortstack[r]{Tugas\\terlambat} & \shortstack[r]{Keterlambatan\\total} & \shortstack[r]{Kelebihan beban\\sesudah perbaikan} & \shortstack[r]{Alih\\konteks} \\
+\midrule
+MPPO-SRS & 1,6 & 1.245,5 & 161,2 & 118.947 & 0,92 & 0,06 \\
+RSR & 0,0 & 1.242,5 & 161,2 & 118.683 & 0,95 & 0,00 \\
+PPO+HM+LM+SR & 0,3 & 1.242,8 & 161,2 & 118.708 & 0,95 & 0,00 \\
+PPO+HM+LM & 39,2 & 1.232,3 & 160,8 & 116.936 & 0,67 & 6,63 \\
+PPO+HM & 23,0 & 1.238,8 & 161,0 & 117.973 & 0,90 & 2,81 \\
+PPO & 59,1 & 1.206,1 & 160,9 & 112.961 & 0,87 & 12,91 \\
+Random & 58,7 & 1.317,4 & 162,1 & 129.917 & 0,70 & 7,19 \\
+Threshold & 72,1 & 1.323,8 & 162,6 & 130.920 & 0,83 & 2,28 \\
+FIFO & 91,1 & 1.115,7 & 155,5 & 100.575 & 3,02 & 30,60 \\
+SPT & 95,0 & 1.196,3 & 157,1 & 114.807 & 26,76 & 22,58 \\
+LPT & 92,5 & 1.223,9 & 157,5 & 117.312 & 12,03 & 25,40 \\
+EDD & 93,7 & 1.203,6 & 156,3 & 111.807 & 2,72 & 21,78 \\
+MOF & 99,3 & 1.165,0 & 156,5 & 106.961 & 4,24 & 25,12 \\
+SkillFit & 77,2 & 1.266,1 & 155,3 & 118.028 & 16,76 & 22,88 \\
+GA-PR & 83,5 & 1.118,0 & 155,9 & 99.851 & 16,81 & 27,97 \\
+PPO-Pair & 12,7 & 1.230,4 & 161,2 & 117.754 & 0,90 & 0,41 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\textit{Catatan:} Rata-rata per episode uji. Kolom sama dengan Tabel~\ref{tab:hasil_akar}.
+\end{table}

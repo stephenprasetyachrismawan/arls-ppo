@@ -1,0 +1,16 @@
+# Pustaka runtime. Batas keras DIPERBARUI: metode DRL boleh memakai library teruji
+# (mengurangi risiko bug implementasi); satu-satunya batas keras = CPU-only (server
+# tanpa GPU) -> torch dipasang dari indeks CPU (torch==*+cpu), threads=1/proses.
+numpy
+pyyaml
+pandas
+matplotlib
+scipy
+pytest
+# DRL (CPU-only): MaskablePPO menggantikan PPO numpy tulis-tangan sebagai metode usulan.
+# torch: pasang wheel CPU -> pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch
+gymnasium
+stable-baselines3==2.9.0
+sb3-contrib==2.9.0
+scikit-learn    # analisis uji oracle (scripts/oracle_terpisahkan.py)
