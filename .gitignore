@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+# full test episodes (download from the v1.0.0 release, see README)
+revisi/hasil/gerbang_batch/uji/ep_*.json
+revisi/hasil/gerbang_batch/uji/ep_*.jsonl
