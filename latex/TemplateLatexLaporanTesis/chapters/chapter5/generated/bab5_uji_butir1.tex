@@ -1,0 +1,20 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Celah ARLS-PPO ke Sequential Lookahead: $\lambda$ tanpa label dikurangi acuan (selang 95\%)}
+\label{tab:uji-butir1}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{6cm}ll}
+\toprule
+Pasangan $\lambda$ & Uk.~1 (poin) & Uk.~2 (poin) \\
+\midrule
+0,1 lawan 0,3 & $+9{,}14$ [$+2{,}07$; $+17{,}75$]$^{*}$ & $-0{,}62$ [$-2{,}20$; $+1{,}05$] \\
+1 lawan interpolasi log 0,3 dan 3 & $-6{,}23$ [$-12{,}29$; $-1{,}64$]$^{*}$ & $-1{,}13$ [$-2{,}68$; $+0{,}38$] \\
+10 lawan interpolasi log 3 dan 30 & $+5{,}14$ [$+3{,}64$; $+6{,}68$]$^{*}$ & $+4{,}31$ [$+3{,}18$; $+5{,}47$]$^{*}$ \\
+pelengkap: rata-rata tanpa label lawan rata-rata berlabel & $+7{,}36$ [$+4{,}68$; $+10{,}51$]$^{*}$ & $+1{,}98$ [$+1{,}17$; $+2{,}92$]$^{*}$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Positif berarti celah ke Sequential Lookahead di $\lambda$ tanpa label lebih besar daripada di acuan berlabel. Batas atas selang adalah $X$ pada kalimat klaim butir~1.
+\end{table}

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arls-ppo"
+version = "1.0.0"
+description = "ARLS-PPO: Aggregated-state Repair-Level Selector PPO for dynamic rescheduling of software projects (thesis code, recipe E15 E9c)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "Stephen Prasetya Chrismawan" }]
+# Exact versions used for every number in the thesis: exp1/dfjsp-ppo-repair/requirements-lock.txt
+dependencies = [
+    "numpy",
+    "pyyaml",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "torch",
+    "gymnasium",
+    "stable-baselines3==2.9.0",
+    "sb3-contrib==2.9.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["arls_ppo*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

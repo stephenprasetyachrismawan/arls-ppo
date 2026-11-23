@@ -1,0 +1,76 @@
+% Dibangkitkan oleh exp1/dfjsp-ppo-repair/scripts/naskah_bab5.py dari run resmi1. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Hasil rinci semua metode pada data uji}
+\label{tab:lampiran_hasil_rinci}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrrrr}
+\toprule
+Metode & Ukuran & IQM & Selang 95\% & MK03 & MK04 & MK09 \\
+\midrule
+MPPO-SRS & Keterlambatan & 118.928 & [112.978; 124.977] & 81.863 & 10.549 & 264.372 \\
+ & Nervousness & 0,151 & [0,148; 0,155] & 0,154 & 0,133 & 0,167 \\
+ & Alih konteks & 0,00 & [0,00; 0,00] & 0,00 & 0,00 & 0,00 \\
+\addlinespace
+RSR & Keterlambatan & 118.897 & [112.981; 124.897] & 81.870 & 10.539 & 264.281 \\
+ & Nervousness & 0,151 & [0,148; 0,154] & 0,154 & 0,133 & 0,167 \\
+ & Alih konteks & 0,00 & [0,00; 0,00] & 0,00 & 0,00 & 0,00 \\
+\addlinespace
+PPO+HM+LM+SR & Keterlambatan & 118.891 & [112.795; 124.855] & 81.866 & 10.543 & 264.265 \\
+ & Nervousness & 0,151 & [0,148; 0,154] & 0,154 & 0,133 & 0,167 \\
+ & Alih konteks & 0,00 & [0,00; 0,00] & 0,00 & 0,00 & 0,00 \\
+\addlinespace
+PPO+HM+LM & Keterlambatan & 116.495 & [110.872; 122.509] & 76.916 & 10.278 & 262.291 \\
+ & Nervousness & 0,166 & [0,162; 0,170] & 0,168 & 0,146 & 0,184 \\
+ & Alih konteks & 5,42 & [4,04; 6,87] & 6,30 & 0,95 & 9,01 \\
+\addlinespace
+PPO+HM & Keterlambatan & 117.838 & [111.973; 123.907] & 78.784 & 10.390 & 264.339 \\
+ & Nervousness & 0,161 & [0,157; 0,165] & 0,164 & 0,142 & 0,177 \\
+ & Alih konteks & 1,76 & [1,21; 2,55] & 3,29 & 0,25 & 1,73 \\
+\addlinespace
+PPO & Keterlambatan & 112.184 & [107.344; 117.386] & 74.214 & 9.922 & 252.415 \\
+ & Nervousness & 0,170 & [0,165; 0,175] & 0,175 & 0,145 & 0,191 \\
+ & Alih konteks & 11,33 & [8,20; 14,67] & 14,97 & 1,17 & 17,84 \\
+\addlinespace
+Random & Keterlambatan & 125.724 & [117.935; 134.187] & 79.282 & 10.644 & 287.247 \\
+ & Nervousness & 0,172 & [0,166; 0,177] & 0,174 & 0,149 & 0,192 \\
+ & Alih konteks & 4,98 & [3,40; 7,05] & 6,83 & 1,26 & 6,86 \\
+\addlinespace
+Threshold & Keterlambatan & 129.589 & [122.849; 135.929] & 83.393 & 11.161 & 294.215 \\
+ & Nervousness & 0,168 & [0,163; 0,173] & 0,171 & 0,145 & 0,189 \\
+ & Alih konteks & 1,24 & [0,68; 1,99] & 2,57 & 0,02 & 1,12 \\
+\addlinespace
+FIFO & Keterlambatan & 102.090 & [98.200; 104.944] & 60.447 & 8.261 & 237.562 \\
+ & Nervousness & 0,324 & [0,321; 0,327] & 0,403 & 0,247 & 0,321 \\
+ & Alih konteks & 28,27 & [21,61; 36,06] & 37,83 & 8,27 & 38,70 \\
+\addlinespace
+SPT & Keterlambatan & 114.809 & [110.586; 118.871] & 73.669 & 8.597 & 262.159 \\
+ & Nervousness & 0,352 & [0,349; 0,355] & 0,425 & 0,249 & 0,382 \\
+ & Alih konteks & 19,76 & [14,93; 25,83] & 31,31 & 4,35 & 23,64 \\
+\addlinespace
+LPT & Keterlambatan & 116.778 & [111.810; 122.127] & 67.236 & 11.074 & 272.022 \\
+ & Nervousness & 0,362 & [0,356; 0,366] & 0,406 & 0,310 & 0,372 \\
+ & Alih konteks & 23,43 & [18,15; 29,42] & 33,78 & 6,83 & 29,68 \\
+\addlinespace
+EDD & Keterlambatan & 110.639 & [107.075; 114.871] & 68.664 & 9.271 & 253.983 \\
+ & Nervousness & 0,338 & [0,335; 0,340] & 0,414 & 0,265 & 0,334 \\
+ & Alih konteks & 20,26 & [15,32; 25,35] & 31,10 & 4,13 & 25,56 \\
+\addlinespace
+MOF & Keterlambatan & 105.844 & [102.345; 109.797] & 64.774 & 8.976 & 243.782 \\
+ & Nervousness & 0,339 & [0,336; 0,342] & 0,412 & 0,264 & 0,342 \\
+ & Alih konteks & 22,36 & [17,40; 28,60] & 33,77 & 5,23 & 28,08 \\
+\addlinespace
+SkillFit & Keterlambatan & 117.213 & [113.971; 120.938] & 75.917 & 11.233 & 264.490 \\
+ & Nervousness & 0,348 & [0,342; 0,354] & 0,422 & 0,262 & 0,360 \\
+ & Alih konteks & 20,78 & [16,02; 26,35] & 31,02 & 3,97 & 27,35 \\
+\addlinespace
+GA-PR & Keterlambatan & 99.456 & [96.679; 102.602] & 62.691 & 9.293 & 226.385 \\
+ & Nervousness & 0,360 & [0,357; 0,363] & 0,416 & 0,294 & 0,371 \\
+ & Alih konteks & 25,65 & [19,54; 32,33] & 34,60 & 6,61 & 35,74 \\
+\addlinespace
+PPO-Pair & Keterlambatan & 117.779 & [111.939; 123.311] & 80.149 & 10.555 & 262.632 \\
+ & Nervousness & 0,158 & [0,154; 0,161] & 0,161 & 0,138 & 0,173 \\
+ & Alih konteks & 0,07 & [0,02; 0,15] & 0,08 & 0,00 & 0,12 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\textit{Catatan:} IQM gabungan adalah rata-rata IQM per instans. Selang adalah selang kepercayaan 95\% \emph{bootstrap} bergugus. PPO-Pair adalah implementasi sendiri dengan jaringan satu lapis 64 unit; pelatihannya hampir tidak mengubah kebijakan, sehingga angka mutu jadwalnya tidak mewakili PPO berbasis pasangan pada umumnya.
+\end{table}

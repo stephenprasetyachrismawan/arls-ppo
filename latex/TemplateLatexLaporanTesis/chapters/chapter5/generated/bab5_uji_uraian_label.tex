@@ -1,0 +1,42 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Suku $J$ setiap metode pada data uji, $\lambda$ berlabel}
+\label{tab:uji-uraian}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrrr}
+\toprule
+$\lambda$ & Metode & Keterlambatan & Perubahan & $\lambda\times$perubahan & $J$ \\
+\midrule
+0{,}3 & ARLS-PPO & $780{,}18$ & $105{,}35$ & $31{,}61$ & $811{,}78$ \\
+0{,}3 & AOR & $4582{,}26$ & $0{,}00$ & $0{,}00$ & $4582{,}26$ \\
+0{,}3 & Random + penjaga & $1054{,}18$ & $99{,}84$ & $29{,}95$ & $1084{,}13$ \\
+0{,}3 & Fixed-L3 + penjaga & $864{,}06$ & $115{,}77$ & $34{,}73$ & $898{,}79$ \\
+0{,}3 & Boosting-IL + penjaga & $780{,}15$ & $102{,}25$ & $30{,}67$ & $810{,}82$ \\
+0{,}3 & ARLS-BC & $787{,}67$ & $105{,}17$ & $31{,}55$ & $819{,}22$ \\
+0{,}3 & ARLS-PPO tanpa penjaga & $807{,}76$ & $126{,}35$ & $37{,}90$ & $845{,}67$ \\
+0{,}3 & Sequential Lookahead & $677{,}22$ & $106{,}83$ & $32{,}05$ & $709{,}27$ \\
+\addlinespace
+3 & ARLS-PPO & $856{,}69$ & $79{,}45$ & $238{,}35$ & $1095{,}04$ \\
+3 & AOR & $4582{,}26$ & $0{,}00$ & $0{,}00$ & $4582{,}26$ \\
+3 & Random + penjaga & $1101{,}86$ & $81{,}43$ & $244{,}30$ & $1346{,}15$ \\
+3 & Fixed-L3 + penjaga & $917{,}71$ & $93{,}67$ & $281{,}01$ & $1198{,}72$ \\
+3 & Boosting-IL + penjaga & $872{,}74$ & $76{,}95$ & $230{,}85$ & $1103{,}59$ \\
+3 & ARLS-BC & $860{,}24$ & $79{,}34$ & $238{,}02$ & $1098{,}26$ \\
+3 & ARLS-PPO tanpa penjaga & $855{,}84$ & $111{,}77$ & $335{,}32$ & $1191{,}16$ \\
+3 & Sequential Lookahead & $728{,}71$ & $80{,}83$ & $242{,}48$ & $971{,}19$ \\
+\addlinespace
+30 & ARLS-PPO & $1608{,}00$ & $32{,}18$ & $965{,}51$ & $2573{,}51$ \\
+30 & AOR & $4582{,}26$ & $0{,}00$ & $0{,}00$ & $4582{,}26$ \\
+30 & Random + penjaga & $1647{,}91$ & $32{,}99$ & $989{,}80$ & $2637{,}71$ \\
+30 & Fixed-L3 + penjaga & $1523{,}02$ & $34{,}74$ & $1042{,}26$ & $2565{,}28$ \\
+30 & Boosting-IL + penjaga & $1794{,}80$ & $30{,}54$ & $916{,}16$ & $2710{,}96$ \\
+30 & ARLS-BC & $1663{,}36$ & $31{,}75$ & $952{,}49$ & $2615{,}85$ \\
+30 & ARLS-PPO tanpa penjaga & $1421{,}54$ & $61{,}76$ & $1852{,}71$ & $3274{,}25$ \\
+30 & Sequential Lookahead & $1204{,}47$ & $36{,}38$ & $1091{,}46$ & $2295{,}93$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Rata-rata per instans lalu atas 38 instans. Keterlambatan dalam satuan $E$. Nilai ARLS-PPO, ARLS-BC, dan ARLS-PPO tanpa penjaga dirata-rata atas tiga \emph{seed} model per kondisi. $\lambda$ tanpa label ada di Lampiran~\ref{lamp:hasil-rinci}.
+\end{table}

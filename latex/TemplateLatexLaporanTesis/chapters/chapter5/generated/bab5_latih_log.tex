@@ -1,0 +1,22 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Ringkasan pelatihan BC dan PPO per \emph{seed} dari log}
+\label{tab:latih-log}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrrrrrrr}
+\toprule
+Data BC & \emph{Seed} & Epoch & Terbaik & Loss & \shortstack[r]{Ketepatan\\latih} & \shortstack[r]{Ketepatan\\sisihan} & \shortstack[r]{Rugi $J$\\sisihan} & \shortstack[r]{Reward PPO\\awal} & \shortstack[r]{Reward PPO\\akhir} \\
+\midrule
+BC & 0 & 51 & 40 & $0{,}132$ & $0{,}804$ & $0{,}773$ & $1{,}753$ & $0{,}0196$ & $0{,}0183$ \\
+BC + DAgger & 0 & 42 & 31 & $0{,}299$ & $0{,}722$ & $0{,}696$ & $4{,}194$ & $0{,}0219$ & $0{,}0181$ \\
+BC & 1 & 96 & 85 & $0{,}053$ & $0{,}886$ & $0{,}847$ & $1{,}271$ & $0{,}0241$ & $0{,}0205$ \\
+BC + DAgger & 1 & 44 & 33 & $0{,}290$ & $0{,}714$ & $0{,}686$ & $3{,}770$ & $0{,}0210$ & $0{,}0178$ \\
+BC & 2 & 64 & 53 & $0{,}096$ & $0{,}834$ & $0{,}799$ & $1{,}795$ & $0{,}0227$ & $0{,}0180$ \\
+BC + DAgger & 2 & 69 & 58 & $0{,}209$ & $0{,}768$ & $0{,}722$ & $3{,}431$ & $0{,}0231$ & $0{,}0185$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Epoch: banyak epoch BC yang dijalankan. Terbaik: epoch yang bobotnya dipakai (rugi $J$ contoh sisihan terkecil). Loss, ketepatan, dan rugi diambil pada epoch terbaik. Reward PPO awal dan akhir: rata-rata tiga titik pertama dan terakhir (setiap 4.096 langkah). Log hanya mencatat reward total, tidak per suku.
+\end{table}

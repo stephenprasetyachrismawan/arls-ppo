@@ -1,0 +1,3278 @@
+{
+ "e1ppo_s0": {
+  "bc": [
+   {
+    "epoch": 0,
+    "loss": 0.68,
+    "akurasi": 0.615,
+    "tahan": 0.616,
+    "rugi": 8.136
+   },
+   {
+    "epoch": 1,
+    "loss": 0.473,
+    "akurasi": 0.628,
+    "tahan": 0.63,
+    "rugi": 6.788
+   },
+   {
+    "epoch": 2,
+    "loss": 0.424,
+    "akurasi": 0.65,
+    "tahan": 0.644,
+    "rugi": 6.219
+   },
+   {
+    "epoch": 3,
+    "loss": 0.399,
+    "akurasi": 0.652,
+    "tahan": 0.642,
+    "rugi": 6.483
+   },
+   {
+    "epoch": 4,
+    "loss": 0.374,
+    "akurasi": 0.667,
+    "tahan": 0.661,
+    "rugi": 5.529
+   },
+   {
+    "epoch": 5,
+    "loss": 0.357,
+    "akurasi": 0.679,
+    "tahan": 0.669,
+    "rugi": 5.764
+   },
+   {
+    "epoch": 6,
+    "loss": 0.341,
+    "akurasi": 0.681,
+    "tahan": 0.666,
+    "rugi": 5.287
+   },
+   {
+    "epoch": 7,
+    "loss": 0.328,
+    "akurasi": 0.685,
+    "tahan": 0.673,
+    "rugi": 5.793
+   },
+   {
+    "epoch": 8,
+    "loss": 0.315,
+    "akurasi": 0.693,
+    "tahan": 0.676,
+    "rugi": 5.833
+   },
+   {
+    "epoch": 9,
+    "loss": 0.303,
+    "akurasi": 0.693,
+    "tahan": 0.674,
+    "rugi": 4.928
+   },
+   {
+    "epoch": 10,
+    "loss": 0.295,
+    "akurasi": 0.694,
+    "tahan": 0.677,
+    "rugi": 4.959
+   },
+   {
+    "epoch": 11,
+    "loss": 0.285,
+    "akurasi": 0.7,
+    "tahan": 0.685,
+    "rugi": 4.536
+   },
+   {
+    "epoch": 12,
+    "loss": 0.274,
+    "akurasi": 0.692,
+    "tahan": 0.676,
+    "rugi": 4.909
+   },
+   {
+    "epoch": 13,
+    "loss": 0.27,
+    "akurasi": 0.722,
+    "tahan": 0.702,
+    "rugi": 4.371
+   },
+   {
+    "epoch": 14,
+    "loss": 0.257,
+    "akurasi": 0.726,
+    "tahan": 0.705,
+    "rugi": 4.872
+   },
+   {
+    "epoch": 15,
+    "loss": 0.251,
+    "akurasi": 0.728,
+    "tahan": 0.708,
+    "rugi": 4.574
+   },
+   {
+    "epoch": 16,
+    "loss": 0.241,
+    "akurasi": 0.739,
+    "tahan": 0.719,
+    "rugi": 3.139
+   },
+   {
+    "epoch": 17,
+    "loss": 0.236,
+    "akurasi": 0.722,
+    "tahan": 0.702,
+    "rugi": 4.492
+   },
+   {
+    "epoch": 18,
+    "loss": 0.228,
+    "akurasi": 0.738,
+    "tahan": 0.721,
+    "rugi": 4.563
+   },
+   {
+    "epoch": 19,
+    "loss": 0.223,
+    "akurasi": 0.737,
+    "tahan": 0.716,
+    "rugi": 2.963
+   },
+   {
+    "epoch": 20,
+    "loss": 0.217,
+    "akurasi": 0.739,
+    "tahan": 0.722,
+    "rugi": 2.996
+   },
+   {
+    "epoch": 21,
+    "loss": 0.213,
+    "akurasi": 0.758,
+    "tahan": 0.734,
+    "rugi": 4.916
+   },
+   {
+    "epoch": 22,
+    "loss": 0.206,
+    "akurasi": 0.748,
+    "tahan": 0.724,
+    "rugi": 2.801
+   },
+   {
+    "epoch": 23,
+    "loss": 0.201,
+    "akurasi": 0.757,
+    "tahan": 0.733,
+    "rugi": 3.036
+   },
+   {
+    "epoch": 24,
+    "loss": 0.196,
+    "akurasi": 0.76,
+    "tahan": 0.734,
+    "rugi": 3.413
+   },
+   {
+    "epoch": 25,
+    "loss": 0.188,
+    "akurasi": 0.757,
+    "tahan": 0.728,
+    "rugi": 2.722
+   },
+   {
+    "epoch": 26,
+    "loss": 0.184,
+    "akurasi": 0.77,
+    "tahan": 0.742,
+    "rugi": 3.071
+   },
+   {
+    "epoch": 27,
+    "loss": 0.179,
+    "akurasi": 0.771,
+    "tahan": 0.74,
+    "rugi": 2.765
+   },
+   {
+    "epoch": 28,
+    "loss": 0.176,
+    "akurasi": 0.774,
+    "tahan": 0.747,
+    "rugi": 2.48
+   },
+   {
+    "epoch": 29,
+    "loss": 0.17,
+    "akurasi": 0.775,
+    "tahan": 0.745,
+    "rugi": 2.269
+   },
+   {
+    "epoch": 30,
+    "loss": 0.167,
+    "akurasi": 0.776,
+    "tahan": 0.747,
+    "rugi": 2.596
+   },
+   {
+    "epoch": 31,
+    "loss": 0.16,
+    "akurasi": 0.793,
+    "tahan": 0.769,
+    "rugi": 2.505
+   },
+   {
+    "epoch": 32,
+    "loss": 0.159,
+    "akurasi": 0.766,
+    "tahan": 0.736,
+    "rugi": 2.665
+   },
+   {
+    "epoch": 33,
+    "loss": 0.154,
+    "akurasi": 0.787,
+    "tahan": 0.758,
+    "rugi": 2.47
+   },
+   {
+    "epoch": 34,
+    "loss": 0.152,
+    "akurasi": 0.786,
+    "tahan": 0.761,
+    "rugi": 3.537
+   },
+   {
+    "epoch": 35,
+    "loss": 0.148,
+    "akurasi": 0.791,
+    "tahan": 0.761,
+    "rugi": 2.059
+   },
+   {
+    "epoch": 36,
+    "loss": 0.146,
+    "akurasi": 0.798,
+    "tahan": 0.772,
+    "rugi": 2.35
+   },
+   {
+    "epoch": 37,
+    "loss": 0.142,
+    "akurasi": 0.794,
+    "tahan": 0.767,
+    "rugi": 2.305
+   },
+   {
+    "epoch": 38,
+    "loss": 0.138,
+    "akurasi": 0.797,
+    "tahan": 0.768,
+    "rugi": 2.026
+   },
+   {
+    "epoch": 39,
+    "loss": 0.137,
+    "akurasi": 0.805,
+    "tahan": 0.773,
+    "rugi": 2.243
+   },
+   {
+    "epoch": 40,
+    "loss": 0.132,
+    "akurasi": 0.804,
+    "tahan": 0.773,
+    "rugi": 1.753
+   },
+   {
+    "epoch": 41,
+    "loss": 0.13,
+    "akurasi": 0.801,
+    "tahan": 0.773,
+    "rugi": 2.027
+   },
+   {
+    "epoch": 42,
+    "loss": 0.125,
+    "akurasi": 0.809,
+    "tahan": 0.781,
+    "rugi": 2.037
+   },
+   {
+    "epoch": 43,
+    "loss": 0.122,
+    "akurasi": 0.819,
+    "tahan": 0.79,
+    "rugi": 2.371
+   },
+   {
+    "epoch": 44,
+    "loss": 0.122,
+    "akurasi": 0.823,
+    "tahan": 0.792,
+    "rugi": 2.232
+   },
+   {
+    "epoch": 45,
+    "loss": 0.119,
+    "akurasi": 0.812,
+    "tahan": 0.778,
+    "rugi": 2.147
+   },
+   {
+    "epoch": 46,
+    "loss": 0.116,
+    "akurasi": 0.815,
+    "tahan": 0.784,
+    "rugi": 1.855
+   },
+   {
+    "epoch": 47,
+    "loss": 0.113,
+    "akurasi": 0.826,
+    "tahan": 0.79,
+    "rugi": 1.99
+   },
+   {
+    "epoch": 48,
+    "loss": 0.11,
+    "akurasi": 0.82,
+    "tahan": 0.786,
+    "rugi": 1.934
+   },
+   {
+    "epoch": 49,
+    "loss": 0.108,
+    "akurasi": 0.827,
+    "tahan": 0.793,
+    "rugi": 1.907
+   },
+   {
+    "epoch": 50,
+    "loss": 0.105,
+    "akurasi": 0.832,
+    "tahan": 0.801,
+    "rugi": 1.852
+   }
+  ],
+  "berhenti": 50,
+  "terbaik": 40,
+  "ppo": [
+   [
+    4096,
+    0.0248
+   ],
+   [
+    8192,
+    0.0159
+   ],
+   [
+    12288,
+    0.0181
+   ],
+   [
+    16384,
+    0.0274
+   ],
+   [
+    20480,
+    0.0252
+   ],
+   [
+    24576,
+    0.0208
+   ],
+   [
+    28672,
+    0.0205
+   ],
+   [
+    32768,
+    0.0269
+   ],
+   [
+    36864,
+    0.0293
+   ],
+   [
+    40960,
+    0.0176
+   ],
+   [
+    45056,
+    0.0219
+   ],
+   [
+    49152,
+    0.0208
+   ],
+   [
+    53248,
+    0.0247
+   ],
+   [
+    57344,
+    0.0235
+   ],
+   [
+    61440,
+    0.0205
+   ],
+   [
+    65536,
+    0.025
+   ],
+   [
+    69632,
+    0.0157
+   ],
+   [
+    73728,
+    0.0215
+   ],
+   [
+    77824,
+    0.0338
+   ],
+   [
+    81920,
+    0.0213
+   ],
+   [
+    86016,
+    0.0246
+   ],
+   [
+    90112,
+    0.0173
+   ],
+   [
+    94208,
+    0.02
+   ],
+   [
+    98304,
+    0.0176
+   ]
+  ],
+  "skala_c": [
+   [
+    0.3,
+    525.002
+   ],
+   [
+    3.0,
+    498.689
+   ],
+   [
+    30.0,
+    291.221
+   ]
+  ],
+  "bc_baris": null
+ },
+ "e9c_s0": {
+  "bc": [
+   {
+    "epoch": 0,
+    "loss": 0.753,
+    "akurasi": 0.587,
+    "tahan": 0.586,
+    "rugi": 8.111
+   },
+   {
+    "epoch": 1,
+    "loss": 0.615,
+    "akurasi": 0.596,
+    "tahan": 0.594,
+    "rugi": 6.676
+   },
+   {
+    "epoch": 2,
+    "loss": 0.579,
+    "akurasi": 0.612,
+    "tahan": 0.607,
+    "rugi": 6.665
+   },
+   {
+    "epoch": 3,
+    "loss": 0.552,
+    "akurasi": 0.606,
+    "tahan": 0.601,
+    "rugi": 6.706
+   },
+   {
+    "epoch": 4,
+    "loss": 0.532,
+    "akurasi": 0.624,
+    "tahan": 0.619,
+    "rugi": 6.221
+   },
+   {
+    "epoch": 5,
+    "loss": 0.512,
+    "akurasi": 0.626,
+    "tahan": 0.616,
+    "rugi": 6.41
+   },
+   {
+    "epoch": 6,
+    "loss": 0.497,
+    "akurasi": 0.625,
+    "tahan": 0.618,
+    "rugi": 5.728
+   },
+   {
+    "epoch": 7,
+    "loss": 0.481,
+    "akurasi": 0.614,
+    "tahan": 0.6,
+    "rugi": 5.985
+   },
+   {
+    "epoch": 8,
+    "loss": 0.467,
+    "akurasi": 0.639,
+    "tahan": 0.631,
+    "rugi": 5.466
+   },
+   {
+    "epoch": 9,
+    "loss": 0.456,
+    "akurasi": 0.635,
+    "tahan": 0.625,
+    "rugi": 5.16
+   },
+   {
+    "epoch": 10,
+    "loss": 0.444,
+    "akurasi": 0.644,
+    "tahan": 0.628,
+    "rugi": 5.859
+   },
+   {
+    "epoch": 11,
+    "loss": 0.433,
+    "akurasi": 0.668,
+    "tahan": 0.653,
+    "rugi": 5.723
+   },
+   {
+    "epoch": 12,
+    "loss": 0.423,
+    "akurasi": 0.662,
+    "tahan": 0.651,
+    "rugi": 5.26
+   },
+   {
+    "epoch": 13,
+    "loss": 0.415,
+    "akurasi": 0.661,
+    "tahan": 0.646,
+    "rugi": 5.09
+   },
+   {
+    "epoch": 14,
+    "loss": 0.406,
+    "akurasi": 0.662,
+    "tahan": 0.643,
+    "rugi": 5.554
+   },
+   {
+    "epoch": 15,
+    "loss": 0.397,
+    "akurasi": 0.645,
+    "tahan": 0.624,
+    "rugi": 5.684
+   },
+   {
+    "epoch": 16,
+    "loss": 0.387,
+    "akurasi": 0.689,
+    "tahan": 0.674,
+    "rugi": 4.999
+   },
+   {
+    "epoch": 17,
+    "loss": 0.38,
+    "akurasi": 0.682,
+    "tahan": 0.659,
+    "rugi": 5.337
+   },
+   {
+    "epoch": 18,
+    "loss": 0.374,
+    "akurasi": 0.685,
+    "tahan": 0.661,
+    "rugi": 5.42
+   },
+   {
+    "epoch": 19,
+    "loss": 0.368,
+    "akurasi": 0.679,
+    "tahan": 0.654,
+    "rugi": 4.957
+   },
+   {
+    "epoch": 20,
+    "loss": 0.361,
+    "akurasi": 0.681,
+    "tahan": 0.654,
+    "rugi": 5.029
+   },
+   {
+    "epoch": 21,
+    "loss": 0.353,
+    "akurasi": 0.697,
+    "tahan": 0.674,
+    "rugi": 4.755
+   },
+   {
+    "epoch": 22,
+    "loss": 0.348,
+    "akurasi": 0.685,
+    "tahan": 0.658,
+    "rugi": 4.714
+   },
+   {
+    "epoch": 23,
+    "loss": 0.341,
+    "akurasi": 0.689,
+    "tahan": 0.663,
+    "rugi": 4.717
+   },
+   {
+    "epoch": 24,
+    "loss": 0.335,
+    "akurasi": 0.696,
+    "tahan": 0.663,
+    "rugi": 4.888
+   },
+   {
+    "epoch": 25,
+    "loss": 0.329,
+    "akurasi": 0.696,
+    "tahan": 0.664,
+    "rugi": 4.745
+   },
+   {
+    "epoch": 26,
+    "loss": 0.323,
+    "akurasi": 0.701,
+    "tahan": 0.672,
+    "rugi": 5.02
+   },
+   {
+    "epoch": 27,
+    "loss": 0.318,
+    "akurasi": 0.706,
+    "tahan": 0.678,
+    "rugi": 4.546
+   },
+   {
+    "epoch": 28,
+    "loss": 0.312,
+    "akurasi": 0.702,
+    "tahan": 0.667,
+    "rugi": 4.735
+   },
+   {
+    "epoch": 29,
+    "loss": 0.309,
+    "akurasi": 0.71,
+    "tahan": 0.674,
+    "rugi": 4.714
+   },
+   {
+    "epoch": 30,
+    "loss": 0.302,
+    "akurasi": 0.712,
+    "tahan": 0.678,
+    "rugi": 4.439
+   },
+   {
+    "epoch": 31,
+    "loss": 0.299,
+    "akurasi": 0.722,
+    "tahan": 0.696,
+    "rugi": 4.194
+   },
+   {
+    "epoch": 32,
+    "loss": 0.294,
+    "akurasi": 0.718,
+    "tahan": 0.684,
+    "rugi": 4.519
+   },
+   {
+    "epoch": 33,
+    "loss": 0.29,
+    "akurasi": 0.714,
+    "tahan": 0.681,
+    "rugi": 4.444
+   },
+   {
+    "epoch": 34,
+    "loss": 0.286,
+    "akurasi": 0.729,
+    "tahan": 0.696,
+    "rugi": 4.781
+   },
+   {
+    "epoch": 35,
+    "loss": 0.282,
+    "akurasi": 0.717,
+    "tahan": 0.68,
+    "rugi": 4.609
+   },
+   {
+    "epoch": 36,
+    "loss": 0.278,
+    "akurasi": 0.734,
+    "tahan": 0.698,
+    "rugi": 4.474
+   },
+   {
+    "epoch": 37,
+    "loss": 0.271,
+    "akurasi": 0.727,
+    "tahan": 0.693,
+    "rugi": 4.432
+   },
+   {
+    "epoch": 38,
+    "loss": 0.269,
+    "akurasi": 0.739,
+    "tahan": 0.705,
+    "rugi": 4.4
+   },
+   {
+    "epoch": 39,
+    "loss": 0.263,
+    "akurasi": 0.74,
+    "tahan": 0.706,
+    "rugi": 4.564
+   },
+   {
+    "epoch": 40,
+    "loss": 0.26,
+    "akurasi": 0.723,
+    "tahan": 0.686,
+    "rugi": 4.48
+   },
+   {
+    "epoch": 41,
+    "loss": 0.257,
+    "akurasi": 0.73,
+    "tahan": 0.69,
+    "rugi": 4.812
+   }
+  ],
+  "berhenti": 41,
+  "terbaik": 31,
+  "ppo": [
+   [
+    4096,
+    0.0269
+   ],
+   [
+    8192,
+    0.0182
+   ],
+   [
+    12288,
+    0.0207
+   ],
+   [
+    16384,
+    0.0259
+   ],
+   [
+    20480,
+    0.022
+   ],
+   [
+    24576,
+    0.0202
+   ],
+   [
+    28672,
+    0.0178
+   ],
+   [
+    32768,
+    0.0243
+   ],
+   [
+    36864,
+    0.026
+   ],
+   [
+    40960,
+    0.0177
+   ],
+   [
+    45056,
+    0.0218
+   ],
+   [
+    49152,
+    0.0195
+   ],
+   [
+    53248,
+    0.0245
+   ],
+   [
+    57344,
+    0.0244
+   ],
+   [
+    61440,
+    0.0233
+   ],
+   [
+    65536,
+    0.0238
+   ],
+   [
+    69632,
+    0.0188
+   ],
+   [
+    73728,
+    0.0198
+   ],
+   [
+    77824,
+    0.0315
+   ],
+   [
+    81920,
+    0.0215
+   ],
+   [
+    86016,
+    0.0241
+   ],
+   [
+    90112,
+    0.0172
+   ],
+   [
+    94208,
+    0.0176
+   ],
+   [
+    98304,
+    0.0195
+   ]
+  ],
+  "skala_c": [
+   [
+    0.3,
+    525.002
+   ],
+   [
+    3.0,
+    498.689
+   ],
+   [
+    30.0,
+    291.221
+   ]
+  ],
+  "bc_baris": 86832
+ },
+ "e1ppo_s1": {
+  "bc": [
+   {
+    "epoch": 0,
+    "loss": 0.688,
+    "akurasi": 0.608,
+    "tahan": 0.624,
+    "rugi": 8.474
+   },
+   {
+    "epoch": 1,
+    "loss": 0.481,
+    "akurasi": 0.633,
+    "tahan": 0.642,
+    "rugi": 7.679
+   },
+   {
+    "epoch": 2,
+    "loss": 0.432,
+    "akurasi": 0.646,
+    "tahan": 0.656,
+    "rugi": 6.697
+   },
+   {
+    "epoch": 3,
+    "loss": 0.401,
+    "akurasi": 0.653,
+    "tahan": 0.66,
+    "rugi": 6.185
+   },
+   {
+    "epoch": 4,
+    "loss": 0.376,
+    "akurasi": 0.649,
+    "tahan": 0.656,
+    "rugi": 5.949
+   },
+   {
+    "epoch": 5,
+    "loss": 0.359,
+    "akurasi": 0.676,
+    "tahan": 0.683,
+    "rugi": 5.386
+   },
+   {
+    "epoch": 6,
+    "loss": 0.344,
+    "akurasi": 0.673,
+    "tahan": 0.68,
+    "rugi": 5.385
+   },
+   {
+    "epoch": 7,
+    "loss": 0.328,
+    "akurasi": 0.686,
+    "tahan": 0.688,
+    "rugi": 5.218
+   },
+   {
+    "epoch": 8,
+    "loss": 0.316,
+    "akurasi": 0.694,
+    "tahan": 0.699,
+    "rugi": 5.061
+   },
+   {
+    "epoch": 9,
+    "loss": 0.303,
+    "akurasi": 0.702,
+    "tahan": 0.706,
+    "rugi": 4.92
+   },
+   {
+    "epoch": 10,
+    "loss": 0.292,
+    "akurasi": 0.705,
+    "tahan": 0.71,
+    "rugi": 4.698
+   },
+   {
+    "epoch": 11,
+    "loss": 0.283,
+    "akurasi": 0.707,
+    "tahan": 0.708,
+    "rugi": 4.749
+   },
+   {
+    "epoch": 12,
+    "loss": 0.275,
+    "akurasi": 0.691,
+    "tahan": 0.692,
+    "rugi": 3.758
+   },
+   {
+    "epoch": 13,
+    "loss": 0.264,
+    "akurasi": 0.699,
+    "tahan": 0.7,
+    "rugi": 4.091
+   },
+   {
+    "epoch": 14,
+    "loss": 0.255,
+    "akurasi": 0.719,
+    "tahan": 0.72,
+    "rugi": 4.322
+   },
+   {
+    "epoch": 15,
+    "loss": 0.245,
+    "akurasi": 0.707,
+    "tahan": 0.711,
+    "rugi": 4.244
+   },
+   {
+    "epoch": 16,
+    "loss": 0.243,
+    "akurasi": 0.733,
+    "tahan": 0.732,
+    "rugi": 3.437
+   },
+   {
+    "epoch": 17,
+    "loss": 0.235,
+    "akurasi": 0.738,
+    "tahan": 0.735,
+    "rugi": 3.45
+   },
+   {
+    "epoch": 18,
+    "loss": 0.226,
+    "akurasi": 0.73,
+    "tahan": 0.73,
+    "rugi": 3.075
+   },
+   {
+    "epoch": 19,
+    "loss": 0.219,
+    "akurasi": 0.743,
+    "tahan": 0.741,
+    "rugi": 3.474
+   },
+   {
+    "epoch": 20,
+    "loss": 0.211,
+    "akurasi": 0.732,
+    "tahan": 0.736,
+    "rugi": 3.235
+   },
+   {
+    "epoch": 21,
+    "loss": 0.208,
+    "akurasi": 0.752,
+    "tahan": 0.748,
+    "rugi": 3.198
+   },
+   {
+    "epoch": 22,
+    "loss": 0.204,
+    "akurasi": 0.739,
+    "tahan": 0.737,
+    "rugi": 2.922
+   },
+   {
+    "epoch": 23,
+    "loss": 0.197,
+    "akurasi": 0.745,
+    "tahan": 0.74,
+    "rugi": 2.645
+   },
+   {
+    "epoch": 24,
+    "loss": 0.189,
+    "akurasi": 0.76,
+    "tahan": 0.758,
+    "rugi": 2.74
+   },
+   {
+    "epoch": 25,
+    "loss": 0.188,
+    "akurasi": 0.763,
+    "tahan": 0.759,
+    "rugi": 3.7
+   },
+   {
+    "epoch": 26,
+    "loss": 0.181,
+    "akurasi": 0.769,
+    "tahan": 0.76,
+    "rugi": 2.571
+   },
+   {
+    "epoch": 27,
+    "loss": 0.176,
+    "akurasi": 0.766,
+    "tahan": 0.76,
+    "rugi": 3.465
+   },
+   {
+    "epoch": 28,
+    "loss": 0.171,
+    "akurasi": 0.781,
+    "tahan": 0.775,
+    "rugi": 3.225
+   },
+   {
+    "epoch": 29,
+    "loss": 0.168,
+    "akurasi": 0.779,
+    "tahan": 0.773,
+    "rugi": 2.982
+   },
+   {
+    "epoch": 30,
+    "loss": 0.163,
+    "akurasi": 0.778,
+    "tahan": 0.771,
+    "rugi": 2.522
+   },
+   {
+    "epoch": 31,
+    "loss": 0.159,
+    "akurasi": 0.772,
+    "tahan": 0.768,
+    "rugi": 2.933
+   },
+   {
+    "epoch": 32,
+    "loss": 0.156,
+    "akurasi": 0.786,
+    "tahan": 0.779,
+    "rugi": 2.624
+   },
+   {
+    "epoch": 33,
+    "loss": 0.152,
+    "akurasi": 0.781,
+    "tahan": 0.772,
+    "rugi": 2.43
+   },
+   {
+    "epoch": 34,
+    "loss": 0.149,
+    "akurasi": 0.794,
+    "tahan": 0.785,
+    "rugi": 2.416
+   },
+   {
+    "epoch": 35,
+    "loss": 0.145,
+    "akurasi": 0.79,
+    "tahan": 0.779,
+    "rugi": 2.245
+   },
+   {
+    "epoch": 36,
+    "loss": 0.141,
+    "akurasi": 0.799,
+    "tahan": 0.79,
+    "rugi": 2.71
+   },
+   {
+    "epoch": 37,
+    "loss": 0.139,
+    "akurasi": 0.795,
+    "tahan": 0.785,
+    "rugi": 2.248
+   },
+   {
+    "epoch": 38,
+    "loss": 0.136,
+    "akurasi": 0.804,
+    "tahan": 0.793,
+    "rugi": 2.643
+   },
+   {
+    "epoch": 39,
+    "loss": 0.135,
+    "akurasi": 0.804,
+    "tahan": 0.79,
+    "rugi": 2.744
+   },
+   {
+    "epoch": 40,
+    "loss": 0.131,
+    "akurasi": 0.81,
+    "tahan": 0.802,
+    "rugi": 2.252
+   },
+   {
+    "epoch": 41,
+    "loss": 0.127,
+    "akurasi": 0.804,
+    "tahan": 0.791,
+    "rugi": 2.366
+   },
+   {
+    "epoch": 42,
+    "loss": 0.124,
+    "akurasi": 0.811,
+    "tahan": 0.795,
+    "rugi": 2.181
+   },
+   {
+    "epoch": 43,
+    "loss": 0.122,
+    "akurasi": 0.82,
+    "tahan": 0.804,
+    "rugi": 2.482
+   },
+   {
+    "epoch": 44,
+    "loss": 0.119,
+    "akurasi": 0.817,
+    "tahan": 0.802,
+    "rugi": 2.262
+   },
+   {
+    "epoch": 45,
+    "loss": 0.118,
+    "akurasi": 0.823,
+    "tahan": 0.806,
+    "rugi": 2.338
+   },
+   {
+    "epoch": 46,
+    "loss": 0.114,
+    "akurasi": 0.828,
+    "tahan": 0.81,
+    "rugi": 1.965
+   },
+   {
+    "epoch": 47,
+    "loss": 0.111,
+    "akurasi": 0.828,
+    "tahan": 0.808,
+    "rugi": 2.348
+   },
+   {
+    "epoch": 48,
+    "loss": 0.109,
+    "akurasi": 0.818,
+    "tahan": 0.803,
+    "rugi": 2.025
+   },
+   {
+    "epoch": 49,
+    "loss": 0.107,
+    "akurasi": 0.833,
+    "tahan": 0.815,
+    "rugi": 1.972
+   },
+   {
+    "epoch": 50,
+    "loss": 0.105,
+    "akurasi": 0.824,
+    "tahan": 0.805,
+    "rugi": 3.069
+   },
+   {
+    "epoch": 51,
+    "loss": 0.104,
+    "akurasi": 0.837,
+    "tahan": 0.82,
+    "rugi": 1.941
+   },
+   {
+    "epoch": 52,
+    "loss": 0.101,
+    "akurasi": 0.834,
+    "tahan": 0.812,
+    "rugi": 2.025
+   },
+   {
+    "epoch": 53,
+    "loss": 0.097,
+    "akurasi": 0.836,
+    "tahan": 0.816,
+    "rugi": 2.006
+   },
+   {
+    "epoch": 54,
+    "loss": 0.095,
+    "akurasi": 0.838,
+    "tahan": 0.82,
+    "rugi": 2.009
+   },
+   {
+    "epoch": 55,
+    "loss": 0.101,
+    "akurasi": 0.838,
+    "tahan": 0.816,
+    "rugi": 2.032
+   },
+   {
+    "epoch": 56,
+    "loss": 0.092,
+    "akurasi": 0.834,
+    "tahan": 0.809,
+    "rugi": 1.931
+   },
+   {
+    "epoch": 57,
+    "loss": 0.093,
+    "akurasi": 0.837,
+    "tahan": 0.813,
+    "rugi": 2.365
+   },
+   {
+    "epoch": 58,
+    "loss": 0.09,
+    "akurasi": 0.843,
+    "tahan": 0.82,
+    "rugi": 1.933
+   },
+   {
+    "epoch": 59,
+    "loss": 0.086,
+    "akurasi": 0.844,
+    "tahan": 0.824,
+    "rugi": 1.765
+   },
+   {
+    "epoch": 60,
+    "loss": 0.085,
+    "akurasi": 0.852,
+    "tahan": 0.826,
+    "rugi": 2.204
+   },
+   {
+    "epoch": 61,
+    "loss": 0.083,
+    "akurasi": 0.85,
+    "tahan": 0.824,
+    "rugi": 2.154
+   },
+   {
+    "epoch": 62,
+    "loss": 0.085,
+    "akurasi": 0.856,
+    "tahan": 0.832,
+    "rugi": 1.993
+   },
+   {
+    "epoch": 63,
+    "loss": 0.079,
+    "akurasi": 0.86,
+    "tahan": 0.833,
+    "rugi": 2.071
+   },
+   {
+    "epoch": 64,
+    "loss": 0.078,
+    "akurasi": 0.86,
+    "tahan": 0.834,
+    "rugi": 1.702
+   },
+   {
+    "epoch": 65,
+    "loss": 0.077,
+    "akurasi": 0.86,
+    "tahan": 0.834,
+    "rugi": 1.836
+   },
+   {
+    "epoch": 66,
+    "loss": 0.077,
+    "akurasi": 0.866,
+    "tahan": 0.837,
+    "rugi": 1.722
+   },
+   {
+    "epoch": 67,
+    "loss": 0.077,
+    "akurasi": 0.86,
+    "tahan": 0.832,
+    "rugi": 1.863
+   },
+   {
+    "epoch": 68,
+    "loss": 0.072,
+    "akurasi": 0.863,
+    "tahan": 0.835,
+    "rugi": 1.662
+   },
+   {
+    "epoch": 69,
+    "loss": 0.074,
+    "akurasi": 0.859,
+    "tahan": 0.832,
+    "rugi": 2.17
+   },
+   {
+    "epoch": 70,
+    "loss": 0.072,
+    "akurasi": 0.871,
+    "tahan": 0.836,
+    "rugi": 1.806
+   },
+   {
+    "epoch": 71,
+    "loss": 0.069,
+    "akurasi": 0.869,
+    "tahan": 0.837,
+    "rugi": 1.798
+   },
+   {
+    "epoch": 72,
+    "loss": 0.069,
+    "akurasi": 0.868,
+    "tahan": 0.838,
+    "rugi": 2.052
+   },
+   {
+    "epoch": 73,
+    "loss": 0.069,
+    "akurasi": 0.875,
+    "tahan": 0.842,
+    "rugi": 1.822
+   },
+   {
+    "epoch": 74,
+    "loss": 0.065,
+    "akurasi": 0.874,
+    "tahan": 0.84,
+    "rugi": 1.816
+   },
+   {
+    "epoch": 75,
+    "loss": 0.065,
+    "akurasi": 0.868,
+    "tahan": 0.834,
+    "rugi": 1.737
+   },
+   {
+    "epoch": 76,
+    "loss": 0.064,
+    "akurasi": 0.871,
+    "tahan": 0.838,
+    "rugi": 1.454
+   },
+   {
+    "epoch": 77,
+    "loss": 0.061,
+    "akurasi": 0.88,
+    "tahan": 0.845,
+    "rugi": 1.614
+   },
+   {
+    "epoch": 78,
+    "loss": 0.059,
+    "akurasi": 0.874,
+    "tahan": 0.839,
+    "rugi": 1.835
+   },
+   {
+    "epoch": 79,
+    "loss": 0.06,
+    "akurasi": 0.885,
+    "tahan": 0.853,
+    "rugi": 1.804
+   },
+   {
+    "epoch": 80,
+    "loss": 0.058,
+    "akurasi": 0.878,
+    "tahan": 0.842,
+    "rugi": 1.834
+   },
+   {
+    "epoch": 81,
+    "loss": 0.056,
+    "akurasi": 0.877,
+    "tahan": 0.845,
+    "rugi": 1.671
+   },
+   {
+    "epoch": 82,
+    "loss": 0.057,
+    "akurasi": 0.884,
+    "tahan": 0.848,
+    "rugi": 1.596
+   },
+   {
+    "epoch": 83,
+    "loss": 0.056,
+    "akurasi": 0.889,
+    "tahan": 0.85,
+    "rugi": 1.714
+   },
+   {
+    "epoch": 84,
+    "loss": 0.055,
+    "akurasi": 0.889,
+    "tahan": 0.845,
+    "rugi": 1.959
+   },
+   {
+    "epoch": 85,
+    "loss": 0.053,
+    "akurasi": 0.886,
+    "tahan": 0.847,
+    "rugi": 1.271
+   },
+   {
+    "epoch": 86,
+    "loss": 0.054,
+    "akurasi": 0.891,
+    "tahan": 0.855,
+    "rugi": 1.754
+   },
+   {
+    "epoch": 87,
+    "loss": 0.053,
+    "akurasi": 0.883,
+    "tahan": 0.845,
+    "rugi": 1.718
+   },
+   {
+    "epoch": 88,
+    "loss": 0.052,
+    "akurasi": 0.89,
+    "tahan": 0.847,
+    "rugi": 1.769
+   },
+   {
+    "epoch": 89,
+    "loss": 0.05,
+    "akurasi": 0.894,
+    "tahan": 0.854,
+    "rugi": 1.877
+   },
+   {
+    "epoch": 90,
+    "loss": 0.051,
+    "akurasi": 0.896,
+    "tahan": 0.855,
+    "rugi": 1.733
+   },
+   {
+    "epoch": 91,
+    "loss": 0.049,
+    "akurasi": 0.895,
+    "tahan": 0.853,
+    "rugi": 1.922
+   },
+   {
+    "epoch": 92,
+    "loss": 0.051,
+    "akurasi": 0.895,
+    "tahan": 0.855,
+    "rugi": 1.909
+   },
+   {
+    "epoch": 93,
+    "loss": 0.05,
+    "akurasi": 0.894,
+    "tahan": 0.857,
+    "rugi": 1.964
+   },
+   {
+    "epoch": 94,
+    "loss": 0.046,
+    "akurasi": 0.905,
+    "tahan": 0.86,
+    "rugi": 1.9
+   },
+   {
+    "epoch": 95,
+    "loss": 0.044,
+    "akurasi": 0.902,
+    "tahan": 0.858,
+    "rugi": 1.713
+   }
+  ],
+  "berhenti": 95,
+  "terbaik": 85,
+  "ppo": [
+   [
+    4096,
+    0.0201
+   ],
+   [
+    8192,
+    0.023
+   ],
+   [
+    12288,
+    0.0292
+   ],
+   [
+    16384,
+    0.0265
+   ],
+   [
+    20480,
+    0.0236
+   ],
+   [
+    24576,
+    0.0196
+   ],
+   [
+    28672,
+    0.0226
+   ],
+   [
+    32768,
+    0.0269
+   ],
+   [
+    36864,
+    0.0298
+   ],
+   [
+    40960,
+    0.0189
+   ],
+   [
+    45056,
+    0.0275
+   ],
+   [
+    49152,
+    0.0211
+   ],
+   [
+    53248,
+    0.0202
+   ],
+   [
+    57344,
+    0.0303
+   ],
+   [
+    61440,
+    0.0202
+   ],
+   [
+    65536,
+    0.0259
+   ],
+   [
+    69632,
+    0.0147
+   ],
+   [
+    73728,
+    0.0196
+   ],
+   [
+    77824,
+    0.0344
+   ],
+   [
+    81920,
+    0.023
+   ],
+   [
+    86016,
+    0.0234
+   ],
+   [
+    90112,
+    0.0193
+   ],
+   [
+    94208,
+    0.0237
+   ],
+   [
+    98304,
+    0.0186
+   ]
+  ],
+  "skala_c": [
+   [
+    0.3,
+    525.002
+   ],
+   [
+    3.0,
+    498.689
+   ],
+   [
+    30.0,
+    291.221
+   ]
+  ],
+  "bc_baris": null
+ },
+ "e9c_s1": {
+  "bc": [
+   {
+    "epoch": 0,
+    "loss": 0.759,
+    "akurasi": 0.583,
+    "tahan": 0.592,
+    "rugi": 6.773
+   },
+   {
+    "epoch": 1,
+    "loss": 0.618,
+    "akurasi": 0.593,
+    "tahan": 0.599,
+    "rugi": 6.866
+   },
+   {
+    "epoch": 2,
+    "loss": 0.577,
+    "akurasi": 0.592,
+    "tahan": 0.602,
+    "rugi": 5.833
+   },
+   {
+    "epoch": 3,
+    "loss": 0.551,
+    "akurasi": 0.594,
+    "tahan": 0.598,
+    "rugi": 5.794
+   },
+   {
+    "epoch": 4,
+    "loss": 0.528,
+    "akurasi": 0.609,
+    "tahan": 0.608,
+    "rugi": 5.925
+   },
+   {
+    "epoch": 5,
+    "loss": 0.508,
+    "akurasi": 0.609,
+    "tahan": 0.608,
+    "rugi": 5.428
+   },
+   {
+    "epoch": 6,
+    "loss": 0.494,
+    "akurasi": 0.613,
+    "tahan": 0.612,
+    "rugi": 5.581
+   },
+   {
+    "epoch": 7,
+    "loss": 0.481,
+    "akurasi": 0.642,
+    "tahan": 0.645,
+    "rugi": 4.925
+   },
+   {
+    "epoch": 8,
+    "loss": 0.467,
+    "akurasi": 0.636,
+    "tahan": 0.639,
+    "rugi": 5.123
+   },
+   {
+    "epoch": 9,
+    "loss": 0.454,
+    "akurasi": 0.653,
+    "tahan": 0.65,
+    "rugi": 5.245
+   },
+   {
+    "epoch": 10,
+    "loss": 0.444,
+    "akurasi": 0.64,
+    "tahan": 0.637,
+    "rugi": 4.872
+   },
+   {
+    "epoch": 11,
+    "loss": 0.431,
+    "akurasi": 0.648,
+    "tahan": 0.645,
+    "rugi": 4.83
+   },
+   {
+    "epoch": 12,
+    "loss": 0.424,
+    "akurasi": 0.632,
+    "tahan": 0.629,
+    "rugi": 4.887
+   },
+   {
+    "epoch": 13,
+    "loss": 0.414,
+    "akurasi": 0.656,
+    "tahan": 0.65,
+    "rugi": 4.686
+   },
+   {
+    "epoch": 14,
+    "loss": 0.406,
+    "akurasi": 0.671,
+    "tahan": 0.667,
+    "rugi": 4.639
+   },
+   {
+    "epoch": 15,
+    "loss": 0.396,
+    "akurasi": 0.678,
+    "tahan": 0.672,
+    "rugi": 4.343
+   },
+   {
+    "epoch": 16,
+    "loss": 0.389,
+    "akurasi": 0.656,
+    "tahan": 0.648,
+    "rugi": 4.471
+   },
+   {
+    "epoch": 17,
+    "loss": 0.382,
+    "akurasi": 0.672,
+    "tahan": 0.663,
+    "rugi": 4.235
+   },
+   {
+    "epoch": 18,
+    "loss": 0.373,
+    "akurasi": 0.673,
+    "tahan": 0.657,
+    "rugi": 4.799
+   },
+   {
+    "epoch": 19,
+    "loss": 0.367,
+    "akurasi": 0.68,
+    "tahan": 0.669,
+    "rugi": 4.55
+   },
+   {
+    "epoch": 20,
+    "loss": 0.36,
+    "akurasi": 0.684,
+    "tahan": 0.673,
+    "rugi": 4.067
+   },
+   {
+    "epoch": 21,
+    "loss": 0.353,
+    "akurasi": 0.687,
+    "tahan": 0.67,
+    "rugi": 4.603
+   },
+   {
+    "epoch": 22,
+    "loss": 0.349,
+    "akurasi": 0.7,
+    "tahan": 0.681,
+    "rugi": 4.396
+   },
+   {
+    "epoch": 23,
+    "loss": 0.343,
+    "akurasi": 0.684,
+    "tahan": 0.663,
+    "rugi": 4.059
+   },
+   {
+    "epoch": 24,
+    "loss": 0.334,
+    "akurasi": 0.699,
+    "tahan": 0.676,
+    "rugi": 4.068
+   },
+   {
+    "epoch": 25,
+    "loss": 0.329,
+    "akurasi": 0.703,
+    "tahan": 0.686,
+    "rugi": 3.973
+   },
+   {
+    "epoch": 26,
+    "loss": 0.323,
+    "akurasi": 0.708,
+    "tahan": 0.685,
+    "rugi": 4.616
+   },
+   {
+    "epoch": 27,
+    "loss": 0.319,
+    "akurasi": 0.701,
+    "tahan": 0.68,
+    "rugi": 4.153
+   },
+   {
+    "epoch": 28,
+    "loss": 0.315,
+    "akurasi": 0.706,
+    "tahan": 0.682,
+    "rugi": 4.183
+   },
+   {
+    "epoch": 29,
+    "loss": 0.308,
+    "akurasi": 0.704,
+    "tahan": 0.679,
+    "rugi": 4.01
+   },
+   {
+    "epoch": 30,
+    "loss": 0.303,
+    "akurasi": 0.708,
+    "tahan": 0.676,
+    "rugi": 4.026
+   },
+   {
+    "epoch": 31,
+    "loss": 0.297,
+    "akurasi": 0.718,
+    "tahan": 0.693,
+    "rugi": 4.153
+   },
+   {
+    "epoch": 32,
+    "loss": 0.295,
+    "akurasi": 0.706,
+    "tahan": 0.676,
+    "rugi": 4.367
+   },
+   {
+    "epoch": 33,
+    "loss": 0.29,
+    "akurasi": 0.714,
+    "tahan": 0.686,
+    "rugi": 3.77
+   },
+   {
+    "epoch": 34,
+    "loss": 0.285,
+    "akurasi": 0.713,
+    "tahan": 0.685,
+    "rugi": 4.152
+   },
+   {
+    "epoch": 35,
+    "loss": 0.283,
+    "akurasi": 0.725,
+    "tahan": 0.697,
+    "rugi": 4.079
+   },
+   {
+    "epoch": 36,
+    "loss": 0.275,
+    "akurasi": 0.713,
+    "tahan": 0.684,
+    "rugi": 4.372
+   },
+   {
+    "epoch": 37,
+    "loss": 0.273,
+    "akurasi": 0.717,
+    "tahan": 0.687,
+    "rugi": 3.992
+   },
+   {
+    "epoch": 38,
+    "loss": 0.268,
+    "akurasi": 0.735,
+    "tahan": 0.704,
+    "rugi": 4.43
+   },
+   {
+    "epoch": 39,
+    "loss": 0.265,
+    "akurasi": 0.723,
+    "tahan": 0.69,
+    "rugi": 4.454
+   },
+   {
+    "epoch": 40,
+    "loss": 0.262,
+    "akurasi": 0.73,
+    "tahan": 0.696,
+    "rugi": 4.062
+   },
+   {
+    "epoch": 41,
+    "loss": 0.258,
+    "akurasi": 0.723,
+    "tahan": 0.692,
+    "rugi": 4.035
+   },
+   {
+    "epoch": 42,
+    "loss": 0.254,
+    "akurasi": 0.726,
+    "tahan": 0.695,
+    "rugi": 4.06
+   },
+   {
+    "epoch": 43,
+    "loss": 0.251,
+    "akurasi": 0.72,
+    "tahan": 0.689,
+    "rugi": 4.052
+   }
+  ],
+  "berhenti": 43,
+  "terbaik": 33,
+  "ppo": [
+   [
+    4096,
+    0.0179
+   ],
+   [
+    8192,
+    0.019
+   ],
+   [
+    12288,
+    0.0261
+   ],
+   [
+    16384,
+    0.0221
+   ],
+   [
+    20480,
+    0.02
+   ],
+   [
+    24576,
+    0.017
+   ],
+   [
+    28672,
+    0.019
+   ],
+   [
+    32768,
+    0.0232
+   ],
+   [
+    36864,
+    0.0254
+   ],
+   [
+    40960,
+    0.0162
+   ],
+   [
+    45056,
+    0.0232
+   ],
+   [
+    49152,
+    0.0187
+   ],
+   [
+    53248,
+    0.0178
+   ],
+   [
+    57344,
+    0.0224
+   ],
+   [
+    61440,
+    0.0189
+   ],
+   [
+    65536,
+    0.0285
+   ],
+   [
+    69632,
+    0.0176
+   ],
+   [
+    73728,
+    0.0166
+   ],
+   [
+    77824,
+    0.0279
+   ],
+   [
+    81920,
+    0.0227
+   ],
+   [
+    86016,
+    0.0239
+   ],
+   [
+    90112,
+    0.0182
+   ],
+   [
+    94208,
+    0.0179
+   ],
+   [
+    98304,
+    0.0172
+   ]
+  ],
+  "skala_c": [
+   [
+    0.3,
+    525.002
+   ],
+   [
+    3.0,
+    498.689
+   ],
+   [
+    30.0,
+    291.221
+   ]
+  ],
+  "bc_baris": 86832
+ },
+ "e1ppo_s2": {
+  "bc": [
+   {
+    "epoch": 0,
+    "loss": 0.677,
+    "akurasi": 0.621,
+    "tahan": 0.615,
+    "rugi": 9.058
+   },
+   {
+    "epoch": 1,
+    "loss": 0.469,
+    "akurasi": 0.624,
+    "tahan": 0.613,
+    "rugi": 7.658
+   },
+   {
+    "epoch": 2,
+    "loss": 0.424,
+    "akurasi": 0.649,
+    "tahan": 0.635,
+    "rugi": 5.867
+   },
+   {
+    "epoch": 3,
+    "loss": 0.395,
+    "akurasi": 0.66,
+    "tahan": 0.645,
+    "rugi": 5.934
+   },
+   {
+    "epoch": 4,
+    "loss": 0.372,
+    "akurasi": 0.664,
+    "tahan": 0.656,
+    "rugi": 5.783
+   },
+   {
+    "epoch": 5,
+    "loss": 0.358,
+    "akurasi": 0.661,
+    "tahan": 0.647,
+    "rugi": 5.275
+   },
+   {
+    "epoch": 6,
+    "loss": 0.342,
+    "akurasi": 0.659,
+    "tahan": 0.652,
+    "rugi": 4.708
+   },
+   {
+    "epoch": 7,
+    "loss": 0.33,
+    "akurasi": 0.667,
+    "tahan": 0.658,
+    "rugi": 4.887
+   },
+   {
+    "epoch": 8,
+    "loss": 0.313,
+    "akurasi": 0.683,
+    "tahan": 0.668,
+    "rugi": 4.77
+   },
+   {
+    "epoch": 9,
+    "loss": 0.303,
+    "akurasi": 0.686,
+    "tahan": 0.673,
+    "rugi": 4.836
+   },
+   {
+    "epoch": 10,
+    "loss": 0.292,
+    "akurasi": 0.706,
+    "tahan": 0.695,
+    "rugi": 4.827
+   },
+   {
+    "epoch": 11,
+    "loss": 0.283,
+    "akurasi": 0.712,
+    "tahan": 0.7,
+    "rugi": 4.03
+   },
+   {
+    "epoch": 12,
+    "loss": 0.272,
+    "akurasi": 0.718,
+    "tahan": 0.704,
+    "rugi": 4.309
+   },
+   {
+    "epoch": 13,
+    "loss": 0.262,
+    "akurasi": 0.711,
+    "tahan": 0.697,
+    "rugi": 4.67
+   },
+   {
+    "epoch": 14,
+    "loss": 0.255,
+    "akurasi": 0.722,
+    "tahan": 0.704,
+    "rugi": 4.549
+   },
+   {
+    "epoch": 15,
+    "loss": 0.248,
+    "akurasi": 0.715,
+    "tahan": 0.697,
+    "rugi": 4.186
+   },
+   {
+    "epoch": 16,
+    "loss": 0.242,
+    "akurasi": 0.731,
+    "tahan": 0.712,
+    "rugi": 4.408
+   },
+   {
+    "epoch": 17,
+    "loss": 0.237,
+    "akurasi": 0.736,
+    "tahan": 0.719,
+    "rugi": 3.538
+   },
+   {
+    "epoch": 18,
+    "loss": 0.225,
+    "akurasi": 0.739,
+    "tahan": 0.721,
+    "rugi": 4.072
+   },
+   {
+    "epoch": 19,
+    "loss": 0.219,
+    "akurasi": 0.748,
+    "tahan": 0.728,
+    "rugi": 3.32
+   },
+   {
+    "epoch": 20,
+    "loss": 0.214,
+    "akurasi": 0.744,
+    "tahan": 0.719,
+    "rugi": 3.716
+   },
+   {
+    "epoch": 21,
+    "loss": 0.211,
+    "akurasi": 0.745,
+    "tahan": 0.728,
+    "rugi": 3.389
+   },
+   {
+    "epoch": 22,
+    "loss": 0.203,
+    "akurasi": 0.763,
+    "tahan": 0.736,
+    "rugi": 4.525
+   },
+   {
+    "epoch": 23,
+    "loss": 0.195,
+    "akurasi": 0.755,
+    "tahan": 0.733,
+    "rugi": 3.513
+   },
+   {
+    "epoch": 24,
+    "loss": 0.192,
+    "akurasi": 0.756,
+    "tahan": 0.734,
+    "rugi": 3.473
+   },
+   {
+    "epoch": 25,
+    "loss": 0.189,
+    "akurasi": 0.763,
+    "tahan": 0.743,
+    "rugi": 3.362
+   },
+   {
+    "epoch": 26,
+    "loss": 0.182,
+    "akurasi": 0.774,
+    "tahan": 0.749,
+    "rugi": 3.193
+   },
+   {
+    "epoch": 27,
+    "loss": 0.177,
+    "akurasi": 0.774,
+    "tahan": 0.75,
+    "rugi": 3.452
+   },
+   {
+    "epoch": 28,
+    "loss": 0.171,
+    "akurasi": 0.773,
+    "tahan": 0.746,
+    "rugi": 3.67
+   },
+   {
+    "epoch": 29,
+    "loss": 0.166,
+    "akurasi": 0.775,
+    "tahan": 0.75,
+    "rugi": 3.781
+   },
+   {
+    "epoch": 30,
+    "loss": 0.168,
+    "akurasi": 0.778,
+    "tahan": 0.753,
+    "rugi": 2.647
+   },
+   {
+    "epoch": 31,
+    "loss": 0.158,
+    "akurasi": 0.773,
+    "tahan": 0.752,
+    "rugi": 2.7
+   },
+   {
+    "epoch": 32,
+    "loss": 0.155,
+    "akurasi": 0.784,
+    "tahan": 0.758,
+    "rugi": 2.566
+   },
+   {
+    "epoch": 33,
+    "loss": 0.153,
+    "akurasi": 0.788,
+    "tahan": 0.762,
+    "rugi": 2.632
+   },
+   {
+    "epoch": 34,
+    "loss": 0.149,
+    "akurasi": 0.79,
+    "tahan": 0.76,
+    "rugi": 2.928
+   },
+   {
+    "epoch": 35,
+    "loss": 0.146,
+    "akurasi": 0.792,
+    "tahan": 0.765,
+    "rugi": 2.281
+   },
+   {
+    "epoch": 36,
+    "loss": 0.14,
+    "akurasi": 0.797,
+    "tahan": 0.766,
+    "rugi": 2.795
+   },
+   {
+    "epoch": 37,
+    "loss": 0.138,
+    "akurasi": 0.794,
+    "tahan": 0.769,
+    "rugi": 2.93
+   },
+   {
+    "epoch": 38,
+    "loss": 0.136,
+    "akurasi": 0.787,
+    "tahan": 0.753,
+    "rugi": 2.895
+   },
+   {
+    "epoch": 39,
+    "loss": 0.132,
+    "akurasi": 0.803,
+    "tahan": 0.77,
+    "rugi": 2.188
+   },
+   {
+    "epoch": 40,
+    "loss": 0.131,
+    "akurasi": 0.809,
+    "tahan": 0.777,
+    "rugi": 3.83
+   },
+   {
+    "epoch": 41,
+    "loss": 0.128,
+    "akurasi": 0.814,
+    "tahan": 0.781,
+    "rugi": 2.788
+   },
+   {
+    "epoch": 42,
+    "loss": 0.123,
+    "akurasi": 0.809,
+    "tahan": 0.77,
+    "rugi": 2.658
+   },
+   {
+    "epoch": 43,
+    "loss": 0.121,
+    "akurasi": 0.813,
+    "tahan": 0.777,
+    "rugi": 2.646
+   },
+   {
+    "epoch": 44,
+    "loss": 0.119,
+    "akurasi": 0.816,
+    "tahan": 0.783,
+    "rugi": 2.174
+   },
+   {
+    "epoch": 45,
+    "loss": 0.115,
+    "akurasi": 0.817,
+    "tahan": 0.783,
+    "rugi": 2.695
+   },
+   {
+    "epoch": 46,
+    "loss": 0.112,
+    "akurasi": 0.816,
+    "tahan": 0.785,
+    "rugi": 2.797
+   },
+   {
+    "epoch": 47,
+    "loss": 0.111,
+    "akurasi": 0.828,
+    "tahan": 0.794,
+    "rugi": 3.694
+   },
+   {
+    "epoch": 48,
+    "loss": 0.109,
+    "akurasi": 0.827,
+    "tahan": 0.79,
+    "rugi": 2.605
+   },
+   {
+    "epoch": 49,
+    "loss": 0.105,
+    "akurasi": 0.828,
+    "tahan": 0.798,
+    "rugi": 2.039
+   },
+   {
+    "epoch": 50,
+    "loss": 0.104,
+    "akurasi": 0.829,
+    "tahan": 0.793,
+    "rugi": 2.262
+   },
+   {
+    "epoch": 51,
+    "loss": 0.101,
+    "akurasi": 0.834,
+    "tahan": 0.794,
+    "rugi": 3.485
+   },
+   {
+    "epoch": 52,
+    "loss": 0.099,
+    "akurasi": 0.825,
+    "tahan": 0.785,
+    "rugi": 2.072
+   },
+   {
+    "epoch": 53,
+    "loss": 0.096,
+    "akurasi": 0.834,
+    "tahan": 0.799,
+    "rugi": 1.795
+   },
+   {
+    "epoch": 54,
+    "loss": 0.095,
+    "akurasi": 0.835,
+    "tahan": 0.797,
+    "rugi": 3.246
+   },
+   {
+    "epoch": 55,
+    "loss": 0.093,
+    "akurasi": 0.837,
+    "tahan": 0.795,
+    "rugi": 2.576
+   },
+   {
+    "epoch": 56,
+    "loss": 0.094,
+    "akurasi": 0.838,
+    "tahan": 0.797,
+    "rugi": 3.505
+   },
+   {
+    "epoch": 57,
+    "loss": 0.092,
+    "akurasi": 0.835,
+    "tahan": 0.794,
+    "rugi": 2.024
+   },
+   {
+    "epoch": 58,
+    "loss": 0.089,
+    "akurasi": 0.847,
+    "tahan": 0.805,
+    "rugi": 2.176
+   },
+   {
+    "epoch": 59,
+    "loss": 0.085,
+    "akurasi": 0.848,
+    "tahan": 0.805,
+    "rugi": 3.096
+   },
+   {
+    "epoch": 60,
+    "loss": 0.085,
+    "akurasi": 0.846,
+    "tahan": 0.806,
+    "rugi": 2.72
+   },
+   {
+    "epoch": 61,
+    "loss": 0.085,
+    "akurasi": 0.846,
+    "tahan": 0.808,
+    "rugi": 1.992
+   },
+   {
+    "epoch": 62,
+    "loss": 0.081,
+    "akurasi": 0.855,
+    "tahan": 0.81,
+    "rugi": 3.411
+   },
+   {
+    "epoch": 63,
+    "loss": 0.079,
+    "akurasi": 0.855,
+    "tahan": 0.81,
+    "rugi": 3.716
+   }
+  ],
+  "berhenti": 63,
+  "terbaik": 53,
+  "ppo": [
+   [
+    4096,
+    0.0203
+   ],
+   [
+    8192,
+    0.021
+   ],
+   [
+    12288,
+    0.0268
+   ],
+   [
+    16384,
+    0.0242
+   ],
+   [
+    20480,
+    0.0228
+   ],
+   [
+    24576,
+    0.0153
+   ],
+   [
+    28672,
+    0.0196
+   ],
+   [
+    32768,
+    0.0225
+   ],
+   [
+    36864,
+    0.024
+   ],
+   [
+    40960,
+    0.0161
+   ],
+   [
+    45056,
+    0.0268
+   ],
+   [
+    49152,
+    0.0212
+   ],
+   [
+    53248,
+    0.0148
+   ],
+   [
+    57344,
+    0.0162
+   ],
+   [
+    61440,
+    0.0202
+   ],
+   [
+    65536,
+    0.0245
+   ],
+   [
+    69632,
+    0.0136
+   ],
+   [
+    73728,
+    0.0169
+   ],
+   [
+    77824,
+    0.0282
+   ],
+   [
+    81920,
+    0.0172
+   ],
+   [
+    86016,
+    0.023
+   ],
+   [
+    90112,
+    0.0207
+   ],
+   [
+    94208,
+    0.0153
+   ],
+   [
+    98304,
+    0.018
+   ]
+  ],
+  "skala_c": [
+   [
+    0.3,
+    525.002
+   ],
+   [
+    3.0,
+    498.689
+   ],
+   [
+    30.0,
+    291.221
+   ]
+  ],
+  "bc_baris": null
+ },
+ "e9c_s2": {
+  "bc": [
+   {
+    "epoch": 0,
+    "loss": 0.75,
+    "akurasi": 0.577,
+    "tahan": 0.567,
+    "rugi": 8.399
+   },
+   {
+    "epoch": 1,
+    "loss": 0.613,
+    "akurasi": 0.583,
+    "tahan": 0.575,
+    "rugi": 7.123
+   },
+   {
+    "epoch": 2,
+    "loss": 0.577,
+    "akurasi": 0.586,
+    "tahan": 0.581,
+    "rugi": 6.236
+   },
+   {
+    "epoch": 3,
+    "loss": 0.55,
+    "akurasi": 0.593,
+    "tahan": 0.587,
+    "rugi": 6.496
+   },
+   {
+    "epoch": 4,
+    "loss": 0.53,
+    "akurasi": 0.621,
+    "tahan": 0.618,
+    "rugi": 5.283
+   },
+   {
+    "epoch": 5,
+    "loss": 0.514,
+    "akurasi": 0.615,
+    "tahan": 0.609,
+    "rugi": 5.366
+   },
+   {
+    "epoch": 6,
+    "loss": 0.498,
+    "akurasi": 0.601,
+    "tahan": 0.593,
+    "rugi": 5.629
+   },
+   {
+    "epoch": 7,
+    "loss": 0.485,
+    "akurasi": 0.629,
+    "tahan": 0.62,
+    "rugi": 5.544
+   },
+   {
+    "epoch": 8,
+    "loss": 0.468,
+    "akurasi": 0.617,
+    "tahan": 0.607,
+    "rugi": 5.395
+   },
+   {
+    "epoch": 9,
+    "loss": 0.46,
+    "akurasi": 0.637,
+    "tahan": 0.624,
+    "rugi": 5.542
+   },
+   {
+    "epoch": 10,
+    "loss": 0.446,
+    "akurasi": 0.638,
+    "tahan": 0.624,
+    "rugi": 4.769
+   },
+   {
+    "epoch": 11,
+    "loss": 0.439,
+    "akurasi": 0.641,
+    "tahan": 0.629,
+    "rugi": 4.5
+   },
+   {
+    "epoch": 12,
+    "loss": 0.429,
+    "akurasi": 0.648,
+    "tahan": 0.632,
+    "rugi": 5.643
+   },
+   {
+    "epoch": 13,
+    "loss": 0.42,
+    "akurasi": 0.662,
+    "tahan": 0.644,
+    "rugi": 5.331
+   },
+   {
+    "epoch": 14,
+    "loss": 0.412,
+    "akurasi": 0.65,
+    "tahan": 0.634,
+    "rugi": 4.833
+   },
+   {
+    "epoch": 15,
+    "loss": 0.399,
+    "akurasi": 0.657,
+    "tahan": 0.639,
+    "rugi": 4.479
+   },
+   {
+    "epoch": 16,
+    "loss": 0.394,
+    "akurasi": 0.683,
+    "tahan": 0.665,
+    "rugi": 4.592
+   },
+   {
+    "epoch": 17,
+    "loss": 0.386,
+    "akurasi": 0.677,
+    "tahan": 0.659,
+    "rugi": 4.643
+   },
+   {
+    "epoch": 18,
+    "loss": 0.379,
+    "akurasi": 0.668,
+    "tahan": 0.648,
+    "rugi": 4.541
+   },
+   {
+    "epoch": 19,
+    "loss": 0.37,
+    "akurasi": 0.658,
+    "tahan": 0.638,
+    "rugi": 4.341
+   },
+   {
+    "epoch": 20,
+    "loss": 0.366,
+    "akurasi": 0.682,
+    "tahan": 0.659,
+    "rugi": 4.293
+   },
+   {
+    "epoch": 21,
+    "loss": 0.358,
+    "akurasi": 0.685,
+    "tahan": 0.66,
+    "rugi": 4.491
+   },
+   {
+    "epoch": 22,
+    "loss": 0.352,
+    "akurasi": 0.686,
+    "tahan": 0.665,
+    "rugi": 4.382
+   },
+   {
+    "epoch": 23,
+    "loss": 0.345,
+    "akurasi": 0.69,
+    "tahan": 0.669,
+    "rugi": 4.138
+   },
+   {
+    "epoch": 24,
+    "loss": 0.338,
+    "akurasi": 0.71,
+    "tahan": 0.685,
+    "rugi": 3.991
+   },
+   {
+    "epoch": 25,
+    "loss": 0.331,
+    "akurasi": 0.717,
+    "tahan": 0.69,
+    "rugi": 4.523
+   },
+   {
+    "epoch": 26,
+    "loss": 0.327,
+    "akurasi": 0.704,
+    "tahan": 0.674,
+    "rugi": 4.475
+   },
+   {
+    "epoch": 27,
+    "loss": 0.322,
+    "akurasi": 0.713,
+    "tahan": 0.685,
+    "rugi": 4.293
+   },
+   {
+    "epoch": 28,
+    "loss": 0.317,
+    "akurasi": 0.687,
+    "tahan": 0.659,
+    "rugi": 4.21
+   },
+   {
+    "epoch": 29,
+    "loss": 0.313,
+    "akurasi": 0.712,
+    "tahan": 0.686,
+    "rugi": 4.145
+   },
+   {
+    "epoch": 30,
+    "loss": 0.306,
+    "akurasi": 0.717,
+    "tahan": 0.685,
+    "rugi": 4.771
+   },
+   {
+    "epoch": 31,
+    "loss": 0.301,
+    "akurasi": 0.715,
+    "tahan": 0.684,
+    "rugi": 4.27
+   },
+   {
+    "epoch": 32,
+    "loss": 0.296,
+    "akurasi": 0.718,
+    "tahan": 0.687,
+    "rugi": 4.206
+   },
+   {
+    "epoch": 33,
+    "loss": 0.292,
+    "akurasi": 0.722,
+    "tahan": 0.689,
+    "rugi": 4.443
+   },
+   {
+    "epoch": 34,
+    "loss": 0.287,
+    "akurasi": 0.725,
+    "tahan": 0.693,
+    "rugi": 3.938
+   },
+   {
+    "epoch": 35,
+    "loss": 0.283,
+    "akurasi": 0.719,
+    "tahan": 0.684,
+    "rugi": 4.079
+   },
+   {
+    "epoch": 36,
+    "loss": 0.28,
+    "akurasi": 0.724,
+    "tahan": 0.69,
+    "rugi": 3.936
+   },
+   {
+    "epoch": 37,
+    "loss": 0.274,
+    "akurasi": 0.717,
+    "tahan": 0.682,
+    "rugi": 3.778
+   },
+   {
+    "epoch": 38,
+    "loss": 0.271,
+    "akurasi": 0.723,
+    "tahan": 0.683,
+    "rugi": 4.56
+   },
+   {
+    "epoch": 39,
+    "loss": 0.266,
+    "akurasi": 0.738,
+    "tahan": 0.703,
+    "rugi": 3.931
+   },
+   {
+    "epoch": 40,
+    "loss": 0.262,
+    "akurasi": 0.736,
+    "tahan": 0.699,
+    "rugi": 4.158
+   },
+   {
+    "epoch": 41,
+    "loss": 0.256,
+    "akurasi": 0.739,
+    "tahan": 0.7,
+    "rugi": 4.11
+   },
+   {
+    "epoch": 42,
+    "loss": 0.256,
+    "akurasi": 0.746,
+    "tahan": 0.707,
+    "rugi": 4.258
+   },
+   {
+    "epoch": 43,
+    "loss": 0.251,
+    "akurasi": 0.744,
+    "tahan": 0.704,
+    "rugi": 4.057
+   },
+   {
+    "epoch": 44,
+    "loss": 0.247,
+    "akurasi": 0.743,
+    "tahan": 0.703,
+    "rugi": 3.944
+   },
+   {
+    "epoch": 45,
+    "loss": 0.245,
+    "akurasi": 0.752,
+    "tahan": 0.712,
+    "rugi": 3.781
+   },
+   {
+    "epoch": 46,
+    "loss": 0.24,
+    "akurasi": 0.747,
+    "tahan": 0.707,
+    "rugi": 3.99
+   },
+   {
+    "epoch": 47,
+    "loss": 0.24,
+    "akurasi": 0.752,
+    "tahan": 0.709,
+    "rugi": 3.767
+   },
+   {
+    "epoch": 48,
+    "loss": 0.236,
+    "akurasi": 0.751,
+    "tahan": 0.708,
+    "rugi": 4.076
+   },
+   {
+    "epoch": 49,
+    "loss": 0.23,
+    "akurasi": 0.74,
+    "tahan": 0.696,
+    "rugi": 3.722
+   },
+   {
+    "epoch": 50,
+    "loss": 0.23,
+    "akurasi": 0.759,
+    "tahan": 0.716,
+    "rugi": 3.765
+   },
+   {
+    "epoch": 51,
+    "loss": 0.226,
+    "akurasi": 0.769,
+    "tahan": 0.726,
+    "rugi": 3.916
+   },
+   {
+    "epoch": 52,
+    "loss": 0.224,
+    "akurasi": 0.751,
+    "tahan": 0.706,
+    "rugi": 3.714
+   },
+   {
+    "epoch": 53,
+    "loss": 0.22,
+    "akurasi": 0.748,
+    "tahan": 0.704,
+    "rugi": 3.609
+   },
+   {
+    "epoch": 54,
+    "loss": 0.218,
+    "akurasi": 0.768,
+    "tahan": 0.725,
+    "rugi": 3.66
+   },
+   {
+    "epoch": 55,
+    "loss": 0.215,
+    "akurasi": 0.761,
+    "tahan": 0.713,
+    "rugi": 3.924
+   },
+   {
+    "epoch": 56,
+    "loss": 0.212,
+    "akurasi": 0.77,
+    "tahan": 0.725,
+    "rugi": 3.692
+   },
+   {
+    "epoch": 57,
+    "loss": 0.21,
+    "akurasi": 0.764,
+    "tahan": 0.72,
+    "rugi": 3.518
+   },
+   {
+    "epoch": 58,
+    "loss": 0.209,
+    "akurasi": 0.768,
+    "tahan": 0.722,
+    "rugi": 3.431
+   },
+   {
+    "epoch": 59,
+    "loss": 0.204,
+    "akurasi": 0.767,
+    "tahan": 0.72,
+    "rugi": 3.803
+   },
+   {
+    "epoch": 60,
+    "loss": 0.203,
+    "akurasi": 0.784,
+    "tahan": 0.732,
+    "rugi": 4.054
+   },
+   {
+    "epoch": 61,
+    "loss": 0.202,
+    "akurasi": 0.77,
+    "tahan": 0.718,
+    "rugi": 3.672
+   },
+   {
+    "epoch": 62,
+    "loss": 0.197,
+    "akurasi": 0.77,
+    "tahan": 0.72,
+    "rugi": 3.546
+   },
+   {
+    "epoch": 63,
+    "loss": 0.196,
+    "akurasi": 0.78,
+    "tahan": 0.73,
+    "rugi": 3.744
+   },
+   {
+    "epoch": 64,
+    "loss": 0.192,
+    "akurasi": 0.776,
+    "tahan": 0.725,
+    "rugi": 3.583
+   },
+   {
+    "epoch": 65,
+    "loss": 0.191,
+    "akurasi": 0.781,
+    "tahan": 0.729,
+    "rugi": 3.55
+   },
+   {
+    "epoch": 66,
+    "loss": 0.19,
+    "akurasi": 0.778,
+    "tahan": 0.727,
+    "rugi": 3.561
+   },
+   {
+    "epoch": 67,
+    "loss": 0.187,
+    "akurasi": 0.786,
+    "tahan": 0.734,
+    "rugi": 3.582
+   },
+   {
+    "epoch": 68,
+    "loss": 0.183,
+    "akurasi": 0.789,
+    "tahan": 0.738,
+    "rugi": 3.495
+   }
+  ],
+  "berhenti": 68,
+  "terbaik": 58,
+  "ppo": [
+   [
+    4096,
+    0.023
+   ],
+   [
+    8192,
+    0.0226
+   ],
+   [
+    12288,
+    0.0236
+   ],
+   [
+    16384,
+    0.0267
+   ],
+   [
+    20480,
+    0.0228
+   ],
+   [
+    24576,
+    0.016
+   ],
+   [
+    28672,
+    0.021
+   ],
+   [
+    32768,
+    0.0224
+   ],
+   [
+    36864,
+    0.0285
+   ],
+   [
+    40960,
+    0.0162
+   ],
+   [
+    45056,
+    0.0266
+   ],
+   [
+    49152,
+    0.0259
+   ],
+   [
+    53248,
+    0.017
+   ],
+   [
+    57344,
+    0.0194
+   ],
+   [
+    61440,
+    0.0186
+   ],
+   [
+    65536,
+    0.0312
+   ],
+   [
+    69632,
+    0.0171
+   ],
+   [
+    73728,
+    0.017
+   ],
+   [
+    77824,
+    0.0296
+   ],
+   [
+    81920,
+    0.0223
+   ],
+   [
+    86016,
+    0.0234
+   ],
+   [
+    90112,
+    0.0198
+   ],
+   [
+    94208,
+    0.0176
+   ],
+   [
+    98304,
+    0.0182
+   ]
+  ],
+  "skala_c": [
+   [
+    0.3,
+    525.002
+   ],
+   [
+    3.0,
+    498.689
+   ],
+   [
+    30.0,
+    291.221
+   ]
+  ],
+  "bc_baris": 86832
+ }
+}

@@ -1,0 +1,10 @@
+# Pembagian data penelitian (keputusan pemilik K2, 18 Oktober 2026).
+# Satu-satunya tempat pembagian ini ditulis. Isinya harus sama dengan
+# dfjsp.datasets.BRANDIMARTE_TRAIN dan BRANDIMARTE_TEST (dijaga tes).
+#
+# train   : instans untuk melatih. Kode pelatihan hanya boleh membaca daftar ini.
+# test    : instans uji. Dibuka sekali oleh `studi uji --buka-uji`, tiap pembukaan dicatat.
+# latency : instans untuk mengukur waktu keputusan saja (bukan mutu jadwal).
+train: [MK01, MK02, MK05, MK06, MK07, MK08, MK10]
+test: [MK03, MK04, MK09]
+latency: [MK01, MK02, MK03, MK04, MK05, MK06, MK07, MK08, MK09, MK10]

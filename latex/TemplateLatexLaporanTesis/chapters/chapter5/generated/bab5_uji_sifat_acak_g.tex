@@ -1,0 +1,25 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Korelasi Spearman selisih $J$ ARLS-PPO terhadap Random + penjaga dengan sifat instans uji}
+\label{tab:uji-sifat-acak-g}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrr}
+\toprule
+Sifat instans & \multicolumn{2}{c}{$\lambda=0{,}3$} & \multicolumn{2}{c}{$\lambda=3$} \\
+ & uk.~1 & uk.~2 & uk.~1 & uk.~2 \\
+\midrule
+Banyak tugas & $-0{,}27$ & $-0{,}53$ & $-0{,}36$ & $-0{,}65$ \\
+Banyak pengembang & $+0{,}08$ & $+0{,}05$ & $+0{,}00$ & $+0{,}00$ \\
+Tugas per pengembang & $-0{,}34$ & $-0{,}59$ & $-0{,}40$ & $-0{,}68$ \\
+Fleksibilitas (pengembang per tugas) & $-0{,}44$ & $-0{,}64$ & $-0{,}03$ & $-0{,}29$ \\
+Beban per pengembang & $-0{,}33$ & $-0{,}59$ & $-0{,}39$ & $-0{,}69$ \\
+Ketimpangan keahlian & $-0{,}23$ & $-0{,}30$ & $+0{,}02$ & $-0{,}09$ \\
+Keketatan tenggat & $-0{,}07$ & $-0{,}19$ & $+0{,}11$ & $-0{,}03$ \\
+Prasyarat per tugas & $-0{,}20$ & $-0{,}47$ & $-0{,}27$ & $-0{,}47$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Satu titik per instans uji (38 instans). Positif berarti makin besar sifat itu, makin besar selisih $J$ (ARLS-PPO makin tertinggal). Deskriptif, tanpa uji hipotesis.
+\end{table}

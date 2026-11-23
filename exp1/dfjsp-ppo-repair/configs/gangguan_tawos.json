@@ -1,0 +1,54 @@
+{
+  "sumber": "TAWOS v1.1 (Tawosi dkk. 2022), doi 10.5522/04/21308124",
+  "rework": {
+    "issue_selesai": 378034,
+    "porsi_dibuka_lagi": 0.07589264457694281,
+    "rasio_kerja_ulang": {
+      "mu": -1.1848942587075608,
+      "sigma": 5.394006964929335,
+      "n": 2893,
+      "median": 0.4675248683440608,
+      "p10": 0.0001287590387160896,
+      "p90": 187.3032329790062,
+      "q1": 0.014705882352941173,
+      "q3": 6.0476190476190474,
+      "sigma_iqr": 4.461951337221108
+    }
+  },
+  "revisi_estimasi": {
+    "issue_berestimasi": 62995,
+    "porsi_estimasi_diubah": 0.12278752281927137,
+    "rasio_estimasi": {
+      "mu": 0.08960996954097337,
+      "sigma": 0.8180754805242831,
+      "n": 10607,
+      "median": 1.3333333333333333,
+      "p10": 0.4,
+      "p90": 2.5,
+      "q1": 0.6,
+      "q3": 2.0,
+      "sigma_iqr": 0.8924928126952824
+    },
+    "porsi_naik": 0.6070519468275667
+  },
+  "tidak_terencana": {
+    "sprint_diukur": 2123,
+    "rasio_tidak_terencana_median": 0.5,
+    "rasio_tidak_terencana_rata": 1.21801266669151,
+    "porsi_bug_tidak_terencana": 0.3754935676983824,
+    "porsi_prioritas_tinggi_tidak_terencana": 0.38281747548083045,
+    "menit_dikerjakan_median": {
+      "tidak_terencana": 1193.0,
+      "terencana": 4332.0
+    },
+    "fano_harian_median": 1.746212121212121,
+    "sprint_fano": 1042,
+    "bentuk_gamma_median": 0.6214819614052867,
+    "sprint_gamma": 1042
+  },
+  "bug_prioritas_tinggi": {
+    "proyek": 37,
+    "fano_harian_median": 1.6580176422369433,
+    "bentuk_gamma_median": 0.2623175348306089
+  }
+}

@@ -1,0 +1,42 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Suku $J$ setiap metode pada data uji, $\lambda$ tanpa label}
+\label{tab:uji-uraian-tanpa-label}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrrr}
+\toprule
+$\lambda$ & Metode & Keterlambatan & Perubahan & $\lambda\times$perubahan & $J$ \\
+\midrule
+0{,}1 & ARLS-PPO & $771{,}62$ & $110{,}79$ & $11{,}08$ & $782{,}70$ \\
+0{,}1 & AOR & $4582{,}26$ & $0{,}00$ & $0{,}00$ & $4582{,}26$ \\
+0{,}1 & Random + penjaga & $1059{,}83$ & $101{,}81$ & $10{,}18$ & $1070{,}01$ \\
+0{,}1 & Fixed-L3 + penjaga & $867{,}83$ & $119{,}02$ & $11{,}90$ & $879{,}74$ \\
+0{,}1 & Boosting-IL + penjaga & $781{,}32$ & $104{,}20$ & $10{,}42$ & $791{,}74$ \\
+0{,}1 & ARLS-BC & $780{,}20$ & $110{,}47$ & $11{,}05$ & $791{,}25$ \\
+0{,}1 & ARLS-PPO tanpa penjaga & $798{,}57$ & $131{,}43$ & $13{,}14$ & $811{,}71$ \\
+0{,}1 & Sequential Lookahead & $679{,}01$ & $112{,}25$ & $11{,}23$ & $690{,}23$ \\
+\addlinespace
+1 & ARLS-PPO & $804{,}74$ & $95{,}03$ & $95{,}03$ & $899{,}78$ \\
+1 & AOR & $4582{,}26$ & $0{,}00$ & $0{,}00$ & $4582{,}26$ \\
+1 & Random + penjaga & $1063{,}73$ & $93{,}03$ & $93{,}03$ & $1156{,}76$ \\
+1 & Fixed-L3 + penjaga & $887{,}37$ & $108{,}26$ & $108{,}26$ & $995{,}63$ \\
+1 & Boosting-IL + penjaga & $855{,}73$ & $86{,}11$ & $86{,}11$ & $941{,}84$ \\
+1 & ARLS-BC & $805{,}57$ & $95{,}55$ & $95{,}55$ & $901{,}12$ \\
+1 & ARLS-PPO tanpa penjaga & $821{,}56$ & $121{,}30$ & $121{,}30$ & $942{,}87$ \\
+1 & Sequential Lookahead & $700{,}10$ & $96{,}75$ & $96{,}75$ & $796{,}84$ \\
+\addlinespace
+10 & ARLS-PPO & $1079{,}65$ & $53{,}93$ & $539{,}29$ & $1618{,}94$ \\
+10 & AOR & $4582{,}26$ & $0{,}00$ & $0{,}00$ & $4582{,}26$ \\
+10 & Random + penjaga & $1194{,}21$ & $60{,}30$ & $602{,}98$ & $1797{,}18$ \\
+10 & Fixed-L3 + penjaga & $1035{,}29$ & $67{,}18$ & $671{,}78$ & $1707{,}08$ \\
+10 & Boosting-IL + penjaga & $1723{,}12$ & $35{,}76$ & $357{,}60$ & $2080{,}71$ \\
+10 & ARLS-BC & $1101{,}82$ & $53{,}97$ & $539{,}73$ & $1641{,}55$ \\
+10 & ARLS-PPO tanpa penjaga & $1021{,}49$ & $89{,}81$ & $898{,}15$ & $1919{,}64$ \\
+10 & Sequential Lookahead & $814{,}49$ & $58{,}18$ & $581{,}80$ & $1396{,}28$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Sama dengan Tabel~\ref{tab:uji-uraian}.
+\end{table}

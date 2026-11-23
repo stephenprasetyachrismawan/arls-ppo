@@ -1,0 +1,20 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Analisis kepekaan: 35 instans benchmark saja (selang 95\%)}
+\label{tab:uji-kepekaan}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llll}
+\toprule
+Pembanding & $\lambda$ & Uk.~1 (\%) & Uk.~2 (\%) \\
+\midrule
+Random + penjaga & 0{,}3 & $-23{,}96$ [$-26{,}09$; $-21{,}73$]$^{*}$ & $-23{,}18$ [$-24{,}80$; $-21{,}60$]$^{*}$ \\
+Random + penjaga & 3 & $-15{,}06$ [$-16{,}55$; $-13{,}55$]$^{*}$ & $-15{,}51$ [$-16{,}66$; $-14{,}15$]$^{*}$ \\
+Fixed-L3 + penjaga & 0{,}3 & $+17{,}47$ [$+8{,}03$; $+29{,}39$]$^{*}$ & $-5{,}02$ [$-6{,}36$; $-2{,}21$]$^{*}$ \\
+Fixed-L3 + penjaga & 3 & $+0{,}22$ [$-2{,}17$; $+3{,}19$] & $-6{,}38$ [$-7{,}40$; $-4{,}70$]$^{*}$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Angka adalah selisih $J$ ARLS-PPO terhadap pembanding dalam persen; negatif berarti ARLS-PPO lebih baik. Uk.~1 rata-rata rasio per kondisi, uk.~2 rasio $J$ total; setiap instans berbobot sama. Tanda $^{*}$: selang tidak memuat nol.
+\end{table}

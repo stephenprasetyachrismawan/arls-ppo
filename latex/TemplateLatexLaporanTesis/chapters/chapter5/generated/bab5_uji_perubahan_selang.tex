@@ -1,0 +1,64 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Selisih banyak perubahan per episode dengan selang 95\%, ARLS-PPO dikurangi pembanding}
+\label{tab:uji-perubahan-selang}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lll}
+\toprule
+Pembanding & $\lambda$ & Selisih perubahan [selang 95\%] \\
+\midrule
+AOR & 0{,}1 & $+110{,}79$ [$+103{,}29$; $+118{,}35$]$^{*}$ \\
+AOR & 0{,}3 & $+105{,}35$ [$+98{,}16$; $+112{,}62$]$^{*}$ \\
+AOR & 1 & $+95{,}03$ [$+88{,}36$; $+101{,}71$]$^{*}$ \\
+AOR & 3 & $+79{,}45$ [$+73{,}58$; $+85{,}22$]$^{*}$ \\
+AOR & 10 & $+53{,}93$ [$+49{,}63$; $+58{,}27$]$^{*}$ \\
+AOR & 30 & $+32{,}18$ [$+29{,}24$; $+35{,}26$]$^{*}$ \\
+\addlinespace
+Random + penjaga & 0{,}1 & $+8{,}97$ [$+7{,}38$; $+10{,}68$]$^{*}$ \\
+Random + penjaga & 0{,}3 & $+5{,}51$ [$+3{,}88$; $+7{,}13$]$^{*}$ \\
+Random + penjaga & 1 & $+2{,}00$ [$+0{,}54$; $+3{,}50$]$^{*}$ \\
+Random + penjaga & 3 & $-1{,}98$ [$-3{,}11$; $-0{,}81$]$^{*}$ \\
+Random + penjaga & 10 & $-6{,}37$ [$-7{,}22$; $-5{,}52$]$^{*}$ \\
+Random + penjaga & 30 & $-0{,}81$ [$-1{,}41$; $-0{,}21$]$^{*}$ \\
+\addlinespace
+Fixed-L3 + penjaga & 0{,}1 & $-8{,}24$ [$-9{,}68$; $-6{,}77$]$^{*}$ \\
+Fixed-L3 + penjaga & 0{,}3 & $-10{,}42$ [$-11{,}87$; $-8{,}98$]$^{*}$ \\
+Fixed-L3 + penjaga & 1 & $-13{,}23$ [$-14{,}65$; $-11{,}83$]$^{*}$ \\
+Fixed-L3 + penjaga & 3 & $-14{,}22$ [$-15{,}58$; $-12{,}91$]$^{*}$ \\
+Fixed-L3 + penjaga & 10 & $-13{,}25$ [$-14{,}42$; $-12{,}10$]$^{*}$ \\
+Fixed-L3 + penjaga & 30 & $-2{,}56$ [$-3{,}21$; $-1{,}92$]$^{*}$ \\
+\addlinespace
+Boosting-IL + penjaga & 0{,}1 & $+6{,}58$ [$+5{,}38$; $+7{,}77$]$^{*}$ \\
+Boosting-IL + penjaga & 0{,}3 & $+3{,}11$ [$+2{,}14$; $+4{,}07$]$^{*}$ \\
+Boosting-IL + penjaga & 1 & $+8{,}92$ [$+7{,}80$; $+10{,}05$]$^{*}$ \\
+Boosting-IL + penjaga & 3 & $+2{,}50$ [$+1{,}58$; $+3{,}51$]$^{*}$ \\
+Boosting-IL + penjaga & 10 & $+18{,}17$ [$+16{,}91$; $+19{,}45$]$^{*}$ \\
+Boosting-IL + penjaga & 30 & $+1{,}64$ [$+1{,}22$; $+2{,}07$]$^{*}$ \\
+\addlinespace
+ARLS-BC & 0{,}1 & $+0{,}32$ [$-0{,}29$; $+0{,}94$] \\
+ARLS-BC & 0{,}3 & $+0{,}18$ [$-0{,}38$; $+0{,}75$] \\
+ARLS-BC & 1 & $-0{,}52$ [$-1{,}10$; $+0{,}05$] \\
+ARLS-BC & 3 & $+0{,}11$ [$-0{,}37$; $+0{,}61$] \\
+ARLS-BC & 10 & $-0{,}04$ [$-0{,}46$; $+0{,}37$] \\
+ARLS-BC & 30 & $+0{,}43$ [$+0{,}22$; $+0{,}65$]$^{*}$ \\
+\addlinespace
+ARLS-PPO tanpa penjaga & 0{,}1 & $-20{,}65$ [$-24{,}22$; $-17{,}42$]$^{*}$ \\
+ARLS-PPO tanpa penjaga & 0{,}3 & $-21{,}00$ [$-24{,}47$; $-17{,}92$]$^{*}$ \\
+ARLS-PPO tanpa penjaga & 1 & $-26{,}27$ [$-29{,}96$; $-22{,}86$]$^{*}$ \\
+ARLS-PPO tanpa penjaga & 3 & $-32{,}32$ [$-36{,}25$; $-28{,}65$]$^{*}$ \\
+ARLS-PPO tanpa penjaga & 10 & $-35{,}89$ [$-40{,}04$; $-31{,}91$]$^{*}$ \\
+ARLS-PPO tanpa penjaga & 30 & $-29{,}57$ [$-33{,}10$; $-26{,}32$]$^{*}$ \\
+\addlinespace
+Sequential Lookahead & 0{,}1 & $-1{,}46$ [$-2{,}63$; $-0{,}33$]$^{*}$ \\
+Sequential Lookahead & 0{,}3 & $-1{,}48$ [$-2{,}78$; $-0{,}21$]$^{*}$ \\
+Sequential Lookahead & 1 & $-1{,}71$ [$-2{,}92$; $-0{,}48$]$^{*}$ \\
+Sequential Lookahead & 3 & $-1{,}37$ [$-2{,}61$; $-0{,}15$]$^{*}$ \\
+Sequential Lookahead & 10 & $-4{,}25$ [$-5{,}01$; $-3{,}46$]$^{*}$ \\
+Sequential Lookahead & 30 & $-4{,}20$ [$-4{,}85$; $-3{,}57$]$^{*}$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} Sama dengan Tabel~\ref{tab:uji-perubahan}, dengan batas bawah dan atas selang \emph{bootstrap} bergugus. Negatif berarti ARLS-PPO membuat lebih sedikit perubahan. Tanda $^{*}$: selang tidak memuat nol.
+\end{table}

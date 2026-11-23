@@ -1,0 +1,23 @@
+% Dibangkitkan oleh revisi/hasil/gerbang_batch/bab5_jalan.py. Jangan diubah dengan tangan.
+\begin{table}[htbp]
+\caption{Label guru, selisih $J$ setiap tingkat, dan bobot contoh BC menurut $\lambda$}
+\label{tab:latih-guru}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrrrrrrrrrr}
+\toprule
+Data & $\lambda$ & $n$ & \multicolumn{4}{c}{Porsi label 0/1/2/3} & \multicolumn{3}{c}{Rata-rata $\Delta J$ tingkat 1/2/3} & Seri & \shortstack[r]{Median\\bobot} & \shortstack[r]{Bobot\\$<0{,}1$} \\
+\midrule
+Guru & 0{,}3 & 14.200 & $0{,}38$ & $0{,}16$ & $0{,}15$ & $0{,}31$ & $-218{,}43$ & $-45{,}90$ & $-110{,}02$ & $0{,}31$ & $0{,}20$ & $0{,}45$ \\
+Guru & 3 & 14.200 & $0{,}46$ & $0{,}15$ & $0{,}13$ & $0{,}26$ & $-202{,}67$ & $-42{,}26$ & $-101{,}02$ & $0{,}29$ & $0{,}18$ & $0{,}37$ \\
+Guru & 30 & 14.200 & $0{,}68$ & $0{,}09$ & $0{,}09$ & $0{,}14$ & $-41{,}07$ & $-4{,}71$ & $-14{,}28$ & $0{,}25$ & $0{,}62$ & $0{,}27$ \\
+\addlinespace
+DAgger & 0{,}3 & 14.744 & $0{,}46$ & $0{,}14$ & $0{,}17$ & $0{,}23$ & $-9{,}37$ & $-20{,}72$ & $-20{,}26$ & $0{,}26$ & $0{,}07$ & $0{,}56$ \\
+DAgger & 3 & 14.744 & $0{,}55$ & $0{,}12$ & $0{,}15$ & $0{,}18$ & $-4{,}56$ & $-18{,}77$ & $-18{,}98$ & $0{,}23$ & $0{,}16$ & $0{,}31$ \\
+DAgger & 30 & 14.744 & $0{,}73$ & $0{,}07$ & $0{,}08$ & $0{,}12$ & $50{,}79$ & $12{,}40$ & $38{,}16$ & $0{,}18$ & $0{,}81$ & $0{,}19$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\textit{Catatan:} $\Delta J$: $J$ sesudah tingkat itu dikurangi $J$ sekarang, rata-rata atas keputusan yang tingkatnya sah; negatif berarti tingkat itu menurunkan $J$. \emph{Seri}: porsi keputusan yang semua tingkat sahnya memberi $J$ sama. Bobot contoh dihitung dengan fungsi \texttt{regret\_weights} yang dipakai pelatihan.
+\end{table}

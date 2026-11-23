@@ -1,0 +1,290 @@
+# Konfigurasi beku pipeline `studi`. Semua angka yang menentukan hasil ada di sini.
+# `studi bekukan` mencatat hash berkas ini; tahap lain menolak jalan kalau isinya berubah.
+# Rancangan: docs/ARSITEKTUR_PIPELINE.md. Indikator: docs/KERANGKA_NASKAH.md Bagian 8.
+# Kunci yang tidak dikenal dianggap galat, jadi salah ketik langsung ketahuan.
+
+version: 1
+name: studi_cepat_layak_stabil
+
+seeds:
+  training: [0, 1, 2]     # tiga seed pelatihan untuk setiap metode yang dilatih (T3)
+  untrained_run: 0        # satu-satunya "run" metode tanpa pelatihan; juga seed Acak dan GA
+
+# Dipakai saat membaca instans dan menyusun tenggat (sama dengan nilai bawaan pustaka).
+data:
+  k_tight: 1.5            # keketatan tenggat; label lama 1,0 dan 2,0 tidak mengubah tenggat
+  capacity_mult: 1.2
+  p_cross_dep: 0.10
+  domain_seed: 0
+
+training:
+  total_timesteps: 1540096   # 188 update x 8 env x 1024 langkah; sama untuk semua metode
+  intensities: [0.05, 0.15, 0.30]   # diacak per episode; checkpoint yang dipakai selalu yang terakhir
+
+ppo:
+  policy: MlpPolicy
+  hidden: [128, 128]
+  activation: relu
+  learning_rate: 0.0003
+  n_steps: 1024
+  n_envs: 8
+  batch_size: 256
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.20
+  ent_coef: 0.03
+  vf_coef: 0.50
+  max_grad_norm: 0.5
+  device: cpu
+
+# Bobot reward 6 suku (suku xi dibuang, keputusan T1). tardiness_only hanya memakai alpha.
+rewards:
+  software_aware: {alpha: 1.00, beta: 0.50, gamma: 1.00, delta: 1.50, eta: 0.30, lam: 0.20}
+  tardiness_only: {alpha: 1.00, beta: 0.00, gamma: 0.00, delta: 0.00, eta: 0.00, lam: 0.00}
+
+capacity_schedules:
+  balanced: {levels: [1.0, 1.5, 2.0]}   # bergiliran seimbang menurut langkah yang dijalankan
+  fixed_1p2: {levels: [1.2]}
+
+# Pemilih Threshold dan GA perbaikan sebagian: angkanya ikut dibekukan.
+threshold: {tau1: 0.2, tau2: 0.5, tau3: 0.3, tau4: 0.8}
+ga: {pop: 12, gens: 8, mut: 0.2}
+
+# Satu nama per metode (arsitektur 5.3). `id` aman untuk nama folder dan hanya dipakai kode.
+# `label` adalah nama tampil (tabel, gambar, makro). `description` adalah konfigurasi lengkap
+# untuk tabel metode di naskah. `macro` dipakai S8 untuk nama makro LaTeX (hanya huruf).
+# high_mask / low_mask / reward / capacity_schedule kosong (null) untuk metode tanpa pelatihan.
+methods:
+  - id: mppo_srs
+    label: MPPO-SRS
+    macro: MPPOSRS
+    description: >-
+      PPO dengan high-level mask dan low-level mask, reward software-aware (enam suku,
+      memuat stabilitas), dilatih dengan kapasitas bergiliran seimbang 1,0, 1,5, dan 2,0
+    group: proposed
+    trained: true
+    high_mask: true
+    low_mask: true
+    reward: software_aware
+    capacity_schedule: balanced
+  - id: ppo
+    label: PPO
+    macro: PPO
+    description: PPO tanpa mask, reward keterlambatan saja, kapasitas latih tetap 1,2
+    group: ablation
+    trained: true
+    high_mask: false
+    low_mask: false
+    reward: tardiness_only
+    capacity_schedule: fixed_1p2
+  - id: ppo_hm
+    label: PPO+HM
+    macro: PPOHM
+    description: PPO dengan high-level mask, reward keterlambatan saja, kapasitas latih tetap 1,2
+    group: ablation
+    trained: true
+    high_mask: true
+    low_mask: false
+    reward: tardiness_only
+    capacity_schedule: fixed_1p2
+  - id: ppo_hm_lm
+    label: PPO+HM+LM
+    macro: PPOHMLM
+    description: >-
+      PPO dengan high-level mask dan low-level mask, reward keterlambatan saja,
+      kapasitas latih tetap 1,2
+    group: ablation
+    trained: true
+    high_mask: true
+    low_mask: true
+    reward: tardiness_only
+    capacity_schedule: fixed_1p2
+  - id: ppo_hm_lm_sr
+    label: PPO+HM+LM+SR
+    macro: PPOHMLMSR
+    description: >-
+      PPO dengan high-level mask dan low-level mask, reward software-aware (stability reward),
+      kapasitas latih tetap 1,2
+    group: ablation
+    trained: true
+    high_mask: true
+    low_mask: true
+    reward: software_aware
+    capacity_schedule: fixed_1p2
+  # PPO-Pair memilih pasangan tugas dan pengembang. Jenis mask-nya diatur pustaka, bukan di sini.
+  - id: ppo_pair
+    label: PPO-Pair
+    macro: PPOPair
+    description: >-
+      PPO yang memilih langsung pasangan tugas dan pengembang (operation-machine pair) dengan
+      mask kelayakan, reward software-aware, kapasitas latih bergiliran seimbang 1,0, 1,5, dan
+      2,0; implementasi sendiri dengan jaringan satu lapis 64 unit dan satu lingkungan
+    group: pair
+    trained: true
+    high_mask: null
+    low_mask: null
+    reward: software_aware
+    capacity_schedule: balanced
+  - id: rsr
+    label: RSR
+    macro: RSR
+    description: >-
+      Right-Shift Repair: selalu memilih Maintain, penugasan dipertahankan dan tugas yang
+      terdampak hanya bergeser waktu
+    group: rule_selector
+    trained: false
+    high_mask: null
+    low_mask: null
+    reward: null
+    capacity_schedule: null
+  - id: random
+    label: Random
+    macro: Random
+    description: >-
+      Memilih satu strategi secara acak di antara strategi yang diizinkan mask tingkat atas
+    group: rule_selector
+    trained: false
+    high_mask: null
+    low_mask: null
+    reward: null
+    capacity_schedule: null
+  - id: threshold
+    label: Threshold
+    macro: Threshold
+    description: >-
+      Memilih strategi menurut ambang intensitas gangguan dan beban berlebih
+      (tau1 0,2, tau2 0,5, tau3 0,3, tau4 0,8)
+    group: rule_selector
+    trained: false
+    high_mask: null
+    low_mask: null
+    reward: null
+    capacity_schedule: null
+  - id: fifo
+    label: FIFO
+    macro: FIFO
+    description: Penjadwalan ulang parsial, tugas diurutkan menurut nomor tugas (masuk lebih dulu, keluar lebih dulu)
+    group: rescheduler
+    trained: false
+    high_mask: null
+    low_mask: null
+    reward: null
+    capacity_schedule: null
+  - id: spt
+    label: SPT
+    macro: SPT
+    description: Penjadwalan ulang parsial, tugas dengan upaya nominal terpendek didahulukan
+    group: rescheduler
+    trained: false
+    high_mask: null
+    low_mask: null
+    reward: null
+    capacity_schedule: null
+  - id: lpt
+    label: LPT
+    macro: LPT
+    description: Penjadwalan ulang parsial, tugas dengan upaya nominal terpanjang didahulukan
+    group: rescheduler
+    trained: false
+    high_mask: null
+    low_mask: null
+    reward: null
+    capacity_schedule: null
+  - id: edd
+    label: EDD
+    macro: EDD
+    description: Penjadwalan ulang parsial, tugas dengan tenggat terdekat didahulukan
+    group: rescheduler
+    trained: false
+    high_mask: null
+    low_mask: null
+    reward: null
+    capacity_schedule: null
+  - id: mof
+    label: MOF
+    macro: MOF
+    description: >-
+      Most-Overloaded-First: penjadwalan ulang parsial, tugas dari pengembang yang paling
+      berlebih beban didahulukan
+    group: rescheduler
+    trained: false
+    high_mask: null
+    low_mask: null
+    reward: null
+    capacity_schedule: null
+  - id: skillfit
+    label: SkillFit
+    macro: SkillFit
+    description: >-
+      Penjadwalan ulang parsial menurut tenggat, tugas dipindah ke pengembang yang
+      keahliannya paling sedikit (paling spesialis)
+    group: rescheduler
+    trained: false
+    high_mask: null
+    low_mask: null
+    reward: null
+    capacity_schedule: null
+  - id: ga_pr
+    label: GA-PR
+    macro: GAPR
+    description: >-
+      Genetic algorithm partial rescheduling: algoritma genetika memperbaiki sebagian jadwal
+      (populasi 12, generasi 8, peluang mutasi 0,2)
+    group: rescheduler
+    trained: false
+    high_mask: null
+    low_mask: null
+    reward: null
+    capacity_schedule: null
+
+# Urutan penambahan komponen untuk tabel sumbangan
+# (PPO -> +HM -> +LM -> +SR -> +CC, yaitu MPPO-SRS).
+components:
+  - {method: ppo, added: PPO polos dengan reward waktu saja}
+  - {method: ppo_hm, added: high-level mask}
+  - {method: ppo_hm_lm, added: low-level mask}
+  - {method: ppo_hm_lm_sr, added: stability reward}
+  - {method: mppo_srs, added: capacity curriculum}
+
+# Grid uji per seed pelatihan: 3 instans x 3 intensitas x 3 kapasitas x 10 seed = 270 episode.
+# Seed episode tetap dan berbeda dari aliran seed latih (yang berasal dari seed pelatihan).
+grid:
+  scenario: mixed            # campuran 5 jenis gangguan
+  intensities: [0.05, 0.15, 0.30]
+  capacities: [1.0, 1.5, 2.0]
+  k_tight: 1.5
+  episode_seeds: [10000, 10001, 10002, 10003, 10004, 10005, 10006, 10007, 10008, 10009]
+
+# Bootstrap bergugus (audit F3, arsitektur 5.4). Gugus = aliran gangguan (instans, intensitas,
+# seed episode), 90 gugus; tiga kapasitas berada di gugus yang sama. Bootstrap mengambil ulang
+# gugus di dalam tiap instans, lalu run di dalam gugus. IQM dihitung per instans, lalu
+# dirata-rata tiga instans; nilai per instans ditampilkan di samping gabungan.
+statistics:
+  n_resamples: 10000
+  alpha: 0.05                # selang kepercayaan 95%
+  seed: 20261018
+  aggregate: iqm
+  condition_measures: [total_tardiness, nervousness, context_switches]
+
+# Indikator keberhasilan, dikunci 18 Oktober 2026 dan direvisi 19 Oktober 2026 (sebelum
+# pelatihan dan sebelum data uji dibuka). Tidak boleh diubah setelah data uji dibuka.
+# Teks asli: KERANGKA_NASKAH Bagian 8.
+indicators:
+  # I-1 Cepat: p95 waktu pemilih MPPO-SRS di bawah 50 ms pada setiap MK01 sampai MK10,
+  # dan lebih kecil daripada PPO-Pair pada setiap MK.
+  i1: {method: mppo_srs, pair_method: ppo_pair, selector_p95_ms_max: 50.0}
+  # I-2 Layak: pada semua episode uji MPPO-SRS, laju strategi tidak valid = 0 dan kelebihan
+  # beban kerja yang ditambahkan oleh perbaikan = 0. Angka 0 untuk beban diberi toleransi
+  # pembulatan 1e-6 (sama dengan EPS di schedule_check.py), karena selisih dua bilangan
+  # pecahan yang sama bisa bersisa 1e-14.
+  i2: {method: mppo_srs, invalid_strategy_rate_max: 0.0, overload_excess_added_max: 1.0e-6}
+  # I-3 Stabil: IQM nervousness dan IQM alih konteks MPPO-SRS lebih rendah daripada setiap
+  # heuristik penjadwalan ulang, dengan CI 95% bergugus yang tidak tumpang tindih.
+  i3:
+    method: mppo_srs
+    measures: [nervousness, context_switches]
+    heuristics: [fifo, spt, lpt, edd, mof, skillfit, ga_pr]
+  # I-4 Stabil (sumbangan reward): selisih berpasangan alih konteks PPO+HM+LM+SR dikurangi
+  # PPO+HM+LM (hanya reward yang berbeda) punya CI 95% seluruhnya di bawah nol.
+  i4: {method: ppo_hm_lm_sr, reference: ppo_hm_lm, measure: context_switches}
