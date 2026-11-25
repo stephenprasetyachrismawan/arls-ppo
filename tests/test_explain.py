@@ -203,6 +203,10 @@ def test_the_worked_example_of_bab_iv_is_reproduced_number_by_number():
     assert q["pindah_posisi"] == [55]
     assert ev["J_after_batch"] == pytest.approx(ref["j_akhir"], abs=1e-12)
     assert ev["changes"] == ref["ubah"]
+    # telat_akhir is the final tardiness of the whole episode over E (Tard / E), as in the
+    # result record; the log writes it out as the output of the episode
+    assert tr.result["telat"] == pytest.approx(ref["telat_akhir"], abs=1e-9)
+    assert tr.explain["output"]["tard_over_E"] == tr.result["telat"]
 
 
 @pytest.mark.parametrize("method", SELECTORS)
