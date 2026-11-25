@@ -317,3 +317,19 @@ def test_manual_levels_and_card_moves_are_explained_too():
                         "ke": dev} in b["moved_dev"]
                 return
     pytest.fail("no feasible move found")
+
+
+def test_the_due_date_of_an_unplanned_task_is_written_with_its_numbers():
+    tr = episode.trace_episode(*JOB, "aor", 3.0, explain=True)
+    seen = 0
+    for ev in tr.events:
+        for e in ev["explain"]["disruptions"]:
+            d = e.get("detail") or {}
+            if e["type"] != "urgent_task" or "tugas_baru" not in d:
+                continue
+            if d["aturan_tenggat"] == "segera":
+                assert d["tenggat"] == d["t"] + (1.0 + d["due_slack"]) * d["upaya"]
+            else:
+                assert d["tenggat"] == d["selesai"] + d["due_slack"] * d["upaya"]
+            seen += 1
+    assert seen > 0

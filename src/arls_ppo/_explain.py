@@ -495,6 +495,7 @@ def effect(inst, sched, event, t_now, before_entries, before_tasks):
                 "tugas_baru": int(tid), "pengembang": int(e.dev_id), "upaya": eff,
                 "pengembang_layak": {int(d): float(v) for d, v in q.eligible_devs.items()},
                 "prioritas": float(q.priority), "aturan_tenggat": rule, "tenggat": float(q.due_date),
+                "t": float(t_now), "due_slack": slack,
                 "rumus_tenggat": (f"t + (1 + {slack:g}) × upaya = {t_now:.4f} + {1 + slack:g} × "
                                   f"{eff:.4f}" if rule == "segera" else
                                   f"selesai di akhir antrean + {slack:g} × upaya = {e.end:.4f} + "
