@@ -169,9 +169,15 @@ def _probabilities(policy, x, mask):
 class Recorder:
     """Collects the events of one traced episode."""
 
-    def __init__(self, lam, options=False):
+    def __init__(self, lam, options=False, explain=False, capacity=None):
         self.lam = float(lam)
+        self.capacity = capacity
+        self.episode: dict = {}      # explained input, disruption draw, and output
         self.options = bool(options)
+        self.explain = bool(explain)
+        self.base_items = None       # explained 9 schedule numbers of the running batch
+        self.feature_log: list = []  # explained 38 numbers, one entry per features() call
+        self.effects: list = []      # explained disruptions of the event being applied
         self.events: list[dict] = []
         self.initial: dict | None = None
         self.mean_effort: float | None = None
@@ -195,6 +201,13 @@ class Recorder:
             "tard_aor": total_tardiness(env.inst, env.sched) / E,
             "subs": None,
         }
+        if self.explain:
+            from . import _explain
+            if self.episode["input"]["E"]["value"] != E:
+                raise _explain.ExplainMismatch(
+                    f"uraian E = {self.episode['input']['E']['value']!r}, tetapi env memberi {E!r}")
+            self._current["explain"] = {"disruptions": self.effects}
+            self.effects = []
 
     def close_event(self, env, action):
         from dfjsp.env.state import total_tardiness
@@ -219,6 +232,8 @@ class Recorder:
             ev["J_after_batch"] = manual["J"]
             ev["change_items"] = manual["items"]
             ev["moves"] = manual["moves"]
+            if self.explain and "explain" in manual:
+                ev.setdefault("explain", {})["manual"] = manual["explain"]
         if ev["subs"] is None:      # AOR: no selector, every sub-decision stays at level 0
             ev["subs"] = [{"j": j, "type": a["type"], "affected": a["tasks"], "requested": 0,
                            "used": 0, "outcome": "aor", "J_before": ev["tard_aor"],
@@ -230,6 +245,21 @@ class Recorder:
         self._current = None
 
     # ------------------------------------------------------------------ batch
+    def _levels(self, inst, base, cur, t, E, lam, affected):
+        """Explained value J of levels 0-3 at one sub-decision (``cur`` = schedule so far)."""
+        import cek_b3
+
+        from . import _explain
+        out = {0: _explain.value(inst, base, cur, t, E, lam, 0,
+                                 cek_b3.score(inst, base, cur, t, E, lam))}
+        for lv in (1, 2, 3):
+            tr = cek_b3.try_level(inst, cur, t, affected, cek_b3.OPS[lv])
+            out[lv] = (_explain.infeasible(lv, "operator tidak menemukan perbaikan yang sah")
+                       if tr is None else
+                       _explain.value(inst, base, tr, t, E, lam, lv,
+                                      cek_b3.score(inst, base, tr, t, E, lam)))
+        return out
+
     def batch_done(self, env, lam, policy, calls, out):
         import cek_b3
         from dfjsp.env.state import total_tardiness
@@ -244,6 +274,7 @@ class Recorder:
         for j, used in enumerate(choice):
             sub = {"j": j, "type": types[j], "affected": sorted(int(x) for x in A[j]),
                    "J_before": cur_j, "changes_before": chg, "used": int(used)}
+            sub_cur = cur
             if policy is None:                      # Sequential Lookahead (teacher)
                 trials = {0: (cur_j, cur, chg)}
                 for lv in (1, 2, 3):
@@ -259,6 +290,9 @@ class Recorder:
                 x, mask, req = calls[j]
                 sub.update(features=x.astype(float).tolist(), mask=mask, requested=req,
                            probs=_probabilities(policy, x, mask))
+                if self.explain:
+                    from . import _explain
+                    sub["selector"] = _explain.selector(policy, x, mask, req)
                 if self.options:
                     values = {0: cur_j}
                     for lv in (1, 2, 3):
@@ -280,6 +314,14 @@ class Recorder:
                             cur, cur_j, chg = tr, jj, c
                 else:
                     sub["outcome"] = "tingkat_0"
+            if self.explain:
+                from . import _explain
+                sub["explain"] = {"features": self.feature_log[j],
+                                  "levels": self._levels(inst, base, sub_cur, t, E, lam, A[j])}
+                if "selector" in sub:
+                    sub["explain"]["selector"] = sub.pop("selector")
+                sub["explain"]["decision"] = _explain.decision(policy, sub,
+                                                               sub["explain"]["levels"])
             sub["J_after"], sub["changes_after"] = cur_j, chg
             subs.append(sub)
         self._current["subs"] = subs
@@ -295,6 +337,11 @@ def _probe_class(base, rec):
 
     class TracingProbe(base):
         def _apply_event(self, event):
+            rec.effects = []
+            if rec.explain and "input" not in rec.episode:
+                from . import _explain
+                rec.episode["input"] = _explain.episode_input(self, rec.capacity)
+                rec.episode["disruptions"] = _explain.disruption_draw(self)
             before = _snapshot(self)
             tard_before = total_tardiness(self.inst, self.sched)
             super()._apply_event(event)
@@ -302,7 +349,12 @@ def _probe_class(base, rec):
 
         def step(self, action):
             rec.close_event(self, action)
-            return super().step(action)
+            out = super().step(action)
+            if rec.explain and self.done:
+                from . import _explain
+                rec.episode["output"] = _explain.episode_output(
+                    self, rec.lam, sum(ev["changes"] for ev in rec.events))
+            return out
 
     TracingProbe.__name__ = base.__name__
     return TracingProbe
@@ -312,10 +364,51 @@ def _run_batch(original, rec):
     def run_batch(env, lam, policy, base_state, record, *args, **kwargs):
         calls: list = []
         wrapped = _RecordingPolicy(policy, calls) if policy is not None else None
+        if rec.explain:
+            from . import _explain
+            rec.base_items = _explain.state9(env, base_state)
+            rec.feature_log = []
         out = original(env, lam, wrapped, base_state, record, *args, **kwargs)
         rec.batch_done(env, lam, policy, calls, out)
+        rec.base_items = None
         return out
     return run_batch
+
+
+def _features(original, rec):
+    """Wrap ``cek_b3.features``: explain the 38 numbers of every call inside a batch."""
+    def features(env, cur, base_state, j, A, types, lam, changes_so_far):
+        x, mask = original(env, cur, base_state, j, A, types, lam, changes_so_far)
+        if rec.base_items is not None:
+            import cek_b3
+
+            from . import _explain
+            from .episode import DISRUPTION_TYPES
+            rec.feature_log.append(_explain.features(
+                env, cur, rec.base_items, j, A, types, lam, changes_so_far, x, mask,
+                cek_b3.OPS, DISRUPTION_TYPES))
+        return x, mask
+    return features
+
+
+def _apply_disruption(original, rec):
+    """Wrap ``apply_disruption``: record what each disruption changed (AOR, tingkat 0)."""
+    def apply_disruption(inst, sched, event, t_now, horizon):
+        before = {int(tid): (int(e.dev_id), float(e.start), float(e.end))
+                  for tid, e in sched.entries.items()}
+        tasks = None
+        if rec.explain:
+            from . import _explain
+            tasks = _explain.task_state(inst)
+        out = original(inst, sched, event, t_now, horizon)
+        if rec.explain:
+            try:
+                rec.effects.append(_explain.effect(inst, sched, event, t_now, before, tasks))
+            except Exception as exc:  # noqa: BLE001  (the log must never change the run)
+                rec.effects.append({"type": event.type, "time": float(event.time),
+                                    "error": f"{type(exc).__name__}: {exc}"})
+        return out
+    return apply_disruption
 
 
 @contextmanager
@@ -323,13 +416,22 @@ def hooks(ce, rec):
     """Install the two observers on ``cek_episode`` (``ce``) and ``cek_b3`` for one run."""
     import cek_b3
 
-    probe, run_batch = ce.EpProbe, cek_b3.run_batch
+    import cek_b0_mask
+    import dfjsp.env.repair_env as repair_env
+
+    probe, run_batch, features = ce.EpProbe, cek_b3.run_batch, cek_b3.features
+    apply_probe, apply_env = cek_b0_mask.apply_disruption, repair_env.apply_disruption
     ce.EpProbe = _probe_class(probe, rec)
     cek_b3.run_batch = _run_batch(run_batch, rec)
+    if rec.explain:
+        cek_b3.features = _features(features, rec)
+        cek_b0_mask.apply_disruption = _apply_disruption(apply_probe, rec)
+        repair_env.apply_disruption = _apply_disruption(apply_env, rec)
     try:
         yield rec
     finally:
-        ce.EpProbe, cek_b3.run_batch = probe, run_batch
+        ce.EpProbe, cek_b3.run_batch, cek_b3.features = probe, run_batch, features
+        cek_b0_mask.apply_disruption, repair_env.apply_disruption = apply_probe, apply_env
 
 
 __all__ = ["Recorder", "hooks", "plain"]
