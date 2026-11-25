@@ -19,17 +19,17 @@ from .models import RUN_DIR, verify_models
 #: used in the manuscript.
 METHODS: dict[str, str] = {
     "ppo_bc_ppo_g": "ARLS-PPO",
-    "ppo_bc_ppo": "ARLS-PPO tanpa penjaga",
+    "ppo_bc_ppo": "ARLS-PPO tanpa guard",
     "ppo_bc_g": "ARLS-BC",
     "aor": "AOR",
     "seq": "Sequential Lookahead",
-    "fix3_g": "Fixed-L3 + penjaga",
-    "acak_g": "Random + penjaga",
-    "il_g": "Boosting-IL + penjaga",
+    "fix3_g": "Fixed-L3 + guard",
+    "acak_g": "Random + guard",
+    "il_g": "Boosting-IL + guard",
 }
 
 #: Methods where the user is the selector (:mod:`arls_ppo.manual`); not thesis methods.
-MANUAL_METHODS: dict[str, str] = {"manual": "Manual", "manual_g": "Manual + penjaga"}
+MANUAL_METHODS: dict[str, str] = {"manual": "Manual", "manual_g": "Manual + guard"}
 
 #: The five disruption types of the TAWOS model, code -> name used in the manuscript.
 DISRUPTION_TYPES: dict[str, str] = {
@@ -125,7 +125,7 @@ def run_episode(instance, capacity: float, intensity: float, seed: int, method: 
     method : str
         One of :data:`METHODS`.
     lam : float
-        Price of one change (λ).
+        Change penalty (λ), the price of one schedule change in J.
     model_seed : int, default=0
         Seed 0, 1 or 2 of the PPO models (only for the three ``ppo_`` methods).
     check : bool, default=True
