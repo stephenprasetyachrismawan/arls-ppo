@@ -100,6 +100,10 @@ def _decide(original, state):
             jj, c = cek_b3.score(inst, base, cur, t, env.mean_effort, lam)
             env._manual_move = {"items": change_items(inst, base, cur.entries, t), "J": jj,
                                 "moves": list(state["moves"][k])}
+            if state.get("explain"):
+                from . import _explain
+                env._manual_move["explain"] = _explain.value(
+                    inst, base, cur, t, env.mean_effort, lam, "manual", (jj, c))
             return cur, c
         pol = _Scripted([state["levels"].get((k, j), 0) for j in range(len(env.per_sub))],
                         method.endswith("_g"))
@@ -123,7 +127,7 @@ def _levels(levels):
 
 def run(instance, capacity: float, intensity: float, seed: int, lam: float, *,
         levels: dict | None = None, moves: dict | None = None, guard: bool = False,
-        options: bool = True, check: bool = True) -> EpisodeTrace:
+        options: bool = True, check: bool = True, explain: bool = False) -> EpisodeTrace:
     """One traced episode decided by the user.
 
     Parameters
@@ -137,8 +141,11 @@ def run(instance, capacity: float, intensity: float, seed: int, lam: float, *,
         Refuse a chosen level that makes J worse, as the guard of ARLS-PPO does.
     options : bool, default=True
         Record the J of every level at every sub-decision, to help the user choose.
+    explain : bool, default=False
+        Add the number log, as ``trace_episode(..., explain=True)``; a card move is explained
+        by the value J of the moved schedule.
     """
-    state = {"k": 0, "levels": _levels(levels),
+    state = {"k": 0, "levels": _levels(levels), "explain": bool(explain),
              "moves": {int(k): v for k, v in (moves or {}).items()}}
     from . import episode as ep
 
@@ -148,6 +155,6 @@ def run(instance, capacity: float, intensity: float, seed: int, lam: float, *,
     try:
         return trace_episode(instance, capacity, intensity, seed,
                              "manual_g" if guard else "manual", lam, check=check,
-                             options=options, _allow_manual=True)
+                             options=options, explain=explain, _allow_manual=True)
     finally:
         ce.decide = original

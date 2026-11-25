@@ -138,6 +138,33 @@ for all eight methods in `tests/test_trace.py`. On top of the result it records:
 - for every sub-decision: the 38 state numbers, the mask, the level probabilities, the level
   requested and the level used, the guard decision, and J before and after.
 
+### The number log (`explain=True`, since v1.1.0)
+
+`trace_episode(..., explain=True)` also writes down where every number comes from, so a reader
+can follow one episode from input to output:
+
+- **input** (`t.explain["input"]`): tasks, capacity `cap_j = m × (Σ nominal effort / developers)`,
+  S0 (rebuilt from the instance file and compared with the run), due dates
+  `d_i = C_i + 0.5 × (C_i − S_i)`, and `E` as a sum over a count;
+- **disruptions** (`t.explain["disruptions"]`): the disruption seed from `derive_episode_seed`,
+  the TAWOS parameters used, every disruption, and how they were grouped into events. The list
+  is drawn a second time from the seed and compared with the run; the seed does not contain the
+  method name, so every method meets the same disruptions;
+- **every event** (`ev["explain"]`): what each disruption changed (old and new effort, new due
+  date, pause), which tasks AOR shifted, and why each task belongs to A_j;
+- **every sub-decision** (`sub["explain"]`): the 38 state numbers, each with its formula and
+  inputs; the selector (for the PPO actor: normalisation, both Tanh layers, the four logits and
+  the masked softmax); J of levels 0-3 written out as late tasks, moved tasks, and per developer
+  the old queue, the new queue, the LIS and n − LIS; and the guard decision;
+- **output** (`t.explain["output"]`): final tardiness, total changes, and J.
+
+Each explained number is computed at the moment the thesis code computes the same number and is
+compared with it; a difference stops the run (`arls_ppo._explain.ExplainMismatch`). The tests in
+`tests/test_explain.py` check the log against the plain run, the numbers the selector read,
+`score` and `_lis_length`, and the worked example of thesis section 4.6
+(`tests/fixtures/kejadian_contoh.json`), number by number. Times in milliseconds are the only
+numbers that change between two runs.
+
 Two more modules serve the simulator; they are not used for any thesis number:
 
 - `arls_ppo.custom`: a user project (epics, issues, developers, links) goes through the path of

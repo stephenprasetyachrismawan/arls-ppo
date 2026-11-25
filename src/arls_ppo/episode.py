@@ -155,17 +155,24 @@ class EpisodeTrace:
         Snapshot at the first event (tasks, developers, schedule S0).
     meta : dict
         Episode settings, method name, mean effort E and the model hashes that were checked.
+    explain : dict
+        Only with ``explain=True``: the number log of the episode, with ``input`` (tasks,
+        capacity, S0, due dates, E), ``disruptions`` (seed, TAWOS parameters, every
+        disruption and how they were grouped into events) and ``output`` (final tardiness,
+        changes, J). Each event and sub-decision then also carries its own ``explain``.
     """
 
     result: dict
     events: list = field(default_factory=list)
     initial: dict = field(default_factory=dict)
     meta: dict = field(default_factory=dict)
+    explain: dict = field(default_factory=dict)
 
 
 def trace_episode(instance, capacity: float, intensity: float, seed: int, method: str,
                   lam: float, *, model_seed: int = 0, check: bool = True,
-                  options: bool = False, _allow_manual: bool = False) -> EpisodeTrace:
+                  options: bool = False, explain: bool = False,
+                  _allow_manual: bool = False) -> EpisodeTrace:
     """Like :func:`run_episode`, but also record every event for display.
 
     The run itself is ``cek_episode.run``; the trace only watches it (see ``_trace``). In trace
@@ -179,7 +186,7 @@ def trace_episode(instance, capacity: float, intensity: float, seed: int, method
 
     ce, name = _start(instance, seed, method, model_seed, allow_manual=_allow_manual)
     job = (name, float(capacity), float(intensity), int(seed), method, float(lam))
-    rec = _trace.Recorder(lam, options=options)
+    rec = _trace.Recorder(lam, options=options, explain=explain, capacity=float(capacity))
     with _trace.hooks(ce, rec):
         result = _run(ce, job, check, _project(instance))
     files = verify_models()
@@ -190,7 +197,7 @@ def trace_episode(instance, capacity: float, intensity: float, seed: int, method
             else None, "mean_effort": rec.mean_effort, "feature_names": list(FEATURE_NAMES),
             "model_files": [{"path": f.path, "sha256": f.actual} for f in files]}
     return EpisodeTrace(result=result, events=rec.events, initial=rec.initial or {},
-                        meta=meta)
+                        meta=meta, explain=rec.episode)
 
 
 def _project(instance):

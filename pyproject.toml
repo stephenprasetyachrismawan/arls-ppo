@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "arls-ppo"
-version = "1.0.0"
+version = "1.1.0"
 description = "ARLS-PPO: Aggregated-state Repair-Level Selector PPO for dynamic rescheduling of software projects (thesis code, recipe E15 E9c)"
 readme = "README.md"
 license = "MIT"
